@@ -1,0 +1,57 @@
+# @package _global_
+# Clean 4x4 horizon-40 pilot. Checkpoint selection remains validation-only.
+task: sudoku
+model_type: sheaf
+
+training:
+  lr: 1.7e-3
+  weight_decay: 1.0e-7
+  epochs: 3
+  batch_size: 16
+  warmup_steps: 10
+  ema_decay: 0.99
+  K_train: 40
+  K_eval: 40
+  loss_window: 4
+  train_iters_dist: fixed
+  train_iters_min: 5
+  val_interval: 1
+  best_split: validation
+  best_metric: completion
+
+data:
+  dir: datasets/sudoku_unique_4x4_clean
+  train_split: train
+  val_splits: [validation]
+  loader: puzzle
+
+task_cfg:
+  grid_size: 4
+  num_classes: 5
+  symbol_capacity: 9
+  constraint_weight: 0.0
+
+model:
+  num_classes: 5
+  sudoku_grid_size: 4
+  sudoku_cell_dim: 16
+  sudoku_symbol_capacity: 9
+  d_v: 64
+  d_e: 16
+  encoder_arch: sudoku_equivariant
+  enc_d_model: 64
+  enc_num_blocks: 2
+  objective_mode: non_negative
+  x_solver: diagonal_prox
+  z_solver: unrolled_cg
+  z_mode: prox
+  gamma: 2.0
+  cg_iters: 3
+  rm_sharing: sudoku_exact
+  rm_mode: fixed
+  rho_init: 0.25
+  decoder_arch: sudoku
+  sudoku_readout_mode: assignment
+  sudoku_internal_projection_mode: sinkhorn
+  sudoku_internal_sinkhorn_iters: 12
+  sudoku_internal_sinkhorn_temperature: 1.0

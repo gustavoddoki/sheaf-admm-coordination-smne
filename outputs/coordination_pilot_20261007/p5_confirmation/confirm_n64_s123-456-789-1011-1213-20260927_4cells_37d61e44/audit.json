@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "run_hash": "37d61e446ae6d5bf2ecb5113f7a0e85fec069c334d61b863a4218675f9688e07",
+  "summary_sha256": "d0eeb3d66b8b355cb193dcc6c7a0ce73b110a700b840ebca18f7d8718527e58f",
+  "verified_output_hashes": 72,
+  "expected_output_hashes": 72,
+  "family_clusters": 64,
+  "interventions_per_family": 4,
+  "no_message_remote_invariance_artifacts": 36,
+  "K1_remote_invariance_artifacts": 24,
+  "primary_recomputed_from_raw_npz_equal_agent_weighted": {
+    "families": 64,
+    "estimate": 0.015975009053356973,
+    "ci95_low": 0.015263676828982593,
+    "ci95_high": 0.016674986527220326,
+    "bootstrap_draws": 20000,
+    "bootstrap_seed": 20261008
+  },
+  "primary_equal_agent_weighted_per_seed_arm": {
+    "seed_123_internal": 0.007963059588028024,
+    "seed_123_terminal": 0.017904708534587612,
+    "seed_456_internal": 0.008220501198021497,
+    "seed_456_terminal": 0.027885260095284182,
+    "seed_789_internal": 0.008494862442336187,
+    "seed_789_terminal": 0.02332783188881238,
+    "seed_1011_internal": 0.0077551070277996825,
+    "seed_1011_terminal": 0.022673303171533963,
+    "seed_1213_internal": 0.00772065501388609,
+    "seed_1213_terminal": 0.027307450291257664,
+    "seed_20260927_internal": 0.00805498772544487,
+    "seed_20260927_terminal": 0.024392381663291537
+  },
+  "runner_slot_weighted_result_recomputed_from_raw_npz": {
+    "families": 64,
+    "estimate": 0.017469141992174208,
+    "ci95_low": 0.016709658555455215,
+    "ci95_high": 0.018230081401662254,
+    "bootstrap_draws": 20000,
+    "bootstrap_seed": 20261008
+  },
+  "runner_slot_weighted_per_seed_arm": {
+    "seed_123_internal": 0.008816673700490552,
+    "seed_123_terminal": 0.018922475488183203,
+    "seed_456_internal": 0.009106374406593617,
+    "seed_456_terminal": 0.030805972478427854,
+    "seed_789_internal": 0.009414541248049666,
+    "seed_789_terminal": 0.02496387999663442,
+    "seed_1011_internal": 0.008572008209890743,
+    "seed_1011_terminal": 0.024553389850229222,
+    "seed_1213_internal": 0.008541154243627738,
+    "seed_1213_terminal": 0.030348515350260424,
+    "seed_20260927_internal": 0.008919828694701086,
+    "seed_20260927_terminal": 0.026664890239001975
+  },
+  "analysis_deviation": "The runner summary pooled all remote agent-cell slots, whereas the frozen protocol specified equal weighting across remote agents after averaging their local slots. The preregistered equal-agent estimand is recomputed here from raw logits; the runner's pooled result is retained as a diagnostic and independently verified.",
+  "per_seed_arm_effects": {
+    "seed_123_internal": 0.007963059588028024,
+    "seed_123_terminal": 0.017904708534587612,
+    "seed_456_internal": 0.008220501198021497,
+    "seed_456_terminal": 0.027885260095284182,
+    "seed_789_internal": 0.008494862442336187,
+    "seed_789_terminal": 0.02332783188881238,
+    "seed_1011_internal": 0.0077551070277996825,
+    "seed_1011_terminal": 0.022673303171533963,
+    "seed_1213_internal": 0.00772065501388609,
+    "seed_1213_terminal": 0.027307450291257664,
+    "seed_20260927_internal": 0.00805498772544487,
+    "seed_20260927_terminal": 0.024392381663291537
+  },
+  "model_elapsed_seconds": 359.29,
+  "inference_backend": "cpu",
+  "labels_provided_to_model": false
+}

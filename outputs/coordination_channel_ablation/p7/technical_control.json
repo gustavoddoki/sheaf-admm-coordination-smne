@@ -1,0 +1,16 @@
+{
+  "changed_cell": 0,
+  "changed_node": 0,
+  "control": "single-view perturbation; all remote logits invariant with mask_policy=none",
+  "global_recipients": [
+    0,
+    9,
+    18
+  ],
+  "local_recipients": [
+    0
+  ],
+  "max_remote_logit_delta_no_admm": 0.0,
+  "status": "PASS",
+  "view_reconstruction_matches_canonical": true
+}

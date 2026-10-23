@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "phase": "p7",
+  "families": 64,
+  "trajectories": 72,
+  "pass_artifacts": 576,
+  "verified_sidecars": 576,
+  "family_result_rows": 4608,
+  "commit_events": 56498,
+  "routed_view_updates": 119242,
+  "technical_channel_control": {
+    "changed_cell": 0,
+    "changed_node": 0,
+    "control": "single-view perturbation; all remote logits invariant with mask_policy=none",
+    "global_recipients": [
+      0,
+      9,
+      18
+    ],
+    "local_recipients": [
+      0
+    ],
+    "max_remote_logit_delta_no_admm": 0.0,
+    "status": "PASS",
+    "view_reconstruction_matches_canonical": true
+  },
+  "pause_resume_equivalence": null,
+  "config_sha256": "bfbe6591c3912fe05ba4e1ee3ef205a4565f562b199e87fa6c0827018bd1ba91",
+  "dataset_manifest_sha256": "4993c25229a42e0f46a8463e57d8f32049a54fa34a3ad8afd1fc5cfb38bd101c",
+  "audit_scope": "complete pass hashes, exact local/global routing, no unauthorized view updates, frozen pre-commit scores, paired family rows"
+}

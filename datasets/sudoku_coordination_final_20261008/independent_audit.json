@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "families": 136,
+  "variants": 816,
+  "independent_uniqueness_checks": 816,
+  "clue_levels": [
+    32,
+    40,
+    48
+  ],
+  "distributions": [
+    "balanced",
+    "concentrated"
+  ],
+  "common_hidden_cells": 20,
+  "prior_solution_exclusions_verified": 136,
+  "artifact_hashes_verified": 147,
+  "manifest_sha256": "4993c25229a42e0f46a8463e57d8f32049a54fa34a3ad8afd1fc5cfb38bd101c",
+  "config_sha256": "df4bda054c425daf8ac9b16334e423bd79773a4d64a2a197715b3c3cfc62d493"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS_COMPLETED_PREFIX",
+  "run_dir": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68",
+  "config_sha256": "ac4fee68c5a42d3dcb18affc5cde80844d9625aed6b77f8bd1a76f377e83a8a1",
+  "runner_sha256": "d53bb506ea11b1abe4ddcc7a93724a9a096449c069a6920ec86c35f770ef6f3a",
+  "communication_core_sha256": "f9626b1bdd830b4e50ee4c38eadd06c34313b6656961735cadc4677067e7690e",
+  "protocol_sha256": "cb81afc8b552e447d704285087e68cc04e861ed4424deb0c56ed4a50ba0c09a8",
+  "evaluation_manifest_sha256": "6e5ffb8051c39dcb8bd7bcb575b74b4c94392d98ff8d2fc416b7c33412a0a567",
+  "families": 64,
+  "seeds": [
+    123,
+    456,
+    789,
+    1011,
+    1213,
+    20260927
+  ],
+  "arms": [
+    "internal",
+    "terminal"
+  ],
+  "conditions": [
+    "full_100",
+    "random_75_r0",
+    "random_75_r1",
+    "random_75_r2",
+    "random_50_r0",
+    "random_50_r1",
+    "random_50_r2",
+    "none_0"
+  ],
+  "expected_and_verified_pass_artifacts": 1472,
+  "completed_condition_blocks": 92,
+  "verified_pass_sidecar_hashes": 1472,
+  "verified_checkpoint_hashes": 12,
+  "verified_no_message_passes": 176,
+  "csv_counts": null,
+  "scope_note": "No-ADMM-message arms still share discrete commits through the board."
+}

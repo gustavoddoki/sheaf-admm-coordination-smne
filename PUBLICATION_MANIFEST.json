@@ -1,0 +1,3693 @@
+{
+  "date": "2026-10-23",
+  "scope": "Seleção P5/P7/P8, sem checkpoints e trajetórias completas",
+  "normalized_metadata": [
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/config.json",
+      "original_sha256": "41077ae102ecbb2d9f5b09301fcf60cfe833aa033a56345c0877ce391ad8e367",
+      "change": "Caminho absoluto da estação substituído pelo caminho relativo do projeto; dados numéricos preservados."
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/config.json",
+      "original_sha256": "152660c7c158eac394cd15135695ed06a3749b3b1cea17e1d8c8c69dc2e5161d",
+      "change": "Caminho absoluto da estação substituído pelo caminho relativo do projeto; dados numéricos preservados."
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/config.json",
+      "original_sha256": "91b9f808a0ca13ec1a0f9bd4de47ae2a17d9f398114ab2466e22b29a983f84e3",
+      "change": "Caminho absoluto da estação substituído pelo caminho relativo do projeto; dados numéricos preservados."
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/audit.json",
+      "original_sha256": "83d39ac0f103f2e0f8062efc7aeda3138614ba27a7874041f5399cfc80a8e34c",
+      "change": "Caminho absoluto da estação substituído pelo caminho relativo do projeto; dados numéricos preservados."
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/partial_audit.json",
+      "original_sha256": "55b3117d72093a8c002cbaaf0a8cb4671cebf1292d3048323cc780229633b43b",
+      "change": "Caminho absoluto da estação substituído pelo caminho relativo do projeto; dados numéricos preservados."
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 83,
+      "sha256": "e8a525eed6045569a932536641b1c8bf1dcc6750d3913d1edd4e3e131ad4a604"
+    },
+    {
+      "path": "configs/config.yaml",
+      "bytes": 2218,
+      "sha256": "746d423c753d637661d42d28b9b5bc8cb3a648d46bcef35d19e96df81eb97bcf"
+    },
+    {
+      "path": "configs/experiment/maze_mpnn.yaml",
+      "bytes": 983,
+      "sha256": "06b5afe6b6b0afbab61c92e687d86012525b52fbcbe48ee6d9a6ec182c59a371"
+    },
+    {
+      "path": "configs/experiment/maze_sheaf.yaml",
+      "bytes": 1269,
+      "sha256": "752c6456d7e8007cd8ac2f559de37f9524b707f939ddcd311fd0f764975dfc72"
+    },
+    {
+      "path": "configs/experiment/mnist_mpnn.yaml",
+      "bytes": 739,
+      "sha256": "b09c0fc7eee66f25ffb1d675f3e6083f7bdb76bf63be6bcbccb144cdb4728a1d"
+    },
+    {
+      "path": "configs/experiment/mnist_sheaf.yaml",
+      "bytes": 1180,
+      "sha256": "c7d04c063977dd9b809ca8f7b875676686d4fcc9a866f87f6a05dc45a150732e"
+    },
+    {
+      "path": "configs/experiment/sudoku_mpnn.yaml",
+      "bytes": 696,
+      "sha256": "f1d5a91878ecf60b8550bac58986ba2f7b7a397b06e528fc5a76bbc2fc9b29f1"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf.yaml",
+      "bytes": 1029,
+      "sha256": "c571b483624ac30b3e62ba606e2001aec87f461e0e4f9690585a5ec1029b4dd0"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_9x9_assignment_no_projection_clean.yaml",
+      "bytes": 1238,
+      "sha256": "5f8cb91d5fd3259949b3024e79373e6eedad79aaf567e77200da7eefb768a728"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_9x9_baseline_clean.yaml",
+      "bytes": 985,
+      "sha256": "1ecae757b43c70cc31e06d814eb5ad5ea3fd8546ec4627214d7ba784647605e6"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_9x9_clue_lock_clean.yaml",
+      "bytes": 1211,
+      "sha256": "f02d8d4464f3b4c480a1b7dd858312ef697201de0b5bb122fda5671e7be49d95"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_9x9_constraint_aware_clean.yaml",
+      "bytes": 1302,
+      "sha256": "273eb32170d6207e86fee1ef1e4610056f04c01eab7f0368e42ae74712e91be7"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_9x9_constraint_aware_fixed_clean.yaml",
+      "bytes": 1113,
+      "sha256": "ae7838ec245248efdab51b3b7c4d55a2d958ba30c50eab570301536ce7a28a6e"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_9x9_decoder_only_sinkhorn_clean.yaml",
+      "bytes": 1242,
+      "sha256": "efdba097c06083def1f865897190fc9a04779a13b2e838eed14d5ed17c9fc203"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_9x9_soft_alldifferent_clean.yaml",
+      "bytes": 1142,
+      "sha256": "482f78b2b5c721eed429081a136f3caccc2cbdbc6a3b0d04a295276eb310f1ab"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_lora.yaml",
+      "bytes": 896,
+      "sha256": "f27ed91cc56635da837b2dcd3b7a369f26ec5b922a19baf470a177dbbf27d321"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_official_pilot.yaml",
+      "bytes": 989,
+      "sha256": "dbd2042d6ea3051e90a0067f904b4e295d0386e202238bc91171fae247dfdbc3"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_16x16.yaml",
+      "bytes": 1022,
+      "sha256": "2d8c1df45cf35e90d613c61c23016254908fe3d193214cef9de33884699d2815"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_4x4.yaml",
+      "bytes": 990,
+      "sha256": "345d5b842e1d411da40e37beb9aa96ba04ff4b82cbe54160db886e97ff84fbe5"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_4x4_assignment_readout.yaml",
+      "bytes": 1007,
+      "sha256": "4447b72b1a363c03f59ff120caeeee2f00c2d3617fc80b65c69301c73e05be78"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_4x4_internal_sinkhorn.yaml",
+      "bytes": 1093,
+      "sha256": "772d1ba2cb27660d22be529719d2d77604575c81c92dbd84a29a44bfd3a95add"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_9x9.yaml",
+      "bytes": 1012,
+      "sha256": "32fe05949b90588f1850081bb332747d8aec1ed05755f7a8046056f19e0c0189"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_9x9_assignment_readout.yaml",
+      "bytes": 1003,
+      "sha256": "ed24850156356f157ed7624c90387fcd9ff74c70d4462f28e13689459afea1d0"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_9x9_internal_sinkhorn.yaml",
+      "bytes": 1080,
+      "sha256": "bdfc178be52b2a76c41d5fb0c60ebadd57986ed3933c37e0c64e845556841c3a"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_9x9_internal_sinkhorn_exact_consensus.yaml",
+      "bytes": 1086,
+      "sha256": "ae75835f8be32e3221c0a465c212729db66530ce4a68eab7ba65d7b56887b1cc"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_9x9_internal_sinkhorn_variable_horizon.yaml",
+      "bytes": 1119,
+      "sha256": "4b3b6135f003bcf5ccf28f2a71ab7c5e6d30ae6329f7138369879e4637b7af28"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_parametric_9x9_sinkhorn.yaml",
+      "bytes": 1107,
+      "sha256": "f5e1b0bab819dc10c200422bbe18ba2f72e39951cc09439a7fb55c7ae2141947"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_16x16_dev.yaml",
+      "bytes": 1197,
+      "sha256": "2e6999072e42875db75ea04070b66aa647ca7d511ab10cbb06e12e9288bc14a1"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_16x16_pilot.yaml",
+      "bytes": 1221,
+      "sha256": "94bff137bec78357f316abe7727fd0e616bcba7517477d47a18be9836e97c2e2"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_16x16_variable_dev.yaml",
+      "bytes": 1318,
+      "sha256": "2665d163718ca6392d5aef8bec57911cc8b63a754903349c7c81d5985339b094"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_4x4_clean.yaml",
+      "bytes": 1155,
+      "sha256": "22e8597c2e95a2cb92fc23547071a40e7ffdcece71849a1fa27549036a7315dd"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_4x4_horizon40_clean.yaml",
+      "bytes": 1157,
+      "sha256": "4302a7fc39bbc7b0c36ae93f2fc8bade9f81bfbafcfda901bedad9407ef4db16"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_9x9_clean.yaml",
+      "bytes": 1158,
+      "sha256": "8bcd7f7255002273a706bf3f2a7d29bd3391caa84e0955b9d74b8680a74061cf"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_9x9_horizon40_clean.yaml",
+      "bytes": 1204,
+      "sha256": "91fa44d5991fee3d30ae0599a29ab492d8d65c41a395a37b0dafeac55a3c5c9a"
+    },
+    {
+      "path": "configs/experiment/sudoku_sheaf_size_equivariant_9x9_matched_dev.yaml",
+      "bytes": 1154,
+      "sha256": "d3a09f0278d2ae7f3a157ef1215554d2051ca7c8f03cdb20ee2d767596a15d52"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/artifact_hashes.json",
+      "bytes": 11046,
+      "sha256": "e4244c590b22656556cfd03b28c5aef98c60b7bb143ed317a430a799884cece1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/artifact_hashes.json.sha256",
+      "bytes": 66,
+      "sha256": "0fcd97bce321d72e0c4471807cbf9ab933e3c829eff87ee8f7ef325848c2f331"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/config.json",
+      "bytes": 287,
+      "sha256": "a2243dde259dffdc6393ad7d2f2ed709e0926c259b1bb021dcf0481633391f81"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0000.json",
+      "bytes": 661,
+      "sha256": "f5226a070e7bd05649b86ab42e45c73a7b6a34ed95319e98d7d02e254009f5db"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0000.json.sha256",
+      "bytes": 66,
+      "sha256": "489bd9f7218974fd415dee24872f7f139c7307ca5236a7b9fb9c4ae84c850293"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0001.json",
+      "bytes": 662,
+      "sha256": "8e09005fb0df45d74c4842a52fab75186758829d6c5944617c41e1a6716080d8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0001.json.sha256",
+      "bytes": 66,
+      "sha256": "00ff73ed25b8e661b8a7c4c9305ac8fa18bc10f11a9d07bf475e339f3cf10c42"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0002.json",
+      "bytes": 660,
+      "sha256": "9db0525265827b4dece65c3b96cf1acddd9fdcc44c2c24ea30722a3f8a92ce82"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0002.json.sha256",
+      "bytes": 66,
+      "sha256": "87afb0e5321c1b5b04ee9354b6804aec72d58c1af1724d50f374e888a6594fdc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0003.json",
+      "bytes": 663,
+      "sha256": "3fba895c4806aafe7c4bedddd40ca6437cc07257ff60eee2771e341cde00f626"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0003.json.sha256",
+      "bytes": 66,
+      "sha256": "e6bb1006014e1203ef686ba4e11848b745a4aeadf54bff9f7eef4febd94e4695"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0004.json",
+      "bytes": 661,
+      "sha256": "32031c2855552a9981140d225a5514e19289baa54dd408cc432f2a49a2c1df0d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0004.json.sha256",
+      "bytes": 66,
+      "sha256": "f179824fb4530936b3132e3da7c800cb35d47f1fc9120deaa24acc108dc69db9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0005.json",
+      "bytes": 660,
+      "sha256": "b3e400569b9da513842ce3c5d7343938be9f8ea055791785155714d4a4a97686"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0005.json.sha256",
+      "bytes": 66,
+      "sha256": "1a7e0ec09978f3d53f37414b82fd9761065de1ec685ab48bc0810b25158cc594"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0006.json",
+      "bytes": 660,
+      "sha256": "7c72d48d73b5d4be7b7212997c2ea18e4b84b4efa8249d1b90d3c919a62e3957"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0006.json.sha256",
+      "bytes": 66,
+      "sha256": "3a4ec94f9d1ceed555fad80db1c6c8e4eb788f149e10a44aa2159f9fb0208b68"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0007.json",
+      "bytes": 661,
+      "sha256": "3c398a73f8c9f57fd168fde77e3e9d188ca5fb51392e3b120af87306063674eb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0007.json.sha256",
+      "bytes": 66,
+      "sha256": "a843a9230e78cf32ebb24c2d060ecfcc0441ed6e0d6ae2c6e20c863ae9931b98"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0008.json",
+      "bytes": 660,
+      "sha256": "ba46ae2287e829d286b1d506d11df02a819d79ca728b427a88e0dc20870984d0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0008.json.sha256",
+      "bytes": 66,
+      "sha256": "ab5be10089732d80baf9f1f5fa556712f941101503dbee995113f3724d5db69c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0009.json",
+      "bytes": 660,
+      "sha256": "efff62d1260f1425b9afd6ef370bbb488166061accacb2b5b7f2a79100e06cac"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0009.json.sha256",
+      "bytes": 66,
+      "sha256": "b176e817d664e4f4bc998d4a5a239efa8186489d65f131e221a68175f3f742e2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0010.json",
+      "bytes": 661,
+      "sha256": "9f56584ef5da07251dd144552c147c00b5780a37a65659425a73067b64ea923f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0010.json.sha256",
+      "bytes": 66,
+      "sha256": "ac649ad7430d3da8eaf61f8cefddcf22523d7e796b866ea584de608bb4336d36"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0011.json",
+      "bytes": 662,
+      "sha256": "7beb95fb1b6543d257c88df021ae8eb91486438af185d9ce53bd94f0b1ffee0f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0011.json.sha256",
+      "bytes": 66,
+      "sha256": "fc5e076ccac8bbdfa4e0c07fa1572d8b8416eabff046d1bfaa8f78e7f62304a7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0012.json",
+      "bytes": 662,
+      "sha256": "f23be395938395866f2b17f063aa9775b9aa11c1ed6b1484e2cd04c68bbc7cc1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0012.json.sha256",
+      "bytes": 66,
+      "sha256": "e858e131338b67cb34cd63a880bf91e1dc1fb63e59e7464afeabf65a13ba8a4a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0013.json",
+      "bytes": 662,
+      "sha256": "a8fedc9f4fb7f77422ee744afd54cb5ab5f56a192e00621146b762fde0612630"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0013.json.sha256",
+      "bytes": 66,
+      "sha256": "cb6928f1c152001dbfa1b8bcc97390a6a221619fe43e2a6264389ebb72ca1dc0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0014.json",
+      "bytes": 661,
+      "sha256": "5a5a8f60ab5551782849b3c6b741e9db9e027cd0136d4f2a7e398937ba24207f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0014.json.sha256",
+      "bytes": 66,
+      "sha256": "859ad308354a87746324fabc4f19c3ae3601c35a6df653cb9c9984c0a4089fc3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0015.json",
+      "bytes": 662,
+      "sha256": "8edffd50ff835b050a59236c1407af561cd19ce357cc9abdd7fcfa3e7c8be115"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0015.json.sha256",
+      "bytes": 66,
+      "sha256": "e9c0e18de8a76c0836c7e8cf38d52673a80c2398f60a056b22a0c6dd84e76997"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0016.json",
+      "bytes": 661,
+      "sha256": "86be6ea7654ec0ea40fff886ccd98b1640fdf8cd796a359f9ea81f9684f09de0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0016.json.sha256",
+      "bytes": 66,
+      "sha256": "f835df340fc5a186d80c0535fca2f2571bb90119a846b316ccf02c1e8ee1f0f7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0017.json",
+      "bytes": 661,
+      "sha256": "1ff87d4af2859bf551913ecbab80b24937266db413f6c00d2ec5fd5da3b333d8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0017.json.sha256",
+      "bytes": 66,
+      "sha256": "26dfa9133c0980134aec550323717373276a2cec0083a850f05e298cd86d66b5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0018.json",
+      "bytes": 661,
+      "sha256": "6e469a420bd7338b2c0075ce7642fb1c1575e74cd4f1b78a2dab940817b64bb9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0018.json.sha256",
+      "bytes": 66,
+      "sha256": "4c7aeb2021e23dea9f0ccf79741eebadc438cb453bddc6e5c555d1be47a3bc2d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0019.json",
+      "bytes": 661,
+      "sha256": "6a55ed2329cff094a2a0ca42d23fcbb49260f048e2c3e1036d88ba9c59fbec97"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0019.json.sha256",
+      "bytes": 66,
+      "sha256": "d8fdf1f4e503117fc67170af4eda3d72fe62562af47118426fd33a94f301f0da"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0020.json",
+      "bytes": 661,
+      "sha256": "dd54e1697ea65c3ac39d7baff5cacbe9ea5fe73ad2ed5190c1a7292be85108e8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0020.json.sha256",
+      "bytes": 66,
+      "sha256": "8f7a69b4152f319b2095d565c6fd56e6bb9c1dd3a4aaa0c259345d5171845f45"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0021.json",
+      "bytes": 661,
+      "sha256": "28c2235e42ab4cdc98c518cf78606ea389a43e6538a08857bc670a4c9d087fb0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0021.json.sha256",
+      "bytes": 66,
+      "sha256": "a522b4f058a12fbf21b57cc15893e72a36db512d970eec87cbcfdf8e034f90b4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0022.json",
+      "bytes": 662,
+      "sha256": "d80cd0617775ed676b4832b01c2f4fb1fff5aaa44732f3c8e3d9d8879e1706d7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0022.json.sha256",
+      "bytes": 66,
+      "sha256": "9dbbf0d07c2d260a0617eb00f220a2b3b08da12d85d13d59a3705a73d47d4191"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0023.json",
+      "bytes": 661,
+      "sha256": "4d5fa1e5e5a147ddd34b0d40abeae3c24dfcf3c5600106db0fd3b75a09807eac"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0023.json.sha256",
+      "bytes": 66,
+      "sha256": "dcc681dfe43a8306ff884c7c00ea525e0e4bc194536a5b5581e10ff3364c2b1d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0024.json",
+      "bytes": 664,
+      "sha256": "fb60152d4713213165b2053246ded442653950112869c59c43e68a329d5e58bb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0024.json.sha256",
+      "bytes": 66,
+      "sha256": "d7f4a1838fc92ff757bbe7f810a5a28a63147812a033a1440222e22b548fb474"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0025.json",
+      "bytes": 662,
+      "sha256": "b0684cf5c75238af85b98ac000b6921bfbf9f2cdd8a0a0ed5d7dd2c5109e81f0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0025.json.sha256",
+      "bytes": 66,
+      "sha256": "959087e5ddc7bec1d9002f21ea4de65949546e44374313e9032109e35e016dba"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0026.json",
+      "bytes": 661,
+      "sha256": "3087a845d427aebee42042f454d154613861a8825cfdd32cd73f131d2f15d548"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0026.json.sha256",
+      "bytes": 66,
+      "sha256": "eb7f34c5015df60bcfd1c4b5dc86ea27ee5fa2b1e9b76c299052d18c07827daa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0027.json",
+      "bytes": 661,
+      "sha256": "d24db7a797e3ac7009dedb459323bbe1256eceef34243a44f1990c23e18efa26"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0027.json.sha256",
+      "bytes": 66,
+      "sha256": "05249fa39524c691ba864381975bca2b1a10f0439dbd9f359f61de19a1cdcd7b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0028.json",
+      "bytes": 661,
+      "sha256": "a3fef66e10333d76b9ffc03d8487418658879fbb5426aa185fc342c587559d00"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0028.json.sha256",
+      "bytes": 66,
+      "sha256": "6ded93817efaaac48dac435981459e8cd383ab0b349877ba56222bd13240f5c0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0029.json",
+      "bytes": 661,
+      "sha256": "77e60a45a78a809b42bbee866332441e6aa1d555ba60f18ca558ee1bee682da4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0029.json.sha256",
+      "bytes": 66,
+      "sha256": "9cf5b0c4575d2c7e3b3d8414affd6b30479f8cf75a82d40193a32a06b8623fba"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0030.json",
+      "bytes": 664,
+      "sha256": "269f8d9529deec83ae1d0f5463df9359dabee80a464fec23b906e08af697e1d7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0030.json.sha256",
+      "bytes": 66,
+      "sha256": "fe70d89af71200a5cfa14fe174923f1eb2ccecb901016cf527012bb632595bce"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0031.json",
+      "bytes": 661,
+      "sha256": "12f31c9877d0abe49e2067793d69e700703adf9baff7278acd54a4632ef83ea2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0031.json.sha256",
+      "bytes": 66,
+      "sha256": "8c6ccae4d434f3e8705342a1c2b88e539cab94f1fcda938abcb6a1149f70edc5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0032.json",
+      "bytes": 661,
+      "sha256": "ba2a986bfa7721795af60d4feb7f22507e50d76a72c51e39241ad05ee7e5641a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0032.json.sha256",
+      "bytes": 66,
+      "sha256": "f76b216040fd711a4dc5002acb61284dd6b4a745e6760769310cf581ecc820a5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0033.json",
+      "bytes": 661,
+      "sha256": "55da26edb4c8ef4dea36e6e58a2837c5d66a71299bcaf002f5b5985dd1ded56e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0033.json.sha256",
+      "bytes": 66,
+      "sha256": "f839b72add7e376202b5b909c31f09251cf0181ec388e2291a69e9194aead43b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0034.json",
+      "bytes": 661,
+      "sha256": "447885574903d0e445e4c754ae4c8155e0c4a02195a5add6795ef5c51d46483c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0034.json.sha256",
+      "bytes": 66,
+      "sha256": "a56afcb3f0bd642ccda2ef4e90e4c5e18bd58ca15f2b658a3a8701c7087d0efa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0035.json",
+      "bytes": 661,
+      "sha256": "9aeef8ee898fcb7c87ff148620977add3b05645fe399f2b2262749640919fc2f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0035.json.sha256",
+      "bytes": 66,
+      "sha256": "1731a6aaa1454e9c41e6be2c345f615a9bab9f8181b0252b3dc61e2ee67f9723"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0036.json",
+      "bytes": 662,
+      "sha256": "8704f905fa65900cd47397adbea8e43f9bb4f9d506def5c7e9222588d94d2995"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0036.json.sha256",
+      "bytes": 66,
+      "sha256": "f436a85b5fae8cf5a2b31eddd4d6b9c7761cad4347e605ad4b9ce69ebc3f8077"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0037.json",
+      "bytes": 661,
+      "sha256": "39c17faf5ab5ccf516e64d8dea36c681697a34eb1f59ff7a3dee9e93010cdfcc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0037.json.sha256",
+      "bytes": 66,
+      "sha256": "1a8e3e91c0cd45ab22f03a0da9a21c146010bed568834a49de051a4b0f2bf3d6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0038.json",
+      "bytes": 664,
+      "sha256": "2ab7ee73b0ae8b30d9ed1e7085df6adda1a7a2fcbd71bafbbedf5a11086b6dd5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0038.json.sha256",
+      "bytes": 66,
+      "sha256": "8021ce64a04f7719b39d56d84daa8d81bc02ab6defaa99f3512e56927fe252db"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0039.json",
+      "bytes": 663,
+      "sha256": "c84a027fe7652b3bbb2e0c10005c3a288876cffa7faf3dc0d9eadff9d454f271"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0039.json.sha256",
+      "bytes": 66,
+      "sha256": "648a183e05c026d7b9ab8ff5e84fc1072879c470dc0947722d19e601b92fff1c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0040.json",
+      "bytes": 662,
+      "sha256": "5c53fa5cfb7c64c62c21f4369828627098309cf8fa7e7edff0c94a428cf136bd"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0040.json.sha256",
+      "bytes": 66,
+      "sha256": "c9402e5d134656ec41d0a8c51b055d29cd1b5901f0753ac7b129a581ba95534a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0041.json",
+      "bytes": 661,
+      "sha256": "835822ec789d5eb74a4fa78392a4e4bd5f528b01f3832041762fcea0c9f586c6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0041.json.sha256",
+      "bytes": 66,
+      "sha256": "c1328a3beb1c1551f4462edd00f6f514b9328c3d6398d6585466d2c6904c1978"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0042.json",
+      "bytes": 663,
+      "sha256": "509bc1f7578c06b20fd620aa1bdba210949c39dd75998bfea29344c855119b03"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0042.json.sha256",
+      "bytes": 66,
+      "sha256": "091a082616fce61172d57650ab1b5b7a0f2888cdd175157cd8eb0985fa6656d1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0043.json",
+      "bytes": 661,
+      "sha256": "818cc9499492ec7d1d4ba2480c667ca7a38a021b1aab7c3515b357cade63495b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0043.json.sha256",
+      "bytes": 66,
+      "sha256": "482b67ef46123aa39be1a1abfb5217a43ec0372a6eeedfc9920ab5e69f578181"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0044.json",
+      "bytes": 663,
+      "sha256": "1d5ba8c4efddf618ea29bdac801da73bb21906f2fa49abccef6a88ffc1965c38"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0044.json.sha256",
+      "bytes": 66,
+      "sha256": "c4ee0147856983e7af550de317306567252e5c28fcdbc09fa9a547db21076cbc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0045.json",
+      "bytes": 661,
+      "sha256": "9f540c38365a4ca097f283a3a4e2de9a1af0103182f34bfd0837e6574794cf9c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0045.json.sha256",
+      "bytes": 66,
+      "sha256": "852d60ab762b3ef32bd97e9b01496e61df3a3b24eeb1c25b36e666aa43199866"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0046.json",
+      "bytes": 663,
+      "sha256": "0c7d378a9c240717d6241a4ceb71113b76332d4effcc937be551b1d4508397a5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0046.json.sha256",
+      "bytes": 66,
+      "sha256": "c890d978b8a9d84fda458fa2f4808432d536f3c08448116eacdb1336f5ceff86"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0047.json",
+      "bytes": 661,
+      "sha256": "c5fb53b81484bf9965d1acb405d1e8fb107d2a6a741139ed741b83f01e5bbc01"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0047.json.sha256",
+      "bytes": 66,
+      "sha256": "3801b134859481a2187280343d139606dba6a7bfd596fd65b2d302145732e7de"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0048.json",
+      "bytes": 664,
+      "sha256": "33ae0d3ec750df52bcc5c366d4c80a4c2089df79003bf673fea689cdb18b3116"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0048.json.sha256",
+      "bytes": 66,
+      "sha256": "66bf03a0ac7d5660ca4d2244ff6c54bb64ba0ff7324897ef24559dab02eb8fe8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0049.json",
+      "bytes": 661,
+      "sha256": "e9d75e79033a3990ff619d1991cfa7d35dba6a878b174b8d0cb266900ace6f95"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0049.json.sha256",
+      "bytes": 66,
+      "sha256": "89695a22779493b3a9c53e95b0fb9ef8af7c6612ca60dcde00e6b95da3025fdd"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0050.json",
+      "bytes": 661,
+      "sha256": "ec0922e87a7469b492b1928561211745e119e7e7802cec29eb70a6cfe11c6b0f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0050.json.sha256",
+      "bytes": 66,
+      "sha256": "23d91c53a642b0daa2768f69086601834b86f1d6e8138020e69533d88537c232"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0051.json",
+      "bytes": 661,
+      "sha256": "5e93096f47765abd5678cf1239af69f7c8dc32be88ef9c2076ba6c055e730671"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0051.json.sha256",
+      "bytes": 66,
+      "sha256": "c84d706c802caf43d080c17c6752e951f3f30df3db85fd41cf3afc5016b3098a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0052.json",
+      "bytes": 661,
+      "sha256": "496a1ffb2cc70c9c226cae8531ebfda5ab2e1a77722cc95d1667cce43ece161b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0052.json.sha256",
+      "bytes": 66,
+      "sha256": "bde40d5861a00838713addcab298ce84b7bbb5194d321ca8d17df4df770bca7c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0053.json",
+      "bytes": 661,
+      "sha256": "982935abbdcdda1673cf4814ff2d32803bfd3b74f56e9d61ef39df10421a7754"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0053.json.sha256",
+      "bytes": 66,
+      "sha256": "b02ee459de64a8008f89502f17e9427f7ff80cade01a9e10a78a8361e87530b6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0054.json",
+      "bytes": 661,
+      "sha256": "51a3058ddf90ac74ac72899dcc25dab535c7f04afcf95ce39ab85dafad493144"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0054.json.sha256",
+      "bytes": 66,
+      "sha256": "0cf9a328ee49e9fe8232b18b7b5d18fc26b1e60a620593bf67d6adaee22a4b5e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0055.json",
+      "bytes": 661,
+      "sha256": "47b6ad3b7633596dc4ccccf9ff22fdc9a04d98c13334d1c5b8ba1962dbb90306"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0055.json.sha256",
+      "bytes": 66,
+      "sha256": "ea05e537dc645bb2ce36331eefe34e5fc68a466291cd7a748a621baf8b583d5f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0056.json",
+      "bytes": 661,
+      "sha256": "b636e8dc3cd432ce69f0a56270cc717a78034b4fd07a62e27e2104d0f7503a50"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0056.json.sha256",
+      "bytes": 66,
+      "sha256": "d40c1d0fc56c8df44fb22de768c968e9bbeb5fc18b8f91e43a4515f4f18ef9b1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0057.json",
+      "bytes": 662,
+      "sha256": "d5fcc37eae5fbbc8f9618bbf896378a99feaaec88aaa091522cb917dbdf93675"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0057.json.sha256",
+      "bytes": 66,
+      "sha256": "21762ac77e6cf12b1189490662a24d679c640a58ab5b944ee34db6c572bb99fa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0058.json",
+      "bytes": 661,
+      "sha256": "4400d9707758dbce24436716fcbc991448938eb779ce7674e9d66dd3d3504195"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0058.json.sha256",
+      "bytes": 66,
+      "sha256": "eb6ee3cf79e47ffb55bf18b7bd1c13c300f15b63b14c712beca7712f569d0d8e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0059.json",
+      "bytes": 661,
+      "sha256": "f2befc82941f68d55fbff37dd1d9aceb48af71d894f5f490b7a1e1ed2257fc50"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0059.json.sha256",
+      "bytes": 66,
+      "sha256": "141a8e76ffe3b08504751173390fea67d6c5a76e29ab96d1894e38637fdb58d9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0060.json",
+      "bytes": 661,
+      "sha256": "2c9cfde2eabb47db74ee0ea5ba7607a1f846abd4c305cfacc661e898f88d79db"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0060.json.sha256",
+      "bytes": 66,
+      "sha256": "4e952495593f50db1c1bd32e684c35f2eb0838800a49d8b7218335ededdee822"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0061.json",
+      "bytes": 664,
+      "sha256": "0ba662ca7e233da7a4eee63fa5ed4824f43949600df4f07290c85f6f5e245e51"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0061.json.sha256",
+      "bytes": 66,
+      "sha256": "69c7a29399c95818dc001c85df3999846afa3362cfb1ff4e857e236188bf5197"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0062.json",
+      "bytes": 664,
+      "sha256": "3109af9fd9eb13823c13239ea8d3f171dea1289dfd2e831ef16159837ebca2ca"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0062.json.sha256",
+      "bytes": 66,
+      "sha256": "791ee684c194e9b21ae02c57dee90ca13b071efc12470f1dad6bd0d79cc99dbc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0063.json",
+      "bytes": 664,
+      "sha256": "cf37c5bb769c0c6ea9d323e4a6bace78ec2ef30542c7876ab33522023732c7f5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/families/family_0063.json.sha256",
+      "bytes": 66,
+      "sha256": "379754b9711badd876f1828f0a7fb5370daa7fbb858afb49df2032040549f139"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/paired_clue_manifest.json",
+      "bytes": 230809,
+      "sha256": "6e5ffb8051c39dcb8bd7bcb575b74b4c94392d98ff8d2fc416b7c33412a0a567"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/paired_clue_manifest.json.sha256",
+      "bytes": 66,
+      "sha256": "570f27f572e03490637ecc2a9f39c420d52112b74e0499d2dc92eb97055ea04d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/test_hard/all__group_indices.npy",
+      "bytes": 2180,
+      "sha256": "e2d4dbfc27369ee1d2ad2a5082aaa63ba1e4a6ffda9120eac01101ee40d90ef0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/test_hard/all__inputs.npy",
+      "bytes": 41600,
+      "sha256": "45d28c9319d6ad206990e3e1d37aa8a34304eeb8937336b6bf22f8c1f5b0ad89"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/test_hard/all__labels.npy",
+      "bytes": 41600,
+      "sha256": "6019b628d1dc99002c070225b3b0a2dc8d1691d77685b191d97c8ec802f5d8cc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/test_hard/all__puzzle_identifiers.npy",
+      "bytes": 2176,
+      "sha256": "b2e237dcf538ffd0c959e408be82af9e4ddad4ad29316ef45ebde523d1bbc4a3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/test_hard/all__puzzle_indices.npy",
+      "bytes": 2180,
+      "sha256": "e2d4dbfc27369ee1d2ad2a5082aaa63ba1e4a6ffda9120eac01101ee40d90ef0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_confirmation_20261007/test_hard/dataset.json",
+      "bytes": 286,
+      "sha256": "2abc42fbda7314157a85f74fb4cdaec2f2d7e4bd91b141387c9625bc19e64466"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/artifact_hashes.json",
+      "bytes": 20892,
+      "sha256": "cea2b489b2cc1205eae599b7002b197b25f1f0be9dbfd91bd87e30347af614db"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/artifact_hashes.json.sha256",
+      "bytes": 66,
+      "sha256": "a7301712868d5ff40770283d51b8ec768abb4820c2d20f35c611b2819eb72f5f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/config.json",
+      "bytes": 280,
+      "sha256": "4bc51e4d928ed740fa567dfc0bdaf0904992c073ec711d36f0e6b7a5af8b6721"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0000.json",
+      "bytes": 660,
+      "sha256": "810293c487c89f8043361a14a95f3c52abf024abc97ac2a0b1ce9227173ba0c4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0000.json.sha256",
+      "bytes": 66,
+      "sha256": "764cb0b98ca75d217736030330cd15e9e9c1d15251bf0ff74762d897179ef159"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0001.json",
+      "bytes": 660,
+      "sha256": "26d41e6c25c621ff446071e9de995ac2955018625c58e930e54fb7c0fd1b8204"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0001.json.sha256",
+      "bytes": 66,
+      "sha256": "71c47bf631fe1146c8598e0198ed3abed9f15948853faf2ab1d2e05f5830394b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0002.json",
+      "bytes": 661,
+      "sha256": "98b2a5f61998b41d0083c2367feacbd8ffa89bbcf590471b3deb302e8c536b98"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0002.json.sha256",
+      "bytes": 66,
+      "sha256": "a835d9e582fd4c214921775045226417d0c594824207e1e4265becaa4e304a05"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0003.json",
+      "bytes": 660,
+      "sha256": "9e3b892a1a8cb630b5e4938c04df2e3d03f3f0bb153be132fb42ce6fce2cbfeb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0003.json.sha256",
+      "bytes": 66,
+      "sha256": "184e0826b9ee9e3d91f36481ac60a8f384ae0c006ec215d8ea6de164acaedb42"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0004.json",
+      "bytes": 660,
+      "sha256": "c67ca91133a7c9614bdd2ae5be1b3f2d5197ba729904b8d24e2e7e1828d424c6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0004.json.sha256",
+      "bytes": 66,
+      "sha256": "8ec538533bf47f71c67ef6f9f16aa8efb982159a059d232a412d9ae41bad2620"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0005.json",
+      "bytes": 660,
+      "sha256": "500ee64d84cb5764e6b55155fc649e5e0c8b3a8b7dc1024103f0fbc7c798a533"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0005.json.sha256",
+      "bytes": 66,
+      "sha256": "cf8c2ada7985e903ac5c78a0f8815b731b7f64a3534cbef84d66b34e059473fa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0006.json",
+      "bytes": 660,
+      "sha256": "8b1daac3b39c5c2147055a9ce855ef7be7913ca6c5dbde53029d3292763777c6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0006.json.sha256",
+      "bytes": 66,
+      "sha256": "1f022796a2785345b107d055509216bbea782bdf2aba710c1f0b142fb1d8c4d9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0007.json",
+      "bytes": 660,
+      "sha256": "236bc8436ef73b13d9eb055dc7e53eb2a10104c773602626946ed61451039b13"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0007.json.sha256",
+      "bytes": 66,
+      "sha256": "3ca343826a3ace29bdfda1b0b4cd5354664fd1bb33f0d9deff5e1c75d56e0390"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0008.json",
+      "bytes": 660,
+      "sha256": "76995d3db3f7f9a54950e68e1a11099b84d6c284a45d31a6a73d4e1371ea3132"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0008.json.sha256",
+      "bytes": 66,
+      "sha256": "ebcbdc15ef04450aa817f9b14b7532df1dd6121b392379e67ee35a409dcc3bb2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0009.json",
+      "bytes": 660,
+      "sha256": "43717777b9c47bf0574967a005a46b0620ace1b4d900774f6bc134d6061a5bbb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0009.json.sha256",
+      "bytes": 66,
+      "sha256": "464e3ffb71d3c2da3242b6b2e01a47c8eb7ee7c99b65ae62c070b37560abea0a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0010.json",
+      "bytes": 662,
+      "sha256": "592593067bf17136770e22e201bc2b3835262ee18597cdb687605e593035184c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0010.json.sha256",
+      "bytes": 66,
+      "sha256": "2bb8c81da1d56931e7e3e00a593f1f9dcadb4bd18cb8b6b9d197bc122e4333f0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0011.json",
+      "bytes": 662,
+      "sha256": "5b5b702546a1060cce86b6cd421bed50a0bb21e89f23c81c41c16ff052aa965b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0011.json.sha256",
+      "bytes": 66,
+      "sha256": "b5bcaf4d3bf1cf86a3f5066a05735dcbac5a553486b745e4a88e99e7dc1648e3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0012.json",
+      "bytes": 661,
+      "sha256": "c41d42319c051a54ea824f3aa40604d00656e02cdbbce1336591bebc71fc889d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0012.json.sha256",
+      "bytes": 66,
+      "sha256": "b34efaf953ac21d4322df7dd1fc8594edfedc78d92001ce351b4d87b45119d2a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0013.json",
+      "bytes": 661,
+      "sha256": "a60cc4bea41d2222eb9bb5a65391bc99686590060f31cb7449084225e0d2b9d8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0013.json.sha256",
+      "bytes": 66,
+      "sha256": "a9f68033cad9a41e9f01926a1d74a4e1a6940ca0f2a32b22eb7b7ed4939e46f1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0014.json",
+      "bytes": 661,
+      "sha256": "84ed5eec43d4a88c83d5c7e9f08c04ddbfb27bdcd6fa8168ebc12e679bf58532"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0014.json.sha256",
+      "bytes": 66,
+      "sha256": "be150b9b4cee44a5dee7f09a81cd7806c8464276057ab18bf6b08092678cce36"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0015.json",
+      "bytes": 661,
+      "sha256": "19095c34e611d5eb96442bc7024c44497c19e54fdb71071a6a2c3bc9b06e02c5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0015.json.sha256",
+      "bytes": 66,
+      "sha256": "b6f6e81048ba92d3bc0e4604f7c3192199515155cf1d24b9e364261092247e8e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0016.json",
+      "bytes": 661,
+      "sha256": "a29d6d23ce3f40547fefa6f16b37d53782b21f6e9c070d866f55b6cc03551bcf"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0016.json.sha256",
+      "bytes": 66,
+      "sha256": "0cc1e64f6dc30cd818383faba3f955d87d16e6a62d855d7ae81b3abe8c89e547"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0017.json",
+      "bytes": 661,
+      "sha256": "f6682e95cf29c01efdda524853b1237e2d0d1523f60184bdc44fc944bc448cb9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0017.json.sha256",
+      "bytes": 66,
+      "sha256": "6d8c93769d6f33bc5b6e62e55073af06047d6bbff334c4094d5fff372ee60949"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0018.json",
+      "bytes": 664,
+      "sha256": "27eb7e30048fbad7c3c118828648390742484b1d1619243783da1347e4c6afe1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0018.json.sha256",
+      "bytes": 66,
+      "sha256": "63218bb663a63375afbada4a875d9ec48a7b8773ed1f9cb9180eb1995005fea4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0019.json",
+      "bytes": 662,
+      "sha256": "79965c6016412813f6aa8cb5877aa9e375c2ac242f94484026e523c73e43b680"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0019.json.sha256",
+      "bytes": 66,
+      "sha256": "a4df326ed5f0e5960705605651a448c3e82fa6a3972baba62eaaa6f628738b78"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0020.json",
+      "bytes": 662,
+      "sha256": "96a4c0136adacc4eafc3dcd3273412bc7c307d92330f74df8e153bc4655e9aab"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0020.json.sha256",
+      "bytes": 66,
+      "sha256": "d61131177576d4ef937a5fcec1e669d7f48da469eadb23fb7b1c4606106c85e8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0021.json",
+      "bytes": 664,
+      "sha256": "b940b384e5d556886c869da84c835a86c7363c352c656e43dc83b2b57b793013"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0021.json.sha256",
+      "bytes": 66,
+      "sha256": "4cfe486c05e679180fdfbcf4ebfd06d00ae87baa23d7afa3b836fbeb471cf8b4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0022.json",
+      "bytes": 664,
+      "sha256": "fd83ecf1b3abcaea5b4028ad1b207d28d9a99df98ddf7b19f4305ba2a0dcbab5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0022.json.sha256",
+      "bytes": 66,
+      "sha256": "18df92332fac978f94513e71e66677275a4588de03aec5d25c184f0c07f55ad7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0023.json",
+      "bytes": 664,
+      "sha256": "eb356cec7ad2433215c131a86caf3bf3d12fc03843560261d627bf2a4e874a52"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0023.json.sha256",
+      "bytes": 66,
+      "sha256": "e99bfcfbd64091744142dcb5e65bd7ee6e06cac5c5ce9617a5dcbdee08b7e285"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0024.json",
+      "bytes": 661,
+      "sha256": "598e11372996a4aea07839bf4b7d44e1df134daf9458cd3870744110dcabe6e5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0024.json.sha256",
+      "bytes": 66,
+      "sha256": "67c5e6e9981dd4f9aeef10ae4376e70b3de42cb12ae20e15ee9b43dd1d9794aa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0025.json",
+      "bytes": 663,
+      "sha256": "44d7b7b03f6d7fbf0ac20906ac2e6bb2f18c7ff906521aecf0faac544e1c7886"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0025.json.sha256",
+      "bytes": 66,
+      "sha256": "9cc655b10b779df6dfec6571df9efa6eedfd283e623c880a1b23d037ae8ccdd5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0026.json",
+      "bytes": 661,
+      "sha256": "bcf3bec20bb65732ff22214c71a91a8068ef5d8f6410cb07c438c07a99225bc9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0026.json.sha256",
+      "bytes": 66,
+      "sha256": "2dd7ae76d81dc4b56da26a650adaa84c25a19b44586bc3c933dd675a4a5157cb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0027.json",
+      "bytes": 661,
+      "sha256": "3dd73036108f41b35dca94082cabbedbc7c692c8e625446211eb2de0552e2fd2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0027.json.sha256",
+      "bytes": 66,
+      "sha256": "82ad11a70058b21e34e405591ff6865b86f8492961708faf394508fcc1b67f4c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0028.json",
+      "bytes": 661,
+      "sha256": "468ed537c47dcfb2b55dae65b814ce7224b10f4c52a21aa778562ea00be086fa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0028.json.sha256",
+      "bytes": 66,
+      "sha256": "609d4a719ab07b4f70e9e8e817e30e42498c7bebbd5898a00496c3b50e41b504"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0029.json",
+      "bytes": 662,
+      "sha256": "22365fbd377f3899bba07d6a62e6bf26a00d51de04e10d33ee070ded8d59ffe7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0029.json.sha256",
+      "bytes": 66,
+      "sha256": "c203e8cd2f4be790bc4a663e66e7966fb6854fa1f0fb869fe3ef5b00146cf1cc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0030.json",
+      "bytes": 661,
+      "sha256": "436d8116575c2b298183c461a14f0ce15c350afcb8a6a6057f5fbff4d0dd0894"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0030.json.sha256",
+      "bytes": 66,
+      "sha256": "a0c186c69a1dc8ecda844f3bc628f98a667d2a43685f28a1c70df537c4bbb1ff"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0031.json",
+      "bytes": 663,
+      "sha256": "2199eee34f2476294c211bd7fea3c32e0fef8af5082a7fa49f9ea3fb96ea6111"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0031.json.sha256",
+      "bytes": 66,
+      "sha256": "15a7270d43a97dcbec5754a25581129c3e2aa21cbeaf1640099c3f6ca92a2f00"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0032.json",
+      "bytes": 661,
+      "sha256": "94ae7bc153e8af59b38164fdf5a102ad26d0f3b030a1403e8d02119074b927aa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0032.json.sha256",
+      "bytes": 66,
+      "sha256": "c89a8cdee01e15d7734e42e5c38c2ba5758e8ad320538cd87821a85698de714c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0033.json",
+      "bytes": 661,
+      "sha256": "deb98c75cf9c56bc5e7a74589b2dc4bd087e2c402d0ef9582dd0e68d853b9ab0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0033.json.sha256",
+      "bytes": 66,
+      "sha256": "1aa9a016e88663da824f8481bd79f6929034446528b6af87c2fa69de1cecc661"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0034.json",
+      "bytes": 661,
+      "sha256": "685172af0c54e7c71c0b30c3db15114a18c60ba4163cbffbe1556e85d3e36800"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0034.json.sha256",
+      "bytes": 66,
+      "sha256": "8bd69e64dac7138795f4d4aedd34d90701cd5678a80258f61eeda55a074c8f4a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0035.json",
+      "bytes": 662,
+      "sha256": "206136a6caa14620c53b9c2ae33a95feaa8ea82da8636c2a9bb6cc8c9dc944f9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0035.json.sha256",
+      "bytes": 66,
+      "sha256": "02bb1f9c3d8b242dd963996e9d5a517f843b1cafd3b27028d10ac3070175c68c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0036.json",
+      "bytes": 661,
+      "sha256": "c0e2622166c68509a803a5cf19084e0b26b32e60dffae0df297e328b464f6eb5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0036.json.sha256",
+      "bytes": 66,
+      "sha256": "c6fe9928f613225fe0b46020785b6d72f0b0c83208703cd99481f6ce008dd124"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0037.json",
+      "bytes": 661,
+      "sha256": "6accbfc305db8f157b7ba23d028e17d15b0cf4f438fef989033f3f0e393a45de"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0037.json.sha256",
+      "bytes": 66,
+      "sha256": "ad8630cc486e9f7381eafda8d9453edfc1af58240f10236d418e9cb906189870"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0038.json",
+      "bytes": 662,
+      "sha256": "79a8f223aa870071c0af2f825bf5c559818103c8ecbc6b6bec6f195147a7fd93"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0038.json.sha256",
+      "bytes": 66,
+      "sha256": "d96b649f88b2d0e87ddc13d6f67696aeef8229c503413527e8df5a2ed8bb0fd3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0039.json",
+      "bytes": 661,
+      "sha256": "aee5b6a364d13fdfb1991457d9fedf33a8851a5b014e21c664c77e6665f6792d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0039.json.sha256",
+      "bytes": 66,
+      "sha256": "4c1f8d14d76608690fc6a61fb4780dc33200ee6528411f3ff6f0f63cf10c1678"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0040.json",
+      "bytes": 661,
+      "sha256": "814cea1b5e5b8ce1557c1980908dbb400047ba0b5c63d18fe67d956eeaaad1c1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0040.json.sha256",
+      "bytes": 66,
+      "sha256": "2b2de468ce6b95523616a10cb0376b1ef3e96f9fe9a5a655d1b05bb35eb52667"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0041.json",
+      "bytes": 661,
+      "sha256": "1b7fe7d576cc993acf66a8b5622a30f2c14641628ee93834c384551eba85b3ef"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0041.json.sha256",
+      "bytes": 66,
+      "sha256": "42daa16142a952653988cc8bee0f834bae3eaf988b39e48d2bf7a9571c1eac73"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0042.json",
+      "bytes": 661,
+      "sha256": "be58161625c2dd280e6631b5689913cf3b1424cca2181040d7e473bb513102be"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0042.json.sha256",
+      "bytes": 66,
+      "sha256": "a435fc9671333c5f1bef8c1a60d0b9810df027e3206b2f01eb9cb6c14998161c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0043.json",
+      "bytes": 664,
+      "sha256": "a4201e1cd09833e5781a5eae26c18f86644b0526db295bb86b0ed994f99cebda"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0043.json.sha256",
+      "bytes": 66,
+      "sha256": "be34163f555c9ea328986c56e88a9a4e036346da2add6700382f45ef3254a1e8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0044.json",
+      "bytes": 662,
+      "sha256": "2a3cc99e9b0c3b139b5b57727c6f20c04124c89145f6e6139228609ab80c9541"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0044.json.sha256",
+      "bytes": 66,
+      "sha256": "6516c069db1f6655b57d26a1419feb0de4e0aa396b4ad94547517262cea69b7e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0045.json",
+      "bytes": 661,
+      "sha256": "57cffef4665b8fb7a1abe98ef8c650c71c9d9aae23e929cc920a224700f8d554"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0045.json.sha256",
+      "bytes": 66,
+      "sha256": "08515b0e6fc348be1a19f95b3e19293a57a686483ce4755ae1c5496226d033b7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0046.json",
+      "bytes": 662,
+      "sha256": "8ac5324587ead0b5faf29ad552b72d13a883ebdd437d987aa2a64ab47c98ee5f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0046.json.sha256",
+      "bytes": 66,
+      "sha256": "1b062b6226f876342b87e7ec65683ad08b3b4a2dcb6bc1923e7eaf445c975143"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0047.json",
+      "bytes": 661,
+      "sha256": "3b90e0a8b94e6c64655f87b8f4bdd64f6966408ddeedb46cecb74de5643034c1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0047.json.sha256",
+      "bytes": 66,
+      "sha256": "dedc0e60dd3fdba620552503718ade1f974d9c41fa285ddf40fd33afaa4b5107"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0048.json",
+      "bytes": 661,
+      "sha256": "b2f50912a9d00b615ed8bbd6385dfbd7f5c7f14531db5cb05d508f05337936a5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0048.json.sha256",
+      "bytes": 66,
+      "sha256": "f95bb89c0b46e3ab06e71a719840409e1e1c3bfff2fc5fda096dc3b90e7261f5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0049.json",
+      "bytes": 663,
+      "sha256": "6347fb6eeb96a13f0e7261babd923a028317527a82224c4be4876488f46b3754"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0049.json.sha256",
+      "bytes": 66,
+      "sha256": "7ebd1422d3a65bce6ce9b84645347d9baa7b26bfa4f1cc0bcb9049a6057dcd57"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0050.json",
+      "bytes": 661,
+      "sha256": "d700e49033d5aadd77583c771ee1b4a1203569ee638ca812ed16740f3ccac23b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0050.json.sha256",
+      "bytes": 66,
+      "sha256": "14423ddbd0cddff1e701d3fa9d2e07a9d0d4d0b2c7c6a3e3795fa911a6d51d63"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0051.json",
+      "bytes": 663,
+      "sha256": "e785f5058aa400909b689e1ba4bfb003969f5f0f6c159f07654e5a29c5d679e4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0051.json.sha256",
+      "bytes": 66,
+      "sha256": "2124a30a0eb5b313133369058f656aeab7f6c65ccd0b58ea042e0808b50e691a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0052.json",
+      "bytes": 661,
+      "sha256": "1e5f17a9ffaa9e1030e4e2def40917814e64351f15e39dd0eeea29183c8202ff"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0052.json.sha256",
+      "bytes": 66,
+      "sha256": "5505cf1e1397c6f68398927fb94ff52b4d86f62c933c883b9c532bd5fbf3a2ad"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0053.json",
+      "bytes": 662,
+      "sha256": "c1ebf93ee55120da8b53ee8cf62e963d1f48ff8bc04034e135706d1a23cb8ffa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0053.json.sha256",
+      "bytes": 66,
+      "sha256": "b874db86022b02b856ace55fcbcf73dc0cbf9aad04f777b87a51b1dca69f6bf6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0054.json",
+      "bytes": 662,
+      "sha256": "b8a4aa04d9db65532333581d18373bb9fe29f676de31bfe39ca1fb2e3b61e438"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0054.json.sha256",
+      "bytes": 66,
+      "sha256": "edac379a67fa71a5c097add48de6f656eb4fdc74b3fcdf0c5c43bf29e6e6db7b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0055.json",
+      "bytes": 663,
+      "sha256": "293a92e6749b1ca671bf69e198321ab9c4915ade928c8ae1115e41d790705863"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0055.json.sha256",
+      "bytes": 66,
+      "sha256": "a11c2f10ba15007c981b4f31632a3b2543423f02688e655cbf53e170d46a4090"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0056.json",
+      "bytes": 661,
+      "sha256": "968672e9b8c500682a4113dc7006c3a22342188a31a48f4c4ac89437d6b44d69"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0056.json.sha256",
+      "bytes": 66,
+      "sha256": "e6bd1840b1e51572940054db480fbd1efe57b82ac0872f24604789522b10ed3b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0057.json",
+      "bytes": 662,
+      "sha256": "707c33e0e8243cb9e268bdeb1a978432907994341232eba0e34d281dd9f6652b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0057.json.sha256",
+      "bytes": 66,
+      "sha256": "1a192051b15a1752241d5d62b3bf157187a2e984073d0cb68f969fbd9bc90ae1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0058.json",
+      "bytes": 662,
+      "sha256": "c0e2adb5ce9717650633d162b4901a1a8c83373ae1420c98fd59b754ee719208"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0058.json.sha256",
+      "bytes": 66,
+      "sha256": "f4478ea39c72cec060f32dac72247c4c1f304f12195c6e699b39e2a398a8550a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0059.json",
+      "bytes": 663,
+      "sha256": "38b2366bbaeba0e6b6ee7bd2484b209a09414aff67983c129c8401e3e4a55693"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0059.json.sha256",
+      "bytes": 66,
+      "sha256": "259f8de7af8bf82dbe4449197b3976b1abddc60de18a55a9e554959c1fac1c3b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0060.json",
+      "bytes": 661,
+      "sha256": "682f200efbea4ca12b1c2f5a1c8ce994090fd176b4f60dae932ced8a1e37229f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0060.json.sha256",
+      "bytes": 66,
+      "sha256": "7d8ceedb653679ccd2373e75da4b2d11e30782ab689628a8bc9d63d9dd7ef003"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0061.json",
+      "bytes": 663,
+      "sha256": "5592c17d4b463c8ea1c234b2b45d35307dfde4c6d2cb54d4af21078a70994fe0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0061.json.sha256",
+      "bytes": 66,
+      "sha256": "83388fa34e3c0a8e76ee793afee51357459cdb589813d07bbf0e9d292f2f8c32"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0062.json",
+      "bytes": 662,
+      "sha256": "184ed28fb640c78731f9cff99ac82c9f4a9b381e5deb307bbfd024d35560f075"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0062.json.sha256",
+      "bytes": 66,
+      "sha256": "7fc3ced412eb475f34f3b928e6525ea178ab10652b1c9936faa3d3d535bdedc5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0063.json",
+      "bytes": 664,
+      "sha256": "f37229bf0aef9bd238371944a902d5bbbb50c1650ea7ed1804a5b7483eea663b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0063.json.sha256",
+      "bytes": 66,
+      "sha256": "d3565189d5598a6cee8e480d39ce54eb1aa8b510740c4b6649d87c7764c14fb6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0064.json",
+      "bytes": 661,
+      "sha256": "a42afda6cd33257b8c5bc98092d60a59848c31df0832ac6e9a717ac66eae2b3d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0064.json.sha256",
+      "bytes": 66,
+      "sha256": "4f9741ba7445e97738f3b29b70474689b5ce8083857e1556353bf07972f2638b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0065.json",
+      "bytes": 661,
+      "sha256": "279b8d8d700534534a628f17ea038c3b8febfc64111bfa72099813e0fa6aedca"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0065.json.sha256",
+      "bytes": 66,
+      "sha256": "53d73e681759161bf522fac253d330acff12a89700e5540137f2fa7a1354965c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0066.json",
+      "bytes": 662,
+      "sha256": "c1e439ad8fd48f7df3e670bfd337b0b07f4c30345a05712806ac2ea3340e3990"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0066.json.sha256",
+      "bytes": 66,
+      "sha256": "ecdb864ebea92027d6ee89c509018ab67b5d837bf2fad33b7bdc299c3ee3eba8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0067.json",
+      "bytes": 661,
+      "sha256": "ca5d488761139578f24dbcca8ed356f367924864385988b9a29ed24ea30a3fc4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0067.json.sha256",
+      "bytes": 66,
+      "sha256": "20e45f18ecba0347804fae0703694e516ca087f002e6994a45f10485cce1844d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0068.json",
+      "bytes": 663,
+      "sha256": "3c628ea71bb6c6b26605c9b415cdec8b2f5a6043eebf78b225ee5efbd362580f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0068.json.sha256",
+      "bytes": 66,
+      "sha256": "820680d944a748e0db868409658a99472ef4a87671ba4a38db0f40701cb2621d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0069.json",
+      "bytes": 661,
+      "sha256": "7c84915a3ffcdcaf478462eb8bdf6f63514564b7f1d80ad960de453fbbb26e2a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0069.json.sha256",
+      "bytes": 66,
+      "sha256": "7305742449d0d4af7e59fd6f512921dbfdc87d27d35a13bffce227aaec623326"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0070.json",
+      "bytes": 662,
+      "sha256": "66756fd135d2286eadbc05c081a9bf71bbff9565258b96b6361f84e00ec49711"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0070.json.sha256",
+      "bytes": 66,
+      "sha256": "17e7b36669099b54581fa73622e4cf4937c3003811d96b267cd211a9536abbef"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0071.json",
+      "bytes": 661,
+      "sha256": "06eec941e40d34be94e85cd64ab8b134d4b4eb832010fed86ae9ae0071a084d8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0071.json.sha256",
+      "bytes": 66,
+      "sha256": "d5b170c5b27ec00247f8550938dcc3a3abd76f39391a7a58cd86ac032ce51a7d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0072.json",
+      "bytes": 661,
+      "sha256": "1b73176bf9306499996c139f11be4faf1fcf8305e0fb556faf504b2877a236a2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0072.json.sha256",
+      "bytes": 66,
+      "sha256": "b14c1b16758d4165e5a6f5dfa96a67136a6c8c8b9fd2e3563a117c48d254ebd8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0073.json",
+      "bytes": 661,
+      "sha256": "55d8cebee5bf8c7a51866becbffd224212ba505fc795ba2e17eff167f56e8430"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0073.json.sha256",
+      "bytes": 66,
+      "sha256": "d4e0df861a69e92628145dd6842d758c3d0e907d6bbc2025f9232e30aa0562f4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0074.json",
+      "bytes": 663,
+      "sha256": "7402283c75f512fb19e4d8f737f1884580a40e7622e5f63bcf81de02b6ec9617"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0074.json.sha256",
+      "bytes": 66,
+      "sha256": "d23afdbbe2a66033c28c614901b77ed4b319592e2ef9324362a664dd46382a3e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0075.json",
+      "bytes": 663,
+      "sha256": "aadb21da1d6f38fc66584a1dea48a89470b47fa079320ddb54ab7eb8f991d781"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0075.json.sha256",
+      "bytes": 66,
+      "sha256": "e80657d257489e93ad2a0942786de5f26030905efcd3aa946565461798789baf"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0076.json",
+      "bytes": 663,
+      "sha256": "40d90d335c5e5daa85da0c3a4ba7ee6939fafc3d5bd887a4af2c91987b078fbe"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0076.json.sha256",
+      "bytes": 66,
+      "sha256": "96acaa4e0ad68a4b2b92e8816783643737f886521a4f5ee5e40ccde4746d053b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0077.json",
+      "bytes": 661,
+      "sha256": "c33642ca5166b2f4a0b3b0a7c60d2791a36299e5e5881c2e45e5593310a2883a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0077.json.sha256",
+      "bytes": 66,
+      "sha256": "9fb6e60a2065248983b5034c89ceed849f868468b02652e382068a96f22d0ba5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0078.json",
+      "bytes": 661,
+      "sha256": "93085b3825f06af2f58c547b89b08a3e430be91302a6537c0903a904673de64d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0078.json.sha256",
+      "bytes": 66,
+      "sha256": "4f431630ad1b252256b87e27d8513c887416e2476f17125d4c7046aefc3677e5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0079.json",
+      "bytes": 661,
+      "sha256": "a3e7246afef6ba8ad536f80a15ad07113af64f2242efd1c345ecaf102415b0db"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0079.json.sha256",
+      "bytes": 66,
+      "sha256": "46a241a579521aea2a637204d3c231f45a3e6e47120d229332a91a61e637e4e8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0080.json",
+      "bytes": 661,
+      "sha256": "9ca2966baa87b0df5a09ea669dcf79f4b19c14ed718bfddb57eeb63f4b49a38b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0080.json.sha256",
+      "bytes": 66,
+      "sha256": "c4fd68db31725e556a20f5b430b73aa9bcb4d86f52e980e59d350d0c218b30a5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0081.json",
+      "bytes": 662,
+      "sha256": "4fd1300342f238b2aa4af1133bdca1ac86272d4c41160d409a66c5ce39434f0c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0081.json.sha256",
+      "bytes": 66,
+      "sha256": "248afb834bc9521d6d42076ab8605403ab29d8f0edb7c068274f4690497ad927"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0082.json",
+      "bytes": 661,
+      "sha256": "a720db399a550af68acc10c34208c8ed52054a3dc97a3ce80d28c90c55112606"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0082.json.sha256",
+      "bytes": 66,
+      "sha256": "acf51045b1ac62e0201518fe985ddbe35e732acdc8d5c6e7348fce45bcf6555e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0083.json",
+      "bytes": 662,
+      "sha256": "ec1f5a5dc9187aa362f8552386681cda6e7c218176d7fe2cc6163e65ece83aad"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0083.json.sha256",
+      "bytes": 66,
+      "sha256": "07da81227a2a18d928fe8c99fcbc0913cba8b2839b91880e23505d41aeddb033"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0084.json",
+      "bytes": 664,
+      "sha256": "16ecc64b8a3f6dc3dc2c3e95921d52f7cf6563814dca39cf0b7754e03837b049"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0084.json.sha256",
+      "bytes": 66,
+      "sha256": "4c729ed93b63b063297cb7970bac8523ffb5d153e9d6fca57295653482c967a6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0085.json",
+      "bytes": 661,
+      "sha256": "91c97493f93822010df70e53c5eb0342ce3d0190360fd64161044ad6c055afde"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0085.json.sha256",
+      "bytes": 66,
+      "sha256": "c0bb0b9a0184071a65647f238622790ee4ee5b6aa2a96f01fa77a59c7d88e581"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0086.json",
+      "bytes": 661,
+      "sha256": "85fa68342ddc6476d21b154340c75a642ed71921df7cff3f7360694a9c2c0209"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0086.json.sha256",
+      "bytes": 66,
+      "sha256": "61e67f4a432e3f803b8ce2d9b9925fe05fce686ecd8178b01770d4cebb26e781"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0087.json",
+      "bytes": 661,
+      "sha256": "521ffa1fcf805394bbced6c9068257c988b30947e10695e4a2b6f5f5160f1667"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0087.json.sha256",
+      "bytes": 66,
+      "sha256": "47570c48b8a31cb2fa55b0aa09854ba40bdc0bf01a6f9a1d9ae559b2dd178d26"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0088.json",
+      "bytes": 663,
+      "sha256": "83020eb3cf0a254a4671f61a0077d39068a9f3e5761e7e3ba25848af26c1e881"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0088.json.sha256",
+      "bytes": 66,
+      "sha256": "018909db9bff5fa508c625f0cff625dbb4ca711160ecbc8859ef5f89e86d4286"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0089.json",
+      "bytes": 661,
+      "sha256": "b191e41736b4df9ce27964be81c9e033395f16102101fc5ff1f7ad011dba60d4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0089.json.sha256",
+      "bytes": 66,
+      "sha256": "f948f865324bae868205026ac8b2db856a8d0dc25563ae5decf7844a1a52076a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0090.json",
+      "bytes": 662,
+      "sha256": "e89f95618853974c3431aeaef492a681730a0b36e2ce16b5aac9769f044d46d8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0090.json.sha256",
+      "bytes": 66,
+      "sha256": "4848e20bfda026ff29436be36d11fd9ed5032d90b14fbe110d4c87514062d9f6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0091.json",
+      "bytes": 662,
+      "sha256": "3b2d9b6ad85139d99e36aa6dcfe3210eccf03571e25cbb233cb3d5807f9953bb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0091.json.sha256",
+      "bytes": 66,
+      "sha256": "f4932ea4dff23e660ccfb2e7541e3bf19e4748332d64b65cf3d06f0c10a6a690"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0092.json",
+      "bytes": 661,
+      "sha256": "d1f197e073ab0ffd78a0b1a2e0f4688cea16c3ab7c426bcd072c59338f8da8a9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0092.json.sha256",
+      "bytes": 66,
+      "sha256": "1a3b72ebcdb2aefd8ec8a3dedbeaf1a96d1e8bd9dc522c53288026f67d4c7d00"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0093.json",
+      "bytes": 663,
+      "sha256": "176fb9734ba8b1d9374be985885a742c5fb8e1f9558a901ebaddda59a4f81836"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0093.json.sha256",
+      "bytes": 66,
+      "sha256": "da59a28e643bb07e83fd5925369e1bb745b724a99737b2a6c273e6883fd978bf"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0094.json",
+      "bytes": 661,
+      "sha256": "717de8f2c7347ea652251ba8b5a65624d9dfbcc2adf8aef5a568d703b1bcdeba"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0094.json.sha256",
+      "bytes": 66,
+      "sha256": "0767896c3ae7f4f95790b669e828bb7ee3801d68b48d08aceebffe6750c23811"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0095.json",
+      "bytes": 661,
+      "sha256": "6bb7fb8c3f0a5a8e7809341727a6a9bab953e2c380dacc5a3ebe71c0b40a5017"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0095.json.sha256",
+      "bytes": 66,
+      "sha256": "0a99c8a7f2fb92f1c1fc551bbde24b5fd7d6197859c7e0d4fa3dc10251b2d42d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0096.json",
+      "bytes": 661,
+      "sha256": "d9a8d762e95d9adf467d3828a8d61d0442774dac60698e68c6b16ca13653431c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0096.json.sha256",
+      "bytes": 66,
+      "sha256": "b57bb3fd77bfca2d7e566554646e4cc41524ffb89a69801c4734a6719eeeb8aa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0097.json",
+      "bytes": 662,
+      "sha256": "5a9dcf97bf82befd7d5323863ce86b1a15760e95573d3e12a6647806b048e31f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0097.json.sha256",
+      "bytes": 66,
+      "sha256": "a27dab2506ce311bcfc7e00f097bd1e65ac2cdc74eaa01d101bc099425c8ae43"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0098.json",
+      "bytes": 661,
+      "sha256": "2c0093488638721097006db6571b1994965308c89b4431f5392a0c4a510b55c3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0098.json.sha256",
+      "bytes": 66,
+      "sha256": "2a486556b95b407213bbbab021fd2fecec27f1d8d79de6f94f60070d32d96ca1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0099.json",
+      "bytes": 662,
+      "sha256": "9fc1a27a422adc86bb875b2b7785ffd419ef5d10e29792ef3ae2e02d43717299"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0099.json.sha256",
+      "bytes": 66,
+      "sha256": "c720fe9fc7b86808bd979d148fec9eca3b90993f7df8b291df7e81cf13f5fc1e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0100.json",
+      "bytes": 662,
+      "sha256": "d827bfd8934abb394de324792b0e6d7c8463845de3a773e78d4c7a444634e14d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0100.json.sha256",
+      "bytes": 66,
+      "sha256": "813a6f06fdef9c4cb28e2d58ef79d2006ffd160b71a032e688c273b2ef88739b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0101.json",
+      "bytes": 662,
+      "sha256": "92105b12da8a8be072257a6bc1807a0f6563a3501cc4e000d0615dc74cecce1b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0101.json.sha256",
+      "bytes": 66,
+      "sha256": "6b30ad89610a56d10ccbac1e1199b4747e3191ddcc14d78668af21eb4e4c94b2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0102.json",
+      "bytes": 664,
+      "sha256": "b7a2bc7d46ef3908e47becd1dd19493c778ca87a81e118b76e3f3965a2ac973a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0102.json.sha256",
+      "bytes": 66,
+      "sha256": "1bd1af83c5eaa64d0ce3ff73cd754c8bbf572aa5997cb1a89ccb800718c72ff8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0103.json",
+      "bytes": 663,
+      "sha256": "1d04c369449ad06c5e42a08d41c39091997f9e43c3eb2f772d8191c4bce60c8a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0103.json.sha256",
+      "bytes": 66,
+      "sha256": "03ed90aa62fbd4ee8738b91fc18acc745dea5c0b0cf02594c9e7d96f0b2688d0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0104.json",
+      "bytes": 662,
+      "sha256": "3f943d93b82c553a0c49e190d6c85a4ec0cd6fcad25a372c42e72301a6dc1d40"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0104.json.sha256",
+      "bytes": 66,
+      "sha256": "e96e33a8ac4d9e63d19c64c21c2c7a6bb44a0cf311707fb872e76f5c3d65c664"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0105.json",
+      "bytes": 662,
+      "sha256": "bebc28b42edd340f884d57987ac3be6fffdede58b0b6f8e65ac8c311a0257a8f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0105.json.sha256",
+      "bytes": 66,
+      "sha256": "e2a3ecb299ab855e2b8e1d7173631d862241dbb12e93c1aed8683fabda9c1a4e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0106.json",
+      "bytes": 664,
+      "sha256": "5a8b037b1ed7db0750fca0a6727679475a4b668986eed254434bdb56706e2254"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0106.json.sha256",
+      "bytes": 66,
+      "sha256": "8fba533ca22a4b842f9301dc9df57d6150b37f90cf62145f2e85646bb95b8c21"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0107.json",
+      "bytes": 662,
+      "sha256": "7c8126e170156c069e3ff93d40af277f8ab76c34a25ee8c6b94d9c52058f719b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0107.json.sha256",
+      "bytes": 66,
+      "sha256": "a9bf3b926ed5c46911917e39c9175e8844552fd125eac5e15b2cb537b55108c9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0108.json",
+      "bytes": 665,
+      "sha256": "a7444e2b1ee0caa2fdfb5202675087880cfba538f9a592cee808658b8134029d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0108.json.sha256",
+      "bytes": 66,
+      "sha256": "19ae035e9492ba065e32c902dae5276929fc377847dddac5b560ade0b8799d27"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0109.json",
+      "bytes": 664,
+      "sha256": "bd5f607141eb16d7b8aa971cd04f1450062bcbd144a6d23a8340ef7cc0431621"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0109.json.sha256",
+      "bytes": 66,
+      "sha256": "0c5627ddfa63750f294fdb167e030b8cf20ce373854c839ea6a3e8415ad98683"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0110.json",
+      "bytes": 663,
+      "sha256": "10c024c414ca387691cbf54a9a63f67c43f6a9da13f49ec5018e90c631476d99"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0110.json.sha256",
+      "bytes": 66,
+      "sha256": "2a909a562fffbf2b491fdf72004bb7f51bb8809b4ab1f21743f5aa5cba22c555"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0111.json",
+      "bytes": 662,
+      "sha256": "30fafe9da37d99d72bd8ed217c99b6fb27bf25bc1b95839fa57e6a9ef16f6835"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0111.json.sha256",
+      "bytes": 66,
+      "sha256": "c0095b396d9b61b38dd100c94e36873dcbeb27b89f3ea75d011bb3621824f355"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0112.json",
+      "bytes": 662,
+      "sha256": "a1da4810be1219da59f69d300f52d3e372e8f90f0f37b95db345d88a658a9313"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0112.json.sha256",
+      "bytes": 66,
+      "sha256": "2fa198a32a9c5df142cdb1b5c8d06a1089d29c2c9f9e4cf9b013d57a1df72d52"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0113.json",
+      "bytes": 662,
+      "sha256": "88640378cac41b10cba75858597a4c3e9d0c792bd7a086909cd12e4cb806e8b6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0113.json.sha256",
+      "bytes": 66,
+      "sha256": "a09c4686a4ce44890091ce6a83543c891cfa64c1276272ad9505a3766746faaf"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0114.json",
+      "bytes": 662,
+      "sha256": "f4f2f2d291ab59b3c9062a72c283b09facfa2f7ceb4fb8e73dd941db0fc66102"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0114.json.sha256",
+      "bytes": 66,
+      "sha256": "50b9c2e36dcd77327e1cad07e9af6de289aab43bffcdcb53e8bad976c84a6950"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0115.json",
+      "bytes": 662,
+      "sha256": "19c2be73df6716ef45ff80c6b56727ea619b9ded75be829b4cfd386343f2f7f0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0115.json.sha256",
+      "bytes": 66,
+      "sha256": "3cf960b65700b9f9546ddc9ba5bf692633c53c8f94751161af7c2b2a9102c812"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0116.json",
+      "bytes": 662,
+      "sha256": "1ad1707e15358a26699be6bef849f5f0dfa4c5239bf98882e738cdc558b38777"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0116.json.sha256",
+      "bytes": 66,
+      "sha256": "73f2059ccbbd58130a32df7a9ac86d0cd17b672eca5842163bad16bfb099916f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0117.json",
+      "bytes": 662,
+      "sha256": "4736b0fc5ad2fc7ecf4b47c0a6c75c42108f511265a54ecb1a658a182dcc5c14"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0117.json.sha256",
+      "bytes": 66,
+      "sha256": "61084e2c482f6244fab85bee1cb776d136f2dd6c21cb5bb2bb871c4389e80259"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0118.json",
+      "bytes": 663,
+      "sha256": "3c29d250207ad529b36268ebd8c0e71ee74f8de19769ed5adb3cac328837133b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0118.json.sha256",
+      "bytes": 66,
+      "sha256": "3ba7ac075387b6eedaa4f8e9f1da51b639379ff15f3f0e6b6c7e031f679bff46"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0119.json",
+      "bytes": 662,
+      "sha256": "c8d0fe056f9e76c13f79b480523e50c37db662aaeeaaedd317bf347951d6dc39"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0119.json.sha256",
+      "bytes": 66,
+      "sha256": "ff01233afcf870c59f6dd3774d8aa29f0733cb32bb25ace9632ad84f9272afb9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0120.json",
+      "bytes": 662,
+      "sha256": "693647ad1e639abe7cf3bab5c194890e6b152575f6c2edf38d612d9b3faad5c0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0120.json.sha256",
+      "bytes": 66,
+      "sha256": "269cc55d0a0e17e7cdb1bf04a1b75a9ab1978d34910650376815beb6fe2d5f66"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0121.json",
+      "bytes": 662,
+      "sha256": "753206fc484538a6fdaf97df3b570d423fb4d12bcd8f4a564efff86aeadbbf79"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0121.json.sha256",
+      "bytes": 66,
+      "sha256": "38fea39d66d12df405deb07911f1b40ead58848bdb98fe7fab2dc303d3704b13"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0122.json",
+      "bytes": 662,
+      "sha256": "c443d2993bc8cd765f1b6b96fd512429e972d4bead66000d5cee3529ff6c473c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0122.json.sha256",
+      "bytes": 66,
+      "sha256": "8320bc8a7c409d8204db0842f0ca6d9e508aefb18e78da8efb1b1694ab1633ec"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0123.json",
+      "bytes": 662,
+      "sha256": "b60e821d4c44cbfd3d764e70f912352c055a157766575d3a396ebeb8cbe67adb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0123.json.sha256",
+      "bytes": 66,
+      "sha256": "ab50acd4eda455b8e2b7822c775c04a93020e5c260c84180b52b9f41ae4848b4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0124.json",
+      "bytes": 663,
+      "sha256": "f0aff106c70332913e605ce88496cade68ceb3d7e74e654713a1f2a62a726a5e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0124.json.sha256",
+      "bytes": 66,
+      "sha256": "af9280778fe86c3408a75ce329bed17f63af22f4ac8c37460549b4d1d224457e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0125.json",
+      "bytes": 664,
+      "sha256": "6b867ec1264620e2c70c9b93ce649216ab54de7ec3ff5d3c26bcacfe247f0e19"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0125.json.sha256",
+      "bytes": 66,
+      "sha256": "b9d8cf3d171920ed57a30783a9b0a312ddb289a75b57e30c51ee05b4975fe2a9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0126.json",
+      "bytes": 662,
+      "sha256": "7a43f5d1c03a0338f1f948171b6827d1ad669e95608d32e45b90330cec16267f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0126.json.sha256",
+      "bytes": 66,
+      "sha256": "37e1c30f8421fdf913356ace5ce82da83362072d41f9bb11c415ca627c6ead6f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0127.json",
+      "bytes": 662,
+      "sha256": "382fe953644c8501f31ab2f2134f3bed8054c6a3947759896c6f4ec8078fc964"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0127.json.sha256",
+      "bytes": 66,
+      "sha256": "f1fdab6caa4b202f1984fc89c9c01f6ca659cc9198578acc3ca136bdfcfa7c18"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0128.json",
+      "bytes": 665,
+      "sha256": "fe4efbf0ff6ec8508d08b2c896e2fbbf0f5eb9272e302d7f3911666220bebdaa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0128.json.sha256",
+      "bytes": 66,
+      "sha256": "2974c4acd3d051cb5279014e34de99fa65e2b44dbd8f6a2f1eeed7949d0de02e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0129.json",
+      "bytes": 662,
+      "sha256": "1a24a4939c6c1890666571f33a2c1f01bb94e1175d7c9b566406a562a6062f9d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0129.json.sha256",
+      "bytes": 66,
+      "sha256": "34163a1985240ce6cd2ba44014081fcf3690bd2349a0579f348106003a1e1121"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0130.json",
+      "bytes": 665,
+      "sha256": "1ac54d276676a2a2325db45fe4200e263ea328d6a972b8414b072962e82c783a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0130.json.sha256",
+      "bytes": 66,
+      "sha256": "9d2b86510a2a6a38694a94718ee6fd7628786ee78c873e85863477f0979562e2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0131.json",
+      "bytes": 663,
+      "sha256": "832bac8310bfc3df579f45668fa70d8dda22025781ba0a9d0d3b88a38c09a591"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0131.json.sha256",
+      "bytes": 66,
+      "sha256": "5726db19f9505a7fa06bada4540178adffaf287deb235799cda3fecbdc219323"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0132.json",
+      "bytes": 662,
+      "sha256": "fdc877d9525529707b94d25c3eaef071caf8f858328ea258b51bb8d0ac4cbac4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0132.json.sha256",
+      "bytes": 66,
+      "sha256": "84cc36d68239fd087177c906763470b57e98387c56c7656f524b0e7213495092"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0133.json",
+      "bytes": 665,
+      "sha256": "f167a94149330576df96a3a64c98b0bff3a41a878857f7b1705d59bd2a322127"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0133.json.sha256",
+      "bytes": 66,
+      "sha256": "d12b2a88a1b8dd10749d464d568b338b1724ad7620a028f73ec1c9666e5ddfd1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0134.json",
+      "bytes": 662,
+      "sha256": "cf67ccc24f6f823e317ebff3596f01ec7b4d15517de57e0679d1cee92b39b9cc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0134.json.sha256",
+      "bytes": 66,
+      "sha256": "b3405fafb31b4a1bc1bc4bc83af8b257733f4ae9ab8d76df5841246d60edf739"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0135.json",
+      "bytes": 663,
+      "sha256": "86567ecfe04a136d5a43ecd6b18954a84afe01294202bfa4fd5d83ad069499a1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/families/family_0135.json.sha256",
+      "bytes": 66,
+      "sha256": "5d9102f77745fa74f019c5d40afbc73e48aaa16159f046dd23054ce9a86643f4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/frozen_build_config.json",
+      "bytes": 818,
+      "sha256": "df4bda054c425daf8ac9b16334e423bd79773a4d64a2a197715b3c3cfc62d493"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/frozen_build_config.json.sha256",
+      "bytes": 66,
+      "sha256": "f6e808c9e7f737ba618060af561ac68ca04da6b42d731c487ebf7cf063a81b6e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/independent_audit.json",
+      "bytes": 512,
+      "sha256": "c09a505d49f01a37099eac5089c03022472664051cc81fc6656a21c39868fb04"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/paired_clue_manifest.json",
+      "bytes": 357850,
+      "sha256": "4993c25229a42e0f46a8463e57d8f32049a54fa34a3ad8afd1fc5cfb38bd101c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/paired_clue_manifest.json.sha256",
+      "bytes": 66,
+      "sha256": "94b5dd6aad9a0a9d9011961c7e4fd707d24db291c584d13a8874f5aa43ed67c5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/test_hard/all__group_indices.npy",
+      "bytes": 3396,
+      "sha256": "06d0b2c5d3b6ec82a00e70bce15663a1aef4af88b01a418a01121924250c8005"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/test_hard/all__inputs.npy",
+      "bytes": 66224,
+      "sha256": "bbb030659f940d984d08d25c3e00bd4d42f9e1e0412f25ca497396934e530dd9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/test_hard/all__labels.npy",
+      "bytes": 66224,
+      "sha256": "4cb8211e67ba3184deaaed83395fe21f57e6ee2a057c0eb10c39b46cedd65826"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/test_hard/all__puzzle_identifiers.npy",
+      "bytes": 3392,
+      "sha256": "d27655dc76e7086c3c7ce0092571056f86ffdf57b0291b2a7a63426b81b38e30"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/test_hard/all__puzzle_indices.npy",
+      "bytes": 3396,
+      "sha256": "06d0b2c5d3b6ec82a00e70bce15663a1aef4af88b01a418a01121924250c8005"
+    },
+    {
+      "path": "datasets/sudoku_coordination_final_20261008/test_hard/dataset.json",
+      "bytes": 286,
+      "sha256": "f351d61b4b6bcfce0717447a09d8ce2e39401dcf5c9432c797f53e81e851545b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/artifact_hashes.json",
+      "bytes": 10528,
+      "sha256": "56dbf408446d02aa4166d4a49a8bae6a98690f9200d14038933e302d9041cf0f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/artifact_hashes.json.sha256",
+      "bytes": 66,
+      "sha256": "5e854fedcf668b7c1db8c878726880830c2e1f361db5b5cc1c164330f8fd3dbd"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/config.json",
+      "bytes": 280,
+      "sha256": "cb727c91367f77d373aab8bebbeda5fc8610175fa48b5a7b6c40d53ec5572987"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0000.json",
+      "bytes": 660,
+      "sha256": "1763c9167e46b58bb3678774f6aadbfc7806c30b03320b9ddb62e81935374d7e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0000.json.sha256",
+      "bytes": 66,
+      "sha256": "f5b28fc154a1546472d4bbc7d6e4d4177943b911189dd42e5945a302490bacf9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0001.json",
+      "bytes": 661,
+      "sha256": "c5fb852e46100f9081026f996201b505ca5523d6e41ffeb49be2b15163151bfa"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0001.json.sha256",
+      "bytes": 66,
+      "sha256": "f72587272122c7b50835b11c6c45efd7c2ba5957e56c077b31bcdf0b81d4b64c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0002.json",
+      "bytes": 660,
+      "sha256": "7aa25d848c6e7e0f42bd62c7feeecf18772a322ef1aab12c64a148d7d6a6a113"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0002.json.sha256",
+      "bytes": 66,
+      "sha256": "954b16f64512449329217378a7ee74b4f335608f00bbafc1d12c6f00fe9fc155"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0003.json",
+      "bytes": 660,
+      "sha256": "aa3a0a61bbd24e27e1513a730ffda39f4b687f6b3965f4da7c05c28801460ee6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0003.json.sha256",
+      "bytes": 66,
+      "sha256": "fd3bebd378535c4afc4ec324cb5bb34829123ccdc06f4cbbb687280bf1ab6703"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0004.json",
+      "bytes": 660,
+      "sha256": "4436e6e8c85e70581247b4d4b3710cd888b22635c6a4972b33ca9bdc3dafb66d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0004.json.sha256",
+      "bytes": 66,
+      "sha256": "7dbff04793a43facb07fd4bf988beaf69561f0b6e6c7fa5674c35b3879466435"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0005.json",
+      "bytes": 661,
+      "sha256": "cc9de4265cc8113837e666d420f36b20c90499b7b494bbb3353eb057c45c08df"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0005.json.sha256",
+      "bytes": 66,
+      "sha256": "54f97256d47d7e1ad16f69ecd3d65c6c7df08271245ddc7f06a3042af358cbb3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0006.json",
+      "bytes": 660,
+      "sha256": "9ad1388bffa40b04954cb047bfa53d1b73e53b65ed2b336be5f6c6d11b0c2cc8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0006.json.sha256",
+      "bytes": 66,
+      "sha256": "bbe68888c528d36bbeadb60e9ca9a9a4fcd01f03a86f943bd3eb4141deaed58e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0007.json",
+      "bytes": 661,
+      "sha256": "ad729d6a53eb044ba4b1d5347c2f9b8023acc83dc90ef3019a1b0438cf2af937"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0007.json.sha256",
+      "bytes": 66,
+      "sha256": "f1419ade0d293f40a8bff11e33711cd950b88b711ff4881dedb30afa2fb09140"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0008.json",
+      "bytes": 661,
+      "sha256": "851f12503bbb82d830ccbb3380555b85e8239ff8d397464236152350eeaae1b4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0008.json.sha256",
+      "bytes": 66,
+      "sha256": "492a48e9b6f3b08dd87366ff585f625693125920340375a17dc7098da3a5730a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0009.json",
+      "bytes": 660,
+      "sha256": "8cc4fa43ba3b309c1956231ba8565ea19fb14f2d345f045e60e41f75594e6e96"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0009.json.sha256",
+      "bytes": 66,
+      "sha256": "95334d09f9664cfaa40e8a6ca97cf31b7ebe8f6cd75d3fbdedbccf876442a519"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0010.json",
+      "bytes": 664,
+      "sha256": "48101fff56cda88ced6292f971e52040234e69d97b96290e5abc5df34accf870"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0010.json.sha256",
+      "bytes": 66,
+      "sha256": "089ed0926805ae810ba2dfded8f0e8aca49bf81f5950f24467828dba1f3f7877"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0011.json",
+      "bytes": 661,
+      "sha256": "34a1948310fe0ec64d57b4099e889410d5907e309e336d255604dbb20359d8e7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0011.json.sha256",
+      "bytes": 66,
+      "sha256": "0b712aab73f894fe9b38855be9dfa217f87173b37cc910503b61fe84d9d09531"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0012.json",
+      "bytes": 662,
+      "sha256": "5a9d5ed8f75777744953c1976bcc355f7f6fb94302aaf57cefad7785ee311946"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0012.json.sha256",
+      "bytes": 66,
+      "sha256": "7f3158b18be48471ddff42dce2e027454a4b9f55803b799117cf16aad8b54602"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0013.json",
+      "bytes": 662,
+      "sha256": "24eb9ccb39cfac7ef9db2473ceeb11f0a28229084c4d31c3f600a7a034b21b8a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0013.json.sha256",
+      "bytes": 66,
+      "sha256": "c2bc617d98e1e6a34a03bc377f01b88530d29a8d2aa2d2b727ce912aa03e060e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0014.json",
+      "bytes": 663,
+      "sha256": "239df3edf5b675089c75e44da322c4d01b2e8f33a1980d0c6fd204fee19d8f1f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0014.json.sha256",
+      "bytes": 66,
+      "sha256": "4ff920acf8354f319c4744c41ac481887698eb01465653ce45657c3b7e057060"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0015.json",
+      "bytes": 661,
+      "sha256": "ca3a5c69de2f09ce5704f1ad05e8421d51a01f240cb9906f56a6ca4089ebad43"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0015.json.sha256",
+      "bytes": 66,
+      "sha256": "f37618e6e8a4bff460b0abe073a032bb13b1ce4a6024522e200a3763134ef881"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0016.json",
+      "bytes": 661,
+      "sha256": "bbdd853ba824fb90d83860c35748513c51a9ab883eb022f9237455a13b64e8f3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0016.json.sha256",
+      "bytes": 66,
+      "sha256": "cd6ad8826c80c608555561720432180aa98c2f760d39524145b710d05394d9cc"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0017.json",
+      "bytes": 660,
+      "sha256": "16bf57a27db0a3a6453da26ab000b057b5b2836ad3798b9e61d5be68b2bb4d3a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0017.json.sha256",
+      "bytes": 66,
+      "sha256": "e2bfa252690aa8daf48acffaf62ed7d0c04c57619d072ad3c0e494fdcb485220"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0018.json",
+      "bytes": 661,
+      "sha256": "5f4eb95d2183d1671c7a646816b578d88bffa0ea942ec8d25406f07e235cc1f0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0018.json.sha256",
+      "bytes": 66,
+      "sha256": "97a78f9ea4027760d40ca028aa5a3cd9e58da4e01cc6a5d2cc34545ae3a2d856"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0019.json",
+      "bytes": 662,
+      "sha256": "909f50d2aa8e2fac6943a609dd5e5725aa17607ba54901faee9898989e390f33"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0019.json.sha256",
+      "bytes": 66,
+      "sha256": "7bb4ab6df3d36bfcfe966ae7eb2af4a973cff496f680dcf011f2a9a2814c2d13"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0020.json",
+      "bytes": 662,
+      "sha256": "c331dc40e9ead192e2cb278b8072fd33e1feebb07198a60251447553010428af"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0020.json.sha256",
+      "bytes": 66,
+      "sha256": "43d8d8111f8a192525abe6ec9e2d2ea2487a729b82ce3c329b41a6d3c0597556"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0021.json",
+      "bytes": 663,
+      "sha256": "062bd3489079fa49558ddb79b6482029cdbd0a23d6ee1a2fbf0ae2fbf0d14ae9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0021.json.sha256",
+      "bytes": 66,
+      "sha256": "ee2d5ee8a9d958c4d3e6f028e633b48bfdbe6aa3f0815bdaa45b3d5d115a2ba8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0022.json",
+      "bytes": 662,
+      "sha256": "915254692ae776fed893a3b2c7bf2bb769960493dd21a5d6ff091779d7d08f79"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0022.json.sha256",
+      "bytes": 66,
+      "sha256": "2edf96c1ee748fc1eaa7fee927210a508c83dd326993b53bf3cf920e9647c147"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0023.json",
+      "bytes": 661,
+      "sha256": "32e210be476d5a028eb0043501fafa86aa9b18d07b6d3e2133d44f83fbd25628"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0023.json.sha256",
+      "bytes": 66,
+      "sha256": "73c8b9a271f080b06195e0b9ba814f852eaa84b9e7734968b0d60954acfe6dca"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0024.json",
+      "bytes": 662,
+      "sha256": "15fa55e0df6ba090cc06f1279107b4fd3eeb0148d74e371b10619f07cf8d4803"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0024.json.sha256",
+      "bytes": 66,
+      "sha256": "0614c7254cffad982a5e905c1df0c536d154efa74c4f63b617978b069cb9fd8f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0025.json",
+      "bytes": 664,
+      "sha256": "6f8da5ff15e3616af6a58033457f639df773d54ea2cb35c1c34aa26c515048f3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0025.json.sha256",
+      "bytes": 66,
+      "sha256": "84af9cc0804f742c64d9ea74631df4302b570f901e3593965dcbbb589940f7e6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0026.json",
+      "bytes": 661,
+      "sha256": "a1fd92662a3dd7c06ae1eb7bb7c4053efd85b13f2afc1a56af77f45b821a75d2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0026.json.sha256",
+      "bytes": 66,
+      "sha256": "d2e0470e182c405ed105ea03bb0192376d8425cfcb2e601d47f7a56a30ea4b0e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0027.json",
+      "bytes": 662,
+      "sha256": "680d6ea2814c13aa618958853c88daaf6c75d8859cc5239a0090d0d08c4e8aba"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0027.json.sha256",
+      "bytes": 66,
+      "sha256": "cf83e5eb96d0e11c59947d1173e7f5a22a16f79a0bf8aed1edc1c102f5c10e7b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0028.json",
+      "bytes": 661,
+      "sha256": "b2b076ae9769311ebbed24158f59b36a72f1b16b26bb8ca59497e3ec1cd921ea"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0028.json.sha256",
+      "bytes": 66,
+      "sha256": "227611c4c4ea079a587dc107ca2af80e44d4a67b8f42bf22782651a4a004be9c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0029.json",
+      "bytes": 661,
+      "sha256": "9fab959d1323117e1e60fe2bb6d9517781fe2d4031f9de1388bd3bb04f55dce9"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0029.json.sha256",
+      "bytes": 66,
+      "sha256": "b2adb1d1f05c927894c63abcfc7564c43acf0118caed96dcbd91cb16dad8a9ae"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0030.json",
+      "bytes": 662,
+      "sha256": "db5ed613ae3bdcbff324b339ff77461e2e75a245bab107375a8757d5505d02e2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0030.json.sha256",
+      "bytes": 66,
+      "sha256": "7bf1120518cddb751be0bdc5d69bc89a456efc5c5652713e2432f4c71ebe9168"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0031.json",
+      "bytes": 662,
+      "sha256": "064ccd6228fb053e189a4c95736da21b5057b2828c50464e9e2a8a86f6658c59"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0031.json.sha256",
+      "bytes": 66,
+      "sha256": "d739659b61656c29cb02f1c6d8b9ce925548d5ee68805827ea536d14bf572a0a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0032.json",
+      "bytes": 663,
+      "sha256": "5e3a88865660e928d5e2cd27e156ea340f6e6c46fbac537e8be5f6723472f5f0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0032.json.sha256",
+      "bytes": 66,
+      "sha256": "44aca9bacb8a3b4a3d2824a6310a804d9ef4f434ca6bc9d0e16f90bce9c38733"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0033.json",
+      "bytes": 664,
+      "sha256": "2b7965ee8665df8e50704c044b0f934bf4b8f862b79a098433198716e4d9c780"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0033.json.sha256",
+      "bytes": 66,
+      "sha256": "7d73eb02d13e4013e14791ff4a7995cea7a197922a029a06429b044287488df1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0034.json",
+      "bytes": 662,
+      "sha256": "991a258d94fb66075b3cea266ca4b7c298403452323f9b2db2568b27ee7f8f3f"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0034.json.sha256",
+      "bytes": 66,
+      "sha256": "7b3b5a54c88141315f327c526690011814b79b3b0735ca9da60ae8becec322e4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0035.json",
+      "bytes": 662,
+      "sha256": "6ecdaf6bcaeba13dcecca9e44e229a6c15328fb3739a66c173ea3d28cd3bc379"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0035.json.sha256",
+      "bytes": 66,
+      "sha256": "c931542e3551e65d88ca80f0c32f6886a0dae03421eb5b84adebcd8e44747fbd"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0036.json",
+      "bytes": 661,
+      "sha256": "9e1aa7a93f4220b30beac7686ae09aa20bff1f51913f1649625b5614038a9168"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0036.json.sha256",
+      "bytes": 66,
+      "sha256": "eb02ccadb77a4a671c9aebddefe5c49884f81eb7caff46fe6427c57f0e6a0dea"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0037.json",
+      "bytes": 661,
+      "sha256": "6afd174b8b54b2c0ab36bca94abed6300b583dcc573f0c86fb6c8e7cf5379b1a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0037.json.sha256",
+      "bytes": 66,
+      "sha256": "b194b4e72712a903395530a822e020fd16ee70147d32e24ddad9dfb20ec1f4b4"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0038.json",
+      "bytes": 661,
+      "sha256": "9d6c382d27ad8b1b07acb086d4e07e6d837e696bb70beda1e76a93e8aec31bb8"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0038.json.sha256",
+      "bytes": 66,
+      "sha256": "1d70998556da909dcd725b60ba5f1b8c5f78c996dc790fb5a1c6e66e7d27513a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0039.json",
+      "bytes": 664,
+      "sha256": "d1f3de78ba0d8b451bed482ae8ef8e1bfc34e7220b8406c39a443d67fec4baa2"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0039.json.sha256",
+      "bytes": 66,
+      "sha256": "9c515464beee0f87c6e74012891a86888eee0fb27984fb5bf723530f207b4b28"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0040.json",
+      "bytes": 664,
+      "sha256": "e64729bd36f33cf2956cb6547e313aa15dd4ada1bf4d7716cbb533e27b769b9a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0040.json.sha256",
+      "bytes": 66,
+      "sha256": "42346e8154d1dbd6d5fe5b2cfca23fe740c9029855de9258f92184d332f624c6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0041.json",
+      "bytes": 664,
+      "sha256": "f312a17bb82c51bd3c9ef0ae400058ad3142a05bdb9d6e3a913eb93ad075d235"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0041.json.sha256",
+      "bytes": 66,
+      "sha256": "11ba63ecd12b25ff35e9c8e937681f3495c2befa616437485b3e9770ec59698c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0042.json",
+      "bytes": 661,
+      "sha256": "aabba4d682b9403ffa45cbe076e7690c5392198d907345682933d1fa0cec24e5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0042.json.sha256",
+      "bytes": 66,
+      "sha256": "45767b7c9ca256e20935d38ca7317324b2c8d6cba23eac33f6d68b9787695f59"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0043.json",
+      "bytes": 662,
+      "sha256": "4e9d9028d78ea7d73dd218babc084c764c0c45c2de0944910e3c08354d970476"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0043.json.sha256",
+      "bytes": 66,
+      "sha256": "6f580ab2128253c5b93b318d59abc40462f1ac8c5a67fbc5c8ee1afd6a33968a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0044.json",
+      "bytes": 661,
+      "sha256": "faca543e658ccd9133a972acce65e9697ea4c286e0081c99724a6322555f14ac"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0044.json.sha256",
+      "bytes": 66,
+      "sha256": "9296ad1a64e40db8eb0e83808edd4488544f287af1d092f2c3e95fe261a6880d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0045.json",
+      "bytes": 662,
+      "sha256": "3258793e336a3754e0fc3a3ba515b0e28e8f1536be6cf7051189e9f7757fe968"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0045.json.sha256",
+      "bytes": 66,
+      "sha256": "6a99734dd3fd5a443ad41bc9bebcbc3647c1e0da3389efe1c33f4ab450d4950c"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0046.json",
+      "bytes": 663,
+      "sha256": "337e470d04e293d30a4bbc429d868132e363d8f6344421d6e78a5fe6a42c20f6"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0046.json.sha256",
+      "bytes": 66,
+      "sha256": "ec787dd0a736437aeb2f1d5c514ca14de12b2fc33c8f5dee3573760fa9cc7dcb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0047.json",
+      "bytes": 664,
+      "sha256": "11416de212fe689901772df349a906989a96bcf7801c0c1eb710e1b0b7324d84"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0047.json.sha256",
+      "bytes": 66,
+      "sha256": "1e78aad1afe5b1ae468e21f07354d9afb94765b5dedf5c516df90298382e30d1"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0048.json",
+      "bytes": 663,
+      "sha256": "3641175ebca0eaaa50b4e0145205df09fd7f7cc210d3c5db07b349304bdeb8d3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0048.json.sha256",
+      "bytes": 66,
+      "sha256": "1699ecd73df88bd6f761fbc92a04c014df20bf9dcb7fb5cfa4c325ea27c77a1b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0049.json",
+      "bytes": 661,
+      "sha256": "f313e2bf27a6ada35cbe4c534406e8a335b72974531d2f6c1a6ac324abbe2a51"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0049.json.sha256",
+      "bytes": 66,
+      "sha256": "5e755616a1dd072c53a71447069aa5a73280b60a73a72d11316178c9a817b6c5"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0050.json",
+      "bytes": 662,
+      "sha256": "d4a11fb0e7a43e19eaaca709a81c0c4484734aab56e7b43d0b0ee61736cc9138"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0050.json.sha256",
+      "bytes": 66,
+      "sha256": "b706fe93da6dcb15a1183170cbf8d66b007531d4d66849faa0caec0a8c7f7ffe"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0051.json",
+      "bytes": 664,
+      "sha256": "6bc21dd4a804ca82f132da772930de293ed37bf953c35d4095626fe41bb4dcdb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0051.json.sha256",
+      "bytes": 66,
+      "sha256": "5d9c5e88c714c356aa6d56b63e2252f6387c13daf35ac26fae2f2e02b488c874"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0052.json",
+      "bytes": 662,
+      "sha256": "369a8c563b0102949b478d4f5b4405ed4ad9ad0ff552ec77bfb9e623745ea56b"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0052.json.sha256",
+      "bytes": 66,
+      "sha256": "6886a6607a2e0fe354f10dd3f78ac65096c116b4ce5cc7ec862f7796e1708482"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0053.json",
+      "bytes": 661,
+      "sha256": "ad6d733734cbf03cdd83c8b09bb7a584b4611a6f9ff48b2a0d93edeb9f435c85"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0053.json.sha256",
+      "bytes": 66,
+      "sha256": "768d67d06b866463417469faad8129ffbec7463713d339f1baf953c83eb8afca"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0054.json",
+      "bytes": 663,
+      "sha256": "153bc3043a3c21cac290e1107d36d2c5e3e31cb56c9c1e7e29a8c4fe49961d85"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0054.json.sha256",
+      "bytes": 66,
+      "sha256": "8ccaf35a9711b2988a06dda4f77375d977874edf7e1205a197073caa30da7b3d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0055.json",
+      "bytes": 661,
+      "sha256": "7f7eceb99317623641ced0fac85aa09dcdf81edafd6cdd9839192999da2b8018"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0055.json.sha256",
+      "bytes": 66,
+      "sha256": "858570aebb74afe744520e345bd8dd26d06ab8f153389271fca3189fe1f6068d"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0056.json",
+      "bytes": 664,
+      "sha256": "85abebab4e8a238513cf9216626bd6aca2827ac58d3c8bb98911462ff667340a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0056.json.sha256",
+      "bytes": 66,
+      "sha256": "9327a68b345f7b82971439396ab08a909db9ae3155189931091718c24d224326"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0057.json",
+      "bytes": 662,
+      "sha256": "7df56bfe2b4b1eb7da75d83e44d379015b62aea7b19321133083e8e065987ec3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0057.json.sha256",
+      "bytes": 66,
+      "sha256": "d69d43ac0f8f0dd4c30bcbfa5f2e3b6368a1250480084cecb8cf4b1d4c10a505"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0058.json",
+      "bytes": 662,
+      "sha256": "5d0441a67f3079e3d289c38a72da3ce063e44d746bbc512929ef54b78817528e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0058.json.sha256",
+      "bytes": 66,
+      "sha256": "bed6ffa700edc79ee7e1f3c436de8c486435e6ad2c3f6c217991003dde3afa94"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0059.json",
+      "bytes": 661,
+      "sha256": "0696f2bd1ee7f2fc567b6f9c3f161cd2ccec04bf860bf543f08780cfa29fd02e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0059.json.sha256",
+      "bytes": 66,
+      "sha256": "02a124870ee699a3f7bdcd0a33f37e2884ac8745c1e7e788de363a935eb49d87"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0060.json",
+      "bytes": 661,
+      "sha256": "bc74e0e8255e39f87b4f967545afa960fe4b8c64751dcb3fa1697abd2cd27e8a"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0060.json.sha256",
+      "bytes": 66,
+      "sha256": "87f1b039c6c7808e6343e0c595c392fbab71b227a6b199ac525f5c57e0b3baec"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0061.json",
+      "bytes": 661,
+      "sha256": "f5ba47db4017a574e7f0f94400d30e7a2d160424bb17f141886ec15f5e09fab7"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0061.json.sha256",
+      "bytes": 66,
+      "sha256": "e05c11b33da2ed547770f3ba97411bcacf4bf3211646888b9664bd6636f4c629"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0062.json",
+      "bytes": 664,
+      "sha256": "caf96c9facd00ecf92c7c08082ee19d189f6bb65157c9bdaaf3212da33e11bcd"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0062.json.sha256",
+      "bytes": 66,
+      "sha256": "c814bea6408e232ebbffa233202780981cdbdd24ec43c4c57d2e4b73c563f804"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0063.json",
+      "bytes": 661,
+      "sha256": "e4edc1cbf2f9132649821c3757e6d2aa4c523a90eea1450068195f99e81760da"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/families/family_0063.json.sha256",
+      "bytes": 66,
+      "sha256": "ed1820f0b489540eb5aa08a49073c6ee8cb724abbc4f30417279fa00d13725fb"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/paired_clue_manifest.json",
+      "bytes": 230370,
+      "sha256": "f472c351c59d4ad44f9bb76f2392562b7d41e055334e3660e7a7dc50e4ddfbba"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/paired_clue_manifest.json.sha256",
+      "bytes": 66,
+      "sha256": "04e87892db5ed01986eaf68b5610221fecdfd2f45589ea59d5c80c352312bd88"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/test_hard/all__group_indices.npy",
+      "bytes": 2180,
+      "sha256": "e2d4dbfc27369ee1d2ad2a5082aaa63ba1e4a6ffda9120eac01101ee40d90ef0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/test_hard/all__inputs.npy",
+      "bytes": 41600,
+      "sha256": "9ab5c3014f5982e26e34e06e3017808f0c7a164df4ad6f019f4b86862f2aad8e"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/test_hard/all__labels.npy",
+      "bytes": 41600,
+      "sha256": "9dee1bf3d7f0268412b6456cf05b04b95f3a3426bc769a8eefe9255a487c4490"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/test_hard/all__puzzle_identifiers.npy",
+      "bytes": 2176,
+      "sha256": "b2e237dcf538ffd0c959e408be82af9e4ddad4ad29316ef45ebde523d1bbc4a3"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/test_hard/all__puzzle_indices.npy",
+      "bytes": 2180,
+      "sha256": "e2d4dbfc27369ee1d2ad2a5082aaa63ba1e4a6ffda9120eac01101ee40d90ef0"
+    },
+    {
+      "path": "datasets/sudoku_coordination_pilot_20261007/test_hard/dataset.json",
+      "bytes": 286,
+      "sha256": "2abc42fbda7314157a85f74fb4cdaec2f2d7e4bd91b141387c9625bc19e64466"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/P5_COMMUNICATION_DECIMATION_RESULTS_2026-10-07.md",
+      "bytes": 8937,
+      "sha256": "3ca02d954d87b5d40e0278a372a6ba41a7cf6417a1caf55152b7c516f39becf5"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/P5_LOCAL_TRANSMISSION_RESULTS_2026-10-07.md",
+      "bytes": 5007,
+      "sha256": "5cc9184eefcb1ecdf7f931258f0d5181b2934712cdf69a2990fd1e0e2dd85f57"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/P5_PROTOCOLO_CONFIRMATORIO_2026-10-07.md",
+      "bytes": 5525,
+      "sha256": "cb81afc8b552e447d704285087e68cc04e861ed4424deb0c56ed4a50ba0c09a8"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/P7_P8_PROTOCOLO_CONGELADO_2026-10-07.md",
+      "bytes": 7721,
+      "sha256": "d5a73d49124b6aac7594a8f7444cf1661fbc782131fbd5d4d3a108f77d481ba7"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/P7_P8_RESULTADOS_CONFIRMATORIOS_2026-10-08.md",
+      "bytes": 12691,
+      "sha256": "c63a5f08a15bb346e08ae0441865c5d49df2530e45955fbbeb7ec8d7974abef3"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/esquema_canais.pdf",
+      "bytes": 29623,
+      "sha256": "10b2d5c1d414fb9c4dc26c8a5a2c18de21d1eb7d10c50230ba297ea32672b9ad"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/esquema_canais.png",
+      "bytes": 295445,
+      "sha256": "2df658586fe65781b771b053cac7e96597376a3a80c626e5673547920461916e"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/informacao_inicial.pdf",
+      "bytes": 75405,
+      "sha256": "c3f06304dacfa0b021ce70de24f67950109ae2f5d2d885bbd5a722053f79367f"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/informacao_inicial.png",
+      "bytes": 216540,
+      "sha256": "b3a1560e9bfc29a54b7951e41a8c350fa2616950d1300b51e547cf5e4eb0a61d"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/separacao_canais.pdf",
+      "bytes": 74348,
+      "sha256": "add86a2ca4b0119a0643419ba9f2dbd808268dca5d12916d5891c64f549588a9"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/separacao_canais.png",
+      "bytes": 139531,
+      "sha256": "11aadd300c5b49c0297c6a3ad9058da2f31c40267c002283593f535a4e63219f"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/transmissao_local.pdf",
+      "bytes": 75475,
+      "sha256": "73d88a2c888c7409ccbfe4889c8fb78619ac15a28ceb1e9cf6988a33ec130926"
+    },
+    {
+      "path": "experiments/sheaf_admm_reasoning/smne_2026/figures/transmissao_local.png",
+      "bytes": 181894,
+      "sha256": "9db22ea6fb7e880989122c6a3d565d9238775f6b2f87407431361db716eb191f"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 9234,
+      "sha256": "518510fd20315c2227423649b3bea079a0fda4071c5803f5c88da4bb2f5f5903"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 436,
+      "sha256": "06e3981b8523882c6bcf3010824a912878299ac528e5f054a7b47eecf8aa0f8d"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/calibration/owner_thresholds_dd7eca346638.json",
+      "bytes": 13289,
+      "sha256": "68d596593877f1cb5c8145bceab5d43e42d1db58245b4e8beb6c6f97a6c2884f"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/analysis.json",
+      "bytes": 2796,
+      "sha256": "02e76db40e75e8f8d289262ccad53a7541ce80502b05ac2623eea183922358a9"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/analysis.md",
+      "bytes": 577,
+      "sha256": "7171bc4898d100d0358dbbe2500ac01d7e60f5a78d41aa12bbcb6dac1ddcd56b"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/audit.json",
+      "bytes": 1011,
+      "sha256": "80371c5c38de638bdde63ba7ec02008899ecb4de2261b0fb48dfe7d7d3cf4869"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/family_results.csv",
+      "bytes": 669672,
+      "sha256": "07ab8d0e27beeaa59167bac3b46f20784fba16dce5d2bd223a7a66583bfeb4ca"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/P7_ADMM_CHANNEL_EFFECT.pdf",
+      "bytes": 15112,
+      "sha256": "483e566ae2fad514a769dfc055be2c9b1ddcb9fb9dd1906ff2ffa57efb8d8c9c"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/P7_ADMM_CHANNEL_EFFECT.png",
+      "bytes": 42026,
+      "sha256": "9bee35f43c0da5cc7896a6bdffaee8c64b095c247e84b114cff46158a488e86d"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/run_config.json",
+      "bytes": 4539,
+      "sha256": "79abf13e1b18dd42196a4ebcc2e1d6e87deec5b7dc7f4615233c6f1e658ebaf8"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p7/technical_control.json",
+      "bytes": 332,
+      "sha256": "642920a9e9e3a0b50b8b7666ac07069c33624579c0f674da139bf61e09ee8abe"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/analysis.json",
+      "bytes": 6519,
+      "sha256": "aaabc87bc9bb3f3a63d62ee58bc1b712a8075e7daf8f5be30a0ee3ebb4002dd9"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/analysis.md",
+      "bytes": 578,
+      "sha256": "69434acb7a1c87222c14691058541d8a37c975df70ad14e5bd59e97cac98f7fc"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/audit.json",
+      "bytes": 1018,
+      "sha256": "3aff3b56ee8ac45dd33e50b2cabf55c7bb98515c51be9d8bb41163f5073e1a68"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/family_results.csv",
+      "bytes": 5605084,
+      "sha256": "2530590639876b1db4fe5df0f189eed57cd076b9aeda04e892ce400605df0f9e"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/logprob_interaction_sensitivity.json",
+      "bytes": 1991,
+      "sha256": "a41137256bc00989cd4759bacb59abbd013c2baa00c81516b27d726026315fe4"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/P8_CLUES_COMMUNICATION.pdf",
+      "bytes": 18960,
+      "sha256": "176354742cc190795ded562fe61a5444ade9195c0c07e801f93d3cff6ea82df3"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/P8_CLUES_COMMUNICATION.png",
+      "bytes": 95365,
+      "sha256": "a420f3bfca166d20e501c74061af0e7dcd90dd4db9b470bf7303dde4238784ff"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/run_config.json",
+      "bytes": 16947,
+      "sha256": "9c95fa55a0bd111b1483861fdcd098df80cc2f2515db2ea5d26cdfb64f9e3c62"
+    },
+    {
+      "path": "outputs/coordination_channel_ablation/p8/technical_control.json",
+      "bytes": 333,
+      "sha256": "c9142755ce3f8bb4f67388ced169a573d1842dbfbe5eb9acc5e9ca24b87af0b4"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/analysis.json",
+      "bytes": 19720,
+      "sha256": "4ad382f5732fc143e2f409833da397623404746cab0f21347d86a512a751991a"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/audit.json",
+      "bytes": 3308,
+      "sha256": "d37beda6ffe675b9ba25e918eb64460ad8c092f5998737a7a370701180ab9346"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/intervention_metrics.csv",
+      "bytes": 4278416,
+      "sha256": "c2705ae341095e6f119be983cd9ee02add5049e442b3a199335c291a78f127c1"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/P5_LOCAL_PROPAGATION.pdf",
+      "bytes": 33237,
+      "sha256": "cb7cfb73d3d3446b0381a65a951ca517850f99eac1c6bf3f16493f540af0ce6f"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/P5_LOCAL_PROPAGATION.png",
+      "bytes": 287419,
+      "sha256": "f8771dcc0d5dc7e3d7a660aef94a05e94f55bc59554a7d5ff1848156ac0cc000"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/run_config.json",
+      "bytes": 6053,
+      "sha256": "a484df37fbb8f4bc4f8426ff656561823efff689d9c3a5c2c2b82589906ed3a5"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/secondary_family_bootstrap.csv",
+      "bytes": 4337,
+      "sha256": "49518bb8458c62a711d72ba3c5364d1d224d283984beae4352f91b7054822684"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/secondary_family_effects_distance1.csv",
+      "bytes": 7133,
+      "sha256": "b37bc359c3e1696eb2e255bbe41217b7c39e53df41f661102b5f2cb52294ffc5"
+    },
+    {
+      "path": "outputs/coordination_pilot_20261007/p5_confirmation/confirm_n64_s123-456-789-1011-1213-20260927_4cells_37d61e44/summary.json",
+      "bytes": 4544,
+      "sha256": "d0eeb3d66b8b355cb193dcc6c7a0ce73b110a700b840ebca18f7d8718527e58f"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/analysis.json",
+      "bytes": 60521,
+      "sha256": "4db589ba24b2910dd37c0988b1bc5fdb3decb7db469cfe714134ee6f1e3fbde2"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/audit.json",
+      "bytes": 1338,
+      "sha256": "e03b7a1762d142e4aac0f4d783e5361cf08dd5a1c21234da7d10a93eca572330"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/calibration.json",
+      "bytes": 9441,
+      "sha256": "aaf8f21e2459ed5c6d63c7628a0c16449b35984679f4cfd9faea86b6a696eba4"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/communication_traffic_summary.csv",
+      "bytes": 6059,
+      "sha256": "f039b47c248a0a6fb375cff6f77efb658f6f21451e786356276720fd819a5a41"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/interaction_by_family.csv",
+      "bytes": 433195,
+      "sha256": "8ba6b7268a25f1a6621bc457efe162e6ebee51ec1b2e121f7313da6d3ddf787f"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/interaction_family_bootstrap.csv",
+      "bytes": 1941,
+      "sha256": "d37418292bcfcbaeb211ca1842d27369070a7530839a8c046183dc8d251c05a3"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/P5_FUNCTIONAL_COMMUNICATION.pdf",
+      "bytes": 36621,
+      "sha256": "3e3516c79fd6b2f6096b9780ab5e258eb8aa96a00d1ca76086ace21dbda47671"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/P5_FUNCTIONAL_COMMUNICATION.png",
+      "bytes": 310982,
+      "sha256": "37653363d197aa41f7649e046cf0f9c9556ad9216c6b47dff551ee2cc2550628"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/paired_budget_results.csv",
+      "bytes": 458197,
+      "sha256": "aeeb37b3cc601f2e7f152a965f00589b38589e3a7761bb89455ac81e77e80fb2"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/partial_audit.json",
+      "bytes": 1219,
+      "sha256": "3adceee1cba6418d3832d4423b422abb72a9a1b76218b87d5c52e9dd3f406f70"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/primary_functional_interaction.csv",
+      "bytes": 435,
+      "sha256": "ce24510f59b21a5e02294168c854aabd80cd7229c7ee83471a44d9b3f682387a"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/run_config.json",
+      "bytes": 4301,
+      "sha256": "159072b2e7f63c4ccaf0d3ed2cdd411a86a1720f64d4113efbed8884a70ae7a3"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/summary.json",
+      "bytes": 10018,
+      "sha256": "161f51bcb4314922ad08c0245db38b62f736b1d673d49977faa7f517326244ee"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/summary_by_seed_condition.csv",
+      "bytes": 10456,
+      "sha256": "25995d749f8b01b3025d6c78cbb53b98f4d6ec34ab3f5b2844fdb84bb492370e"
+    },
+    {
+      "path": "outputs/p5_decim/n64_s6_a2_p8m3_ac4fee68/summary_family_bootstrap.csv",
+      "bytes": 7155,
+      "sha256": "ebee473c5d25aff2e5868b372086a1cc53ae56419b0ff5ab2089b7fe07579bc2"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1676,
+      "sha256": "8e057f62ce593e0fa6e877945993efab67e13d03e8c7cb6ae9d398243995d1cc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4955,
+      "sha256": "f396947ce8a4107a0de672749562c24810b1a84143a648b64dbef286d4e9376a"
+    },
+    {
+      "path": "scripts/analyze_coordination_channel_ablation.py",
+      "bytes": 15119,
+      "sha256": "2fbe4dba9eae7acfb76cb77773721e616eca8154fea281ae7a5c460918e18473"
+    },
+    {
+      "path": "scripts/analyze_coordination_communication_decimation.py",
+      "bytes": 15340,
+      "sha256": "60a1a5272e3342bcbca934f9368f3f77907e56dfdf5d6b014110bcd676a59576"
+    },
+    {
+      "path": "scripts/analyze_coordination_information_confirmation.py",
+      "bytes": 6851,
+      "sha256": "a4335f99ce4c1aaf085a989eacd5cfca5ecc6a571d8be1b2f52015e7b0d8b52f"
+    },
+    {
+      "path": "scripts/analyze_p8_logprob_sensitivity.py",
+      "bytes": 5519,
+      "sha256": "3b487e67f027492ed42840bde943fae857fca5698b26bf221be34c669c770aa6"
+    },
+    {
+      "path": "scripts/audit_coordination_channel_ablation.py",
+      "bytes": 16038,
+      "sha256": "5a176171c2c682cbfdf0046e824e8c922dd4fd4472801890db922b51bd187137"
+    },
+    {
+      "path": "scripts/audit_coordination_decimation_confirmation.py",
+      "bytes": 23051,
+      "sha256": "691f472767431d55a41db340102aab61f5e32582875e1e1622030a3b0f85f28e"
+    },
+    {
+      "path": "scripts/audit_coordination_information_confirmation.py",
+      "bytes": 15050,
+      "sha256": "0c3a32dd5364c0a02bf90b713bdc29fa424702eb6cebc2a055e0dcbd127eb403"
+    },
+    {
+      "path": "scripts/benchmark_sakana_constraint_inference.py",
+      "bytes": 18699,
+      "sha256": "2b371ca0d3dc88ee5912bd7d0bce6bf297860c5b3a8bd2ea3bcc21aa4b8ac2aa"
+    },
+    {
+      "path": "scripts/build_coordination_confirmation.py",
+      "bytes": 5479,
+      "sha256": "fcb9514db9dd4619ef02d1a6d87d25c5bb0173e7a2913d06dcb8a80081a5970d"
+    },
+    {
+      "path": "scripts/build_coordination_final_holdouts.py",
+      "bytes": 3157,
+      "sha256": "d80ae49e2675e59e50ecd42c7d5114999426e0cc6fa7c2e5ab1f45686cdcde67"
+    },
+    {
+      "path": "scripts/build_coordination_paired_clues.py",
+      "bytes": 13391,
+      "sha256": "5c96352f1265b606ee0f3a9c67ed6f2128d6d21a36ec8dc3b27602acd3a5fe28"
+    },
+    {
+      "path": "scripts/evaluate_sakana_placement_horizon.py",
+      "bytes": 38016,
+      "sha256": "913c254b7854bc81dd2303b52314eda308e5d0a6b38f8088dd3293f299b79afd"
+    },
+    {
+      "path": "scripts/plot_coordination_communication_decimation.py",
+      "bytes": 8189,
+      "sha256": "c6f881535606a2297c997e84577b6aff39d308cceb62db45bb2db2607189526d"
+    },
+    {
+      "path": "scripts/plot_coordination_local_propagation.py",
+      "bytes": 6123,
+      "sha256": "aa5927d49cc55b5256d689d6cd8c89c954951cbfc587b73f1505267a36410850"
+    },
+    {
+      "path": "scripts/run_coordination_channel_ablation.py",
+      "bytes": 46055,
+      "sha256": "7a8979bdc6eb8d606b1495d01391b5ffb16bbd78650c1814cf629915e945dedc"
+    },
+    {
+      "path": "scripts/run_coordination_communication_decimation.py",
+      "bytes": 34193,
+      "sha256": "f9626b1bdd830b4e50ee4c38eadd06c34313b6656961735cadc4677067e7690e"
+    },
+    {
+      "path": "scripts/run_coordination_decimation_confirmation.py",
+      "bytes": 21525,
+      "sha256": "d53bb506ea11b1abe4ddcc7a93724a9a096449c069a6920ec86c35f770ef6f3a"
+    },
+    {
+      "path": "scripts/run_coordination_information_confirmation.py",
+      "bytes": 26465,
+      "sha256": "788e0210f434f9f9e001c6a6e4adb0914dd5017883b95d80f3f6d821f4c42661"
+    },
+    {
+      "path": "scripts/run_coordination_local_information.py",
+      "bytes": 22099,
+      "sha256": "546be9fe6cc4a7cbcdbefb3d41b53c67ad6185235a453202ef83ec2e828abe7c"
+    },
+    {
+      "path": "scripts/run_sakana_placement_terminal.py",
+      "bytes": 5211,
+      "sha256": "5ee8b8f84d4d36df54a9008d7343e7005226930dbcea894bf0f0c915256c126f"
+    },
+    {
+      "path": "scripts/run_sakana_stability_local_multiseed.py",
+      "bytes": 7940,
+      "sha256": "f13f173ba5866877718f3a83cd90aa4afadc4aa2e87cb1db7e294e12ce558f8a"
+    },
+    {
+      "path": "src/sheaf_admm/__init__.py",
+      "bytes": 879,
+      "sha256": "4426623bc9c12763c549e6271b12c75d37e72c78e6e6429c9f2e0155fbd7d9d2"
+    },
+    {
+      "path": "src/sheaf_admm/admm.py",
+      "bytes": 42145,
+      "sha256": "5325da924f4176e0fc3ea000828a31c9145509fffba07e1bb97ca808bf42d56e"
+    },
+    {
+      "path": "src/sheaf_admm/data/__init__.py",
+      "bytes": 2138,
+      "sha256": "175e2597ed8289d3deae41c4567229adb6cc4a3bc1db37c5c814bb1beca3914f"
+    },
+    {
+      "path": "src/sheaf_admm/data/build_maze.py",
+      "bytes": 12951,
+      "sha256": "904dd31231d11270f5b40a6f5f22587b4d753c94c83dec74ff738ae0913b41f4"
+    },
+    {
+      "path": "src/sheaf_admm/data/build_mnist.py",
+      "bytes": 5918,
+      "sha256": "be710c33251631ae56f070fb46264794108de08064b8710b924bcc72454cd426"
+    },
+    {
+      "path": "src/sheaf_admm/data/build_sudoku.py",
+      "bytes": 7787,
+      "sha256": "308b2d6e26fbff475ff4b490971c27a9f427052a2cd89e783789815cb8b1e4b4"
+    },
+    {
+      "path": "src/sheaf_admm/data/common.py",
+      "bytes": 4086,
+      "sha256": "b74341a20681841e913fcdcfb6f6385f2ef6a2593d5a067978860d356efd1134"
+    },
+    {
+      "path": "src/sheaf_admm/data/latin_generation.py",
+      "bytes": 4692,
+      "sha256": "540543fd350067041bef37e9dd913bcecc90f7d9342ae615875902118ad9aff2"
+    },
+    {
+      "path": "src/sheaf_admm/data/latin_solver.py",
+      "bytes": 5408,
+      "sha256": "b75fa7324cd3b97ac31b4ebeed419ecfabc40426fb9ea535efb831791aae90f8"
+    },
+    {
+      "path": "src/sheaf_admm/data/loaders.py",
+      "bytes": 15587,
+      "sha256": "cf4683406635f246887ed17c0ce1f31c91dc9deab887bac169a0546d5f6c840b"
+    },
+    {
+      "path": "src/sheaf_admm/data/sudoku_generation.py",
+      "bytes": 11860,
+      "sha256": "3fe553aa33a6af12327e6949e40b6236aebdc77001397b4a7eca002f5947e41a"
+    },
+    {
+      "path": "src/sheaf_admm/data/sudoku_metrics.py",
+      "bytes": 6075,
+      "sha256": "740edf4a419eaa42f8f6026faa8e06b6ee400b3ace012d31434e07eba455a447"
+    },
+    {
+      "path": "src/sheaf_admm/data/sudoku_solver.py",
+      "bytes": 8883,
+      "sha256": "0c8eab3ed432918a37011b1ec71958717616debe2c1a67c4c5dabab4123edfaa"
+    },
+    {
+      "path": "src/sheaf_admm/data/views.py",
+      "bytes": 20665,
+      "sha256": "d3a1fc3b58fe50010ee8b111a48643f30fcb8db9a3b193cbcdecf14f71c4f8bb"
+    },
+    {
+      "path": "src/sheaf_admm/dcop.py",
+      "bytes": 10429,
+      "sha256": "3ba8dab6fc7c74cb00268e9d88a39c63c9fe75998d396727a3c2edbc50d0920a"
+    },
+    {
+      "path": "src/sheaf_admm/geometry/__init__.py",
+      "bytes": 1257,
+      "sha256": "e4f4e5c391740aeea65864caa4ef3902fc4c708a2a7adb7cb15aa8c9cf29d66b"
+    },
+    {
+      "path": "src/sheaf_admm/geometry/base.py",
+      "bytes": 2773,
+      "sha256": "3e487af7f078f991a00b43e14b170e01ea26977fd3b85b9c1a139e17f43eac05"
+    },
+    {
+      "path": "src/sheaf_admm/geometry/fixed.py",
+      "bytes": 2503,
+      "sha256": "aaafb9121f51d4294894f6c0ebe5ee205d4c79e12c0d04ccaa9ecb8dfc5525ff"
+    },
+    {
+      "path": "src/sheaf_admm/geometry/lora.py",
+      "bytes": 7774,
+      "sha256": "c41eeaa83377a67307075bd50123bfab0ba77ae607eba64d209f4a6924b57580"
+    },
+    {
+      "path": "src/sheaf_admm/geometry/restriction_maps.py",
+      "bytes": 10077,
+      "sha256": "e09c183705f0eefffa8915e895fc306f856e01548f8b752d9349b368bd3d5918"
+    },
+    {
+      "path": "src/sheaf_admm/models/__init__.py",
+      "bytes": 1829,
+      "sha256": "c75060115e86d355710c2e2c40d3a8450dfd5825397977e27b7fecbd7bdc686b"
+    },
+    {
+      "path": "src/sheaf_admm/models/config.py",
+      "bytes": 5366,
+      "sha256": "86050b32e7f044fe962f8f3800fff195d11dec7fb47b986d5eb7336edb7945de"
+    },
+    {
+      "path": "src/sheaf_admm/models/decoder.py",
+      "bytes": 8214,
+      "sha256": "675d1eca4c4083aaba7f2403aaa8f6a784f8fd711d960ad39c4caf3f3d92a694"
+    },
+    {
+      "path": "src/sheaf_admm/models/encoder.py",
+      "bytes": 25073,
+      "sha256": "72a23e6722564bccf40f42ee1cedcd7467282459f13b42fea318714460e1ef2a"
+    },
+    {
+      "path": "src/sheaf_admm/models/layers.py",
+      "bytes": 6325,
+      "sha256": "98f348538bc776e64274de9b6ef7e54929d27b44edd9c6f84185cd3b7daeac5c"
+    },
+    {
+      "path": "src/sheaf_admm/models/mpnn.py",
+      "bytes": 10012,
+      "sha256": "ad4c6dbdc0ca76242db2b88431455dc7ef40d98c2fddac705caefc2d6be93918"
+    },
+    {
+      "path": "src/sheaf_admm/models/mpnn_model.py",
+      "bytes": 6591,
+      "sha256": "4b6bcc018e06e2ea718e91a9e98a5604ca7e895bc112326e6b3e4f1866b52f0e"
+    },
+    {
+      "path": "src/sheaf_admm/models/sheaf_model.py",
+      "bytes": 24934,
+      "sha256": "a2d1f02579490fece26cd82312535998a5f7c2fe7a6195e1d4a1898d49f02112"
+    },
+    {
+      "path": "src/sheaf_admm/models/sudoku_projection.py",
+      "bytes": 6758,
+      "sha256": "f41d2bb872e20b8245d1ebf673090b705cdd33df37cffb81df72c16c6a901ad2"
+    },
+    {
+      "path": "src/sheaf_admm/precision.py",
+      "bytes": 1156,
+      "sha256": "91cfb5d6eed46db4d667c8e643d9510eb70f0b60f3d0071ac84afc55a531670e"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/__init__.py",
+      "bytes": 529,
+      "sha256": "1e9c8a36ac220282d22cd5b7637c46049008f6641c43a7bcf494a2e35cb64d3b"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/base.py",
+      "bytes": 2817,
+      "sha256": "9139ace66485b53c5c182014c3aa223878991be83a9d8df9b27872a4f97acb8f"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/x_solvers/__init__.py",
+      "bytes": 1399,
+      "sha256": "669f180ad10278753da17a940988bfe37d0063288340511f4493b73e505165a5"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/x_solvers/dense_quadratic.py",
+      "bytes": 1303,
+      "sha256": "5c3691c7eb0d6cfd3dd4d8dd075df12a760d2ebe91fcc12473bc4a40387186ae"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/x_solvers/diagonal_prox.py",
+      "bytes": 2348,
+      "sha256": "d7518bcc679ea5434ffc742ad14da34d975f8d9c60ebbe4bf2277d5a7b16e929"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/x_solvers/experimental/__init__.py",
+      "bytes": 347,
+      "sha256": "4e72962556c03c80945d44ce3e577bc91f3b42190ed31e25d80b9f3845999cca"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/x_solvers/simple.py",
+      "bytes": 875,
+      "sha256": "dbaa4450dfad7b2c60c786c80f3baeef0406298f7238a883f3b802627e97f70a"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/z_solvers/__init__.py",
+      "bytes": 916,
+      "sha256": "8b53fe3a3126e05e0e224b7cb0a2e92b7754b6decfb954fec904b621b49f792a"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/z_solvers/gd.py",
+      "bytes": 2278,
+      "sha256": "9637ee8acb22b19e969e5f1dbf2e35cf7a8e30e2d55696ad407e0e9a2c8fb7b7"
+    },
+    {
+      "path": "src/sheaf_admm/solvers/z_solvers/unrolled_cg.py",
+      "bytes": 9853,
+      "sha256": "0feee14c29efeb64bb5ab5bf625e4acb5a99793bf3e1e2446d28080b74f79753"
+    },
+    {
+      "path": "src/sheaf_admm/training/__init__.py",
+      "bytes": 849,
+      "sha256": "1d1d5d9a57b57cd038fc6e1cad34c7d5a084845622a5ede7fa7086a738431021"
+    },
+    {
+      "path": "src/sheaf_admm/training/checkpoint.py",
+      "bytes": 4679,
+      "sha256": "74ab370690478edb0baf4ee44d35624f6954bddd806e254f0d4a0d615fff8394"
+    },
+    {
+      "path": "src/sheaf_admm/training/loop.py",
+      "bytes": 5773,
+      "sha256": "fcb26fecf3163ca587454cdb9bb5fd7fe193e8d2f14989f5be85997b624b594e"
+    },
+    {
+      "path": "src/sheaf_admm/training/optim.py",
+      "bytes": 2794,
+      "sha256": "322a5a556cb2f590afec864ac2659eb0072ca1a5b99d3b2b5b8c2442bec1745e"
+    },
+    {
+      "path": "src/sheaf_admm/training/tasks.py",
+      "bytes": 13294,
+      "sha256": "45708a063ae180e810b679e490497bdca164f8cab7513614e87a162a65dcfa54"
+    },
+    {
+      "path": "src/sheaf_admm/viz/__init__.py",
+      "bytes": 1198,
+      "sha256": "d2bdecf71e19d970485702d43f771e6173000b147320c3b12bafcf30bcbf2e03"
+    },
+    {
+      "path": "src/sheaf_admm/viz/_render.py",
+      "bytes": 5394,
+      "sha256": "f5d8a1c903a2462835ff68d821a5707de618da8f71f0a53c5f659aa9a3952985"
+    },
+    {
+      "path": "src/sheaf_admm/viz/coordination.py",
+      "bytes": 3191,
+      "sha256": "307a2b8987463461b5212bfacf8618ba6f5d089098b4bea098eafb3b5ac473a1"
+    },
+    {
+      "path": "src/sheaf_admm/viz/prediction.py",
+      "bytes": 5799,
+      "sha256": "61c08ff29f3175431345347b33fa282f097600dd837fa556290cd71519b6e293"
+    },
+    {
+      "path": "src/sheaf_admm/viz/trajectory.py",
+      "bytes": 3227,
+      "sha256": "495808e049ebbd761f9de9d1f418dd6f2449e39f0ca014192340294d9bd0cfa4"
+    },
+    {
+      "path": "src/sheaf_admm/viz/xz.py",
+      "bytes": 4709,
+      "sha256": "22ad82f8e7a21e6c604a18aa4a1dfa514cc3ecb645f2788f6e5ef80352d2b8e5"
+    },
+    {
+      "path": "upstream_uv.lock",
+      "bytes": 821103,
+      "sha256": "4ee1df051214ba6d7b039f4018a2a469ee6abbe174119d7237694aeb2e084c5c"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 374,
+      "sha256": "f281cb48dc250d334ed1944d8e401ea761c4992120d3f8da96be81983e024512"
+    }
+  ]
+}
