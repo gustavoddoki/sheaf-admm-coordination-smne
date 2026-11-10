@@ -1,0 +1,52 @@
+# @package _global_
+# Parametric-family control: 9x9 Sudoku with the same per-cell width as 4x4.
+task: sudoku
+model_type: sheaf
+
+training:
+  lr: 1.7e-3
+  weight_decay: 1.0e-7
+  epochs: 3
+  batch_size: 16
+  warmup_steps: 10
+  ema_decay: 0.99
+  K_train: 5
+  K_eval: 10
+  loss_window: 2
+  train_iters_dist: fixed
+  val_interval: 1
+  best_metric: completion
+
+data:
+  dir: datasets/sudoku_parametric_9x9
+  train_split: train
+  val_splits: [test_hard]
+  loader: puzzle
+
+task_cfg:
+  grid_size: 9
+  num_classes: 10
+  constraint_weight: 0.0
+
+model:
+  num_classes: 10
+  sudoku_grid_size: 9
+  d_v: 144                # 9 cells x 16-dimensional cell blocks
+  d_e: 16
+  encoder_arch: sudoku
+  enc_d_model: 64
+  enc_num_blocks: 2
+  comm_norm_type: layernorm
+  objective_mode: non_negative
+  x_solver: diagonal_prox
+  z_solver: unrolled_cg
+  z_mode: prox
+  gamma: 2.0
+  cg_iters: 3
+  rm_sharing: sudoku
+  rm_init: soft_slice
+  rm_mode: fixed
+  num_directions: 9
+  rho_init: 0.25
+  decoder_arch: sudoku
+  dec_hidden_dims: [128]

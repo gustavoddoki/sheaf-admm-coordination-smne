@@ -1,0 +1,59 @@
+{
+  "analysis": "exploratory sensitivity; not a confirmatory primary test",
+  "input_csv": "outputs\\coordination_channel_ablation\\p8\\family_results.csv",
+  "input_sha256": "2530590639876b1db4fe5df0f189eed57cd076b9aeda04e892ce400605df0f9e",
+  "formula": "(48 clues, 100%-50% communication) - (32 clues, 100%-50%)",
+  "independent_unit": "solution family",
+  "aggregation": "average repeated masks, checkpoint seeds, and model positions within family and cell",
+  "bootstrap": {
+    "method": "percentile cluster bootstrap over families",
+    "draws": 20000,
+    "seed": 20261008
+  },
+  "results": {
+    "balanced": {
+      "primary_logprob": {
+        "label": "pre-commit log-probability",
+        "estimate": -0.4449704429996949,
+        "ci95_family_bootstrap": [
+          -0.598764901902668,
+          -0.27289306546551806
+        ],
+        "families": 64
+      },
+      "primary_accuracy": {
+        "label": "pre-commit accuracy reconstruction",
+        "estimate": -0.1567780671296296,
+        "ci95_family_bootstrap": [
+          -0.1729383680555555,
+          -0.14008933738425924
+        ],
+        "families": 64,
+        "confirmatory_accuracy_estimate": -0.1567780671296296,
+        "absolute_difference_from_confirmatory": 0.0
+      }
+    },
+    "concentrated": {
+      "primary_logprob": {
+        "label": "pre-commit log-probability",
+        "estimate": -0.31994175254404633,
+        "ci95_family_bootstrap": [
+          -0.4808590536489721,
+          -0.13685197913313615
+        ],
+        "families": 64
+      },
+      "primary_accuracy": {
+        "label": "pre-commit accuracy reconstruction",
+        "estimate": -0.13917824074074073,
+        "ci95_family_bootstrap": [
+          -0.1558521412037037,
+          -0.12233072916666665
+        ],
+        "families": 64,
+        "confirmatory_accuracy_estimate": -0.13917824074074073,
+        "absolute_difference_from_confirmatory": 0.0
+      }
+    }
+  }
+}

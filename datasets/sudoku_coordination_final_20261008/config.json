@@ -1,0 +1,12 @@
+{
+  "dataset": "Ritvik19/Sudoku-Dataset",
+  "height": 9,
+  "width": 9,
+  "seed": 20261008,
+  "train_size": 0,
+  "test_size": 816,
+  "difficulty_max": 2.0,
+  "train_augment": false,
+  "test_augment": false,
+  "output_dir": "datasets/sudoku_coordination_final_20261008"
+}

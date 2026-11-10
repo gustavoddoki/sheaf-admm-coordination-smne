@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "main_tables_checked": 12,
+  "numerical_main_tables_checked": 10,
+  "supplemental_numerical_tables_checked": 5,
+  "exported_curve_points_checked": 960,
+  "figure_hashes_checked": 2,
+  "m5": {
+    "gate_sha256": "acf16084d1c4c15955a345cbf2c1e2aedd92dcebc5cc994eb2849198255f4c06",
+    "analysis": "retained_m5_analysis_ada4a276b8ca",
+    "audits_passed": 3,
+    "hypotheses_supported": 10,
+    "tables_checked": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "S3"
+    ],
+    "figure_2_curve_points_checked": 1200
+  },
+  "manuscript_sha256": "e264649997147303d959af39195d9af8334ab6349f01b3193aa8dff72254b0c7",
+  "supplement_sha256": "d3d9137b66bcdbe77b0ed4d8e337313b6a7db5a0f9d1c4dad5f1003481b28692",
+  "verifier_sha256": "1cfff7d6bcaec9a74010cdbdd75fadde0d19498b4237b1129015444cd217f5e1",
+  "scope": "Exact published numerical rows/rounding and curve means; design-table row counts; stage-2 (M5) tables against the frozen M5 gate, its audited runs and its analysis."
+}

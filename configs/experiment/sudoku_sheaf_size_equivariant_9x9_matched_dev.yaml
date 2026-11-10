@@ -1,0 +1,57 @@
+# @package _global_
+# Match the 16x16 development pilot except for graph/alphabet size and data.
+task: sudoku
+model_type: sheaf
+
+training:
+  seed: 42
+  lr: 1.7e-3
+  weight_decay: 1.0e-7
+  epochs: 2
+  batch_size: 1
+  warmup_steps: 4
+  ema_decay: 0.99
+  K_train: 3
+  K_eval: 3
+  loss_window: 1
+  train_iters_dist: fixed
+  val_interval: 1
+  best_split: validation
+  best_metric: completion
+
+data:
+  dir: datasets/sudoku_unique_9x9_matched_dev
+  train_split: train
+  val_splits: [validation]
+  loader: puzzle
+
+task_cfg:
+  grid_size: 9
+  num_classes: 10
+  symbol_capacity: 16
+  constraint_weight: 0.0
+
+model:
+  num_classes: 10
+  sudoku_grid_size: 9
+  sudoku_cell_dim: 24
+  sudoku_symbol_capacity: 16
+  d_v: 216
+  d_e: 24
+  encoder_arch: sudoku_equivariant
+  enc_d_model: 32
+  enc_num_blocks: 2
+  objective_mode: non_negative
+  x_solver: diagonal_prox
+  z_solver: unrolled_cg
+  z_mode: prox
+  gamma: 2.0
+  cg_iters: 2
+  rm_sharing: sudoku_exact
+  rm_mode: fixed
+  rho_init: 0.25
+  decoder_arch: sudoku
+  sudoku_readout_mode: assignment
+  sudoku_internal_projection_mode: sinkhorn
+  sudoku_internal_sinkhorn_iters: 4
+  sudoku_internal_sinkhorn_temperature: 1.0

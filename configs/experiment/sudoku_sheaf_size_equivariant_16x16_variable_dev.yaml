@@ -1,0 +1,60 @@
+# @package _global_
+# Seed-42 development pilot; compare three placement arms with identical data
+# and training horizon. Override only the internal/output projection modes.
+task: sudoku
+model_type: sheaf
+
+training:
+  seed: 42
+  lr: 1.7e-3
+  weight_decay: 1.0e-7
+  epochs: 5
+  batch_size: 1
+  warmup_steps: 4
+  ema_decay: 0.99
+  K_train: 10
+  K_eval: 10
+  loss_window: 1
+  train_iters_dist: uniform
+  train_iters_min: 5
+  val_interval: 1
+  best_split: validation
+  best_metric: completion
+
+data:
+  dir: datasets/sudoku_unique_16x16_variable_horizon_dev
+  train_split: train
+  val_splits: [validation]
+  loader: puzzle
+
+task_cfg:
+  grid_size: 16
+  num_classes: 17
+  symbol_capacity: 16
+  constraint_weight: 0.0
+
+model:
+  num_classes: 17
+  sudoku_grid_size: 16
+  sudoku_cell_dim: 24
+  sudoku_symbol_capacity: 16
+  d_v: 384
+  d_e: 24
+  encoder_arch: sudoku_equivariant
+  enc_d_model: 32
+  enc_num_blocks: 2
+  objective_mode: quadratic
+  x_solver: diagonal_prox
+  z_solver: unrolled_cg
+  z_mode: prox
+  gamma: 2.0
+  cg_iters: 2
+  rm_sharing: sudoku_exact
+  rm_mode: fixed
+  rho_init: 0.25
+  decoder_arch: sudoku
+  sudoku_readout_mode: assignment
+  sudoku_assignment_readout_transform: log_softplus
+  sudoku_internal_projection_mode: sinkhorn
+  sudoku_internal_sinkhorn_iters: 4
+  sudoku_internal_sinkhorn_temperature: 1.0

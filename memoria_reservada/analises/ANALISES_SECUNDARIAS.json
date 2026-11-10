@@ -1,0 +1,181 @@
+{
+  "status": "complete",
+  "analysis_role": "secondary_post_hoc_historical_benchmark_not_fresh_confirmation",
+  "bootstrap_seed": 2026110801,
+  "bootstrap_samples": 10000,
+  "inference_limit": "Marginal descriptive intervals; three seeds; historical selection unaccounted for; fixed schedules.",
+  "competitive_contrasts": {
+    "freeze_missing": {
+      "correct_gain": {
+        "mean_pp": 1.482046070460705,
+        "percentile_95_pp": [
+          1.1348238482384831,
+          1.8419715447154477
+        ]
+      },
+      "excess_reduction": {
+        "mean_pp": -0.6132377295995183,
+        "percentile_95_pp": [
+          -0.7435683905450181,
+          -0.4902373155675992
+        ]
+      }
+    },
+    "pause_isolated": {
+      "correct_gain": {
+        "mean_pp": 3.0403116531165324,
+        "percentile_95_pp": [
+          2.566056910569107,
+          3.5399728997289985
+        ]
+      },
+      "excess_reduction": {
+        "mean_pp": -12.124454230653416,
+        "percentile_95_pp": [
+          -12.446752201897016,
+          -11.808651385124959
+        ]
+      }
+    }
+  },
+  "temporal_differences": {
+    "blackout": {
+      "correct_agreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": 9.163279132791327
+      },
+      "wrong_agreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": -5.707994579945799
+      },
+      "disagreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": -2.3204607046070453
+      }
+    },
+    "partition3": {
+      "correct_agreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": 4.386856368563686
+      },
+      "wrong_agreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": -2.8963414634146334
+      },
+      "disagreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": -1.0219060523938572
+      }
+    },
+    "random50": {
+      "correct_agreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": 8.062330623306233
+      },
+      "wrong_agreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": -4.844173441734418
+      },
+      "disagreement": {
+        "first_nonzero_mean_round": 6,
+        "final_difference_pp": -2.1567299006323393
+      }
+    },
+    "late_burst4": {
+      "correct_agreement": {
+        "first_nonzero_mean_round": 11,
+        "final_difference_pp": 18.34349593495935
+      },
+      "wrong_agreement": {
+        "first_nonzero_mean_round": 11,
+        "final_difference_pp": -10.857046070460706
+      },
+      "disagreement": {
+        "first_nonzero_mean_round": 11,
+        "final_difference_pp": -5.109530261969286
+      }
+    }
+  },
+  "exact_counts_sensitivity": {
+    "standard_dual": {
+      "three_original_faults": 0,
+      "all_four_faults": 0
+    },
+    "retained_dual": {
+      "three_original_faults": 1,
+      "all_four_faults": 1
+    },
+    "pause_isolated": {
+      "three_original_faults": 0,
+      "all_four_faults": 1
+    }
+  },
+  "data_checks": {
+    "exact_training_solution_overlap_count": 0,
+    "evaluated_families": 48,
+    "training_labels_sha256": "76e43325e807290c97686ba32adcd4fa9f76a75e8dd8a75635ae7b884e16ccf6",
+    "evaluation_labels_sha256": "9dee1bf3d7f0268412b6456cf05b04b95f3a3426bc769a8eefe9255a487c4490",
+    "manifest_unique_solution_count_records": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "scope": "Exact training solution overlap checked now; uniqueness uses generation records, not independent recount; no symmetry separation claim."
+  },
+  "source_csv_sha256": {
+    "outputs\\intermittent_coordination_20261106\\retained_confirmatory_v2_evaluation_83d47d13ff11\\confirmatory_metrics.csv": "874100045f9af5a87ff0686d5ec20b768c0b1adb15a744cab7b0e6838ab993b6",
+    "outputs\\intermittent_coordination_20261106\\retained_confirmatory_v2_evaluation_4fe72af831dd\\confirmatory_metrics.csv": "6fa1542fcf47e0acd6ca27f3e0d9614c6c87750655dd2d7ca8a01bf104df9791",
+    "outputs\\intermittent_coordination_20261106\\retained_confirmatory_v2_evaluation_86e41d68fbf3\\confirmatory_metrics.csv": "b3d067470234e865883d3c9eea3258017f08854900496a2f50fa9ea5607a3aff"
+  },
+  "gate_sha256": "e8618cd5bf6b91c25bacf7449f0d31a2c4a38550433f1f49aec6ba4e54a9f91c",
+  "script_sha256": "a72b3f27aafa2a3ff6eb613b9bd150ccd4a79eab4a3839445941146fc166defa",
+  "figure_sha256": {
+    "trajetorias_historicas.png": "f7687ba30a04c8025e96e34e96f10e4d9a8f8e21f6028423a5bc589a79868456",
+    "trajetorias_historicas.svg": "c041ad317c3136d9c6f686bcf5e030bc74faa3e8d1a44be5611beccd3b80c319"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "bootstrap_seed": 20261008,
+  "dataset_manifest_sha256": "4993c25229a42e0f46a8463e57d8f32049a54fa34a3ad8afd1fc5cfb38bd101c",
+  "decimation_curves": {
+    "balanced/communication_100": [
+      {
+        "ci95_family_bootstrap": [
+          0.9222005208333334,
+          0.9597227647569444
+        ],
+        "clues": 32,
+        "mean_accuracy": 0.9420138888888888
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9995659722222221,
+          0.9999565972222222
+        ],
+        "clues": 40,
+        "mean_accuracy": 0.9997829861111112
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9998697916666666,
+          1.0
+        ],
+        "clues": 48,
+        "mean_accuracy": 0.9999565972222222
+      }
+    ],
+    "balanced/communication_50": [
+      {
+        "ci95_family_bootstrap": [
+          0.7584129050925926,
+          0.7992838541666667
+        ],
+        "clues": 32,
+        "mean_accuracy": 0.7789496527777778
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9664205367476851,
+          0.9786168981481482
+        ],
+        "clues": 40,
+        "mean_accuracy": 0.9729962384259259
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9919053819444443,
+          0.9952112268518518
+        ],
+        "clues": 48,
+        "mean_accuracy": 0.9936704282407407
+      }
+    ],
+    "concentrated/communication_100": [
+      {
+        "ci95_family_bootstrap": [
+          0.9220052083333334,
+          0.9600477430555555
+        ],
+        "clues": 32,
+        "mean_accuracy": 0.9420138888888888
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9841145833333333,
+          0.9958767361111112
+        ],
+        "clues": 40,
+        "mean_accuracy": 0.9911458333333333
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9963541666666667,
+          0.999197048611111
+        ],
+        "clues": 48,
+        "mean_accuracy": 0.9979383680555556
+      }
+    ],
+    "concentrated/communication_50": [
+      {
+        "ci95_family_bootstrap": [
+          0.7580504918981481,
+          0.7991899956597223
+        ],
+        "clues": 32,
+        "mean_accuracy": 0.7789496527777778
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9085574001736111,
+          0.935814525462963
+        ],
+        "clues": 40,
+        "mean_accuracy": 0.9227358217592593
+      },
+      {
+        "ci95_family_bootstrap": [
+          0.9682796223958333,
+          0.9792534722222221
+        ],
+        "clues": 48,
+        "mean_accuracy": 0.9740523726851852
+      }
+    ]
+  },
+  "family_cluster_bootstrap_draws": 20000,
+  "family_count": 64,
+  "independent_unit": "solution family",
+  "interaction_formula": "(acc48_100 - acc48_50) - (acc32_100 - acc32_50), per distribution",
+  "phase": "P8",
+  "primary_contrasts": {
+    "balanced": {
+      "ci95_family_bootstrap": [
+        -0.1730615234375,
+        -0.14029206452546297
+      ],
+      "estimate": -0.1567780671296296,
+      "families": 64,
+      "name": "balanced_clue_by_communication_interaction",
+      "p_holm_two_primary": 6.472733239235624e-27,
+      "p_two_sided_paired_t": 3.236366619617812e-27,
+      "sd_between_families": 0.06761510617726332
+    },
+    "concentrated": {
+      "ci95_family_bootstrap": [
+        -0.1554763454861111,
+        -0.12188946759259259
+      ],
+      "estimate": -0.13917824074074073,
+      "families": 64,
+      "name": "concentrated_clue_by_communication_interaction",
+      "p_holm_two_primary": 7.495777887922336e-24,
+      "p_two_sided_paired_t": 7.495777887922336e-24,
+      "sd_between_families": 0.06964694656734771
+    }
+  },
+  "primary_endpoint": "family mean pre-commit accuracy, equal agent-view weighting; decimation with global commits",
+  "repeated_measures": "checkpoint seed, model position, and communication mask",
+  "run_config_sha256": "0a24e3673f0b78d6681e1b637ddc23587abcd9a8fafd804dc71fb21c0ffd63e0",
+  "secondary_direct_means": [
+    {
+      "clues": 32,
+      "communication_fraction": 0.5,
+      "distribution": "balanced",
+      "primary_accuracy": 0.6187717013888889,
+      "primary_logprob": -0.9832399347797036
+    },
+    {
+      "clues": 32,
+      "communication_fraction": 1.0,
+      "distribution": "balanced",
+      "primary_accuracy": 0.8281684027777777,
+      "primary_logprob": -0.4948082927415574
+    },
+    {
+      "clues": 32,
+      "communication_fraction": 0.5,
+      "distribution": "concentrated",
+      "primary_accuracy": 0.6187717013888889,
+      "primary_logprob": -0.9832399347797036
+    },
+    {
+      "clues": 32,
+      "communication_fraction": 1.0,
+      "distribution": "concentrated",
+      "primary_accuracy": 0.8281684027777777,
+      "primary_logprob": -0.4948082927415574
+    },
+    {
+      "clues": 40,
+      "communication_fraction": 0.5,
+      "distribution": "balanced",
+      "primary_accuracy": 0.8446252893518519,
+      "primary_logprob": -0.505224358616235
+    },
+    {
+      "clues": 40,
+      "communication_fraction": 1.0,
+      "distribution": "balanced",
+      "primary_accuracy": 0.9793402777777778,
+      "primary_logprob": -0.09952176998365299
+    },
+    {
+      "clues": 40,
+      "communication_fraction": 0.5,
+      "distribution": "concentrated",
+      "primary_accuracy": 0.7714988425925926,
+      "primary_logprob": -0.6308071539420376
+    },
+    {
+      "clues": 40,
+      "communication_fraction": 1.0,
+      "distribution": "concentrated",
+      "primary_accuracy": 0.9391710069444444,
+      "primary_logprob": -0.2196293621054792
+    },
+    {
+      "clues": 48,
+      "communication_fraction": 0.5,
+      "distribution": "balanced",
+      "primary_accuracy": 0.9653645833333333,
+      "primary_logprob": -0.19926675802081362
+    },
+    {
+      "clues": 48,
+      "communication_fraction": 1.0,
+      "distribution": "balanced",
+      "primary_accuracy": 0.9997612847222223,
+      "primary_logprob": -0.015647022673704165
+    },
+    {
+      "clues": 48,
+      "communication_fraction": 0.5,
+      "distribution": "concentrated",
+      "primary_accuracy": 0.8875651041666667,
+      "primary_logprob": -0.35458920794846766
+    },
+    {
+      "clues": 48,
+      "communication_fraction": 1.0,
+      "distribution": "concentrated",
+      "primary_accuracy": 0.9882378472222223,
+      "primary_logprob": -0.07108854535406782
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "blank_identifier_id": 0,
+  "height": 9,
+  "ignore_label_id": 0,
+  "mean_puzzle_examples": 1.0,
+  "num_puzzle_identifiers": 1,
+  "pad_id": 0,
+  "seq_len": 81,
+  "sets": [
+    "all"
+  ],
+  "total_groups": 512,
+  "total_puzzles": 512,
+  "vocab_size": 10,
+  "width": 9
+}

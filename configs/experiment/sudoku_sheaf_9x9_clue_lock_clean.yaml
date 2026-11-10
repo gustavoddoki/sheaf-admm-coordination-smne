@@ -1,0 +1,58 @@
+# @package _global_
+# Matched clue-only control: same assignment-state model and training as the
+# internal Sinkhorn arm, but free assignments are not normalized.
+task: sudoku
+model_type: sheaf
+
+training:
+  lr: 1.7e-3
+  weight_decay: 1.0e-7
+  epochs: 5
+  batch_size: 16
+  warmup_steps: 10
+  ema_decay: 0.99
+  K_train: 10
+  K_eval: 10
+  loss_window: 2
+  train_iters_dist: uniform
+  train_iters_min: 5
+  val_interval: 1
+  best_split: validation
+  best_metric: completion
+
+data:
+  dir: datasets/sudoku_unique_9x9_clean
+  train_split: train
+  val_splits: [validation]
+  loader: puzzle
+
+task_cfg:
+  grid_size: 9
+  num_classes: 10
+  constraint_weight: 0.0
+
+model:
+  num_classes: 10
+  sudoku_grid_size: 9
+  d_v: 144
+  d_e: 16
+  encoder_arch: sudoku
+  enc_d_model: 64
+  enc_num_blocks: 2
+  comm_norm_type: layernorm
+  objective_mode: non_negative
+  x_solver: diagonal_prox
+  z_solver: unrolled_cg
+  z_mode: prox
+  gamma: 2.0
+  cg_iters: 3
+  rm_sharing: sudoku
+  rm_init: soft_slice
+  rm_mode: fixed
+  num_directions: 9
+  rho_init: 0.25
+  decoder_arch: sudoku
+  sudoku_readout_mode: assignment
+  sudoku_internal_projection_mode: clue_lock
+  sudoku_internal_sinkhorn_iters: 12
+  sudoku_internal_sinkhorn_temperature: 1.0

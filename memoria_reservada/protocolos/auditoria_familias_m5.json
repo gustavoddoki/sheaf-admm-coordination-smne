@@ -1,0 +1,1347 @@
+{
+  "version": "retained_m5_family_audit_v1",
+  "status": "passed",
+  "dataset": "datasets\\sudoku_coordination_m5_20261109",
+  "generator_seed": 20261109,
+  "families": 96,
+  "selected_stratum": {
+    "clues": 40,
+    "policy": "concentrated"
+  },
+  "uniqueness": "Base puzzle and all 8 nested variants per family recounted to exactly one solution.",
+  "consistency": "Every clue equals the family solution; common evaluation cells hidden; labels equal family solution.",
+  "exact_overlap": {
+    "hits": [],
+    "sources_scanned": 123,
+    "sources": [
+      {
+        "path": "datasets\\sudoku_branching_coordination_dev_20261008\\test_hard\\all__labels.npy",
+        "distinct_solutions": 16
+      },
+      {
+        "path": "datasets\\sudoku_confirmatory_20260916\\missing_30\\test_hard\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_confirmatory_20260916\\missing_40\\test_hard\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_confirmatory_20260916\\missing_50\\test_hard\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_coordination_confirmation_20261007\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_coordination_extension_20261022\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_coordination_final_20261008\\test_hard\\all__labels.npy",
+        "distinct_solutions": 136
+      },
+      {
+        "path": "datasets\\sudoku_coordination_pilot_20261007\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_easy_eval_local\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_easy_eval_local\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\G-D4\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\G-D4\\train\\all__labels.npy",
+        "distinct_solutions": 400000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\G-ID\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\G-ID\\train\\all__labels.npy",
+        "distinct_solutions": 50000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\S-D4\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\S-D4\\train\\all__labels.npy",
+        "distinct_solutions": 400000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\S-ID\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_batch_ablation\\S-ID\\train\\all__labels.npy",
+        "distinct_solutions": 50000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_dev2000\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_extreme300\\test_hard\\all__labels.npy",
+        "distinct_solutions": 300
+      },
+      {
+        "path": "datasets\\sudoku_extreme_sample2_1500\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_extreme_sample3_1500\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_extreme_sample4_1500\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_extreme_sample_1500\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_extreme_x1k_aug\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_x1k_aug\\train\\all__labels.npy",
+        "distinct_solutions": 500000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_x1k_source\\train\\all__labels.npy",
+        "distinct_solutions": 1000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_x50k\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_x50k\\train\\all__labels.npy",
+        "distinct_solutions": 50000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_x50k_dihedral8\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_extreme_x50k_dihedral8\\train\\all__labels.npy",
+        "distinct_solutions": 400000
+      },
+      {
+        "path": "datasets\\sudoku_medium_local\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_medium_local\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_official_disjoint_pilot\\test_hard\\all__labels.npy",
+        "distinct_solutions": 266
+      },
+      {
+        "path": "datasets\\sudoku_official_disjoint_pilot\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_10\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_10\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_20\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_20\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_30\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_30\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_40\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_40\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_50\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_official_missing_50\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_official_pilot\\test_hard\\all__labels.npy",
+        "distinct_solutions": 266
+      },
+      {
+        "path": "datasets\\sudoku_official_pilot\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_parametric_9x9\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_parametric_9x9\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_relative_final_test\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_relative_final_test\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_relative_validation\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_relative_validation\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_sakana_compute_matched_fresh_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_compute_matched_fresh_holdout_k5_independent\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_difficulty_confirmation_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_difficulty_replication_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_equal_compute_confirmation_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_equal_compute_replication_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_equal_time_confirmation_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_equal_time_confirmation_holdout_3\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_final_mrv_confirmation_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_full_reproduction\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_sakana_full_reproduction\\train\\all__labels.npy",
+        "distinct_solutions": 400000
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_16384\\train\\all__labels.npy",
+        "distinct_solutions": 16384
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_16384\\validation\\all__labels.npy",
+        "distinct_solutions": 512
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_4096\\train\\all__labels.npy",
+        "distinct_solutions": 4096
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_4096\\validation\\all__labels.npy",
+        "distinct_solutions": 512
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_dev_unique\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_2\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_3\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_4\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_5\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_6\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_7\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_8\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1500
+      },
+      {
+        "path": "datasets\\sudoku_sakana_hard_fresh_holdout_9\\test_hard\\all__labels.npy",
+        "distinct_solutions": 5000
+      },
+      {
+        "path": "datasets\\sudoku_sakana_horizon_map_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_official_prefix\\test_hard\\all__labels.npy",
+        "distinct_solutions": 2000
+      },
+      {
+        "path": "datasets\\sudoku_sakana_official_prefix\\train\\all__labels.npy",
+        "distinct_solutions": 400000
+      },
+      {
+        "path": "datasets\\sudoku_sakana_placement_confirmation_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_2048\\holdout\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_2048\\train\\all__labels.npy",
+        "distinct_solutions": 2048
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_2048\\validation\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_4096\\holdout\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_4096\\train\\all__labels.npy",
+        "distinct_solutions": 4096
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_4096\\validation\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_pilot\\holdout\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_pilot\\train\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_sakana_stability_pilot\\validation\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_smoke\\test_hard\\all__labels.npy",
+        "distinct_solutions": 4
+      },
+      {
+        "path": "datasets\\sudoku_smoke\\train\\all__labels.npy",
+        "distinct_solutions": 16
+      },
+      {
+        "path": "datasets\\sudoku_smoke_eval\\test_hard\\all__labels.npy",
+        "distinct_solutions": 32
+      },
+      {
+        "path": "datasets\\sudoku_smoke_eval\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_1024\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_1024\\train\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_backtracking_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_backtracking_holdout\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_clean\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_clean\\train\\all__labels.npy",
+        "distinct_solutions": 1024
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_clean\\validation\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_clue_lock_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_clue_lock_holdout\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_constraint_ablation_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_constraint_ablation_holdout\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_constraint_placement_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_constraint_placement_holdout\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_matched\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_matched\\train\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_matched_dev\\test_hard\\all__labels.npy",
+        "distinct_solutions": 32
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_matched_dev\\train\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_matched_dev\\validation\\all__labels.npy",
+        "distinct_solutions": 16
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_matched_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_matched_holdout\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_offtemplate_20261014\\test_hard\\all__labels.npy",
+        "distinct_solutions": 256
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_offtemplate_20261014\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_ood_36_45\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_ood_36_45\\train\\all__labels.npy",
+        "distinct_solutions": 2
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_projection_budget_holdout\\test_hard\\all__labels.npy",
+        "distinct_solutions": 64
+      },
+      {
+        "path": "datasets\\sudoku_unique_9x9_projection_budget_holdout\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      },
+      {
+        "path": "datasets\\sudoku_very_easy_eval_local\\test_hard\\all__labels.npy",
+        "distinct_solutions": 128
+      },
+      {
+        "path": "datasets\\sudoku_very_easy_eval_local\\train\\all__labels.npy",
+        "distinct_solutions": 1
+      }
+    ]
+  },
+  "orbit_overlap": {
+    "fingerprint": "pair_cycle_v1",
+    "fingerprint_code_sha256": "d82f5d1c88224d899ff5c635673131061adf0ae1b98ce5d1e7c38e1ca29e45ff",
+    "interpretation": "Different fingerprints certify that no Sudoku symmetry maps one grid to the other.",
+    "hits": [],
+    "mutual_distinct_within_m5": true,
+    "sources": [
+      {
+        "path": "datasets/sudoku_coordination_pilot_20261007/test_hard/all__labels.npy",
+        "sha256": "9dee1bf3d7f0268412b6456cf05b04b95f3a3426bc769a8eefe9255a487c4490",
+        "distinct_solutions": 64,
+        "distinct_fingerprints": 64
+      },
+      {
+        "path": "datasets/sudoku_sakana_stability_4096/train/all__labels.npy",
+        "sha256": "76e43325e807290c97686ba32adcd4fa9f76a75e8dd8a75635ae7b884e16ccf6",
+        "distinct_solutions": 4096,
+        "distinct_fingerprints": 3093
+      },
+      {
+        "path": "datasets/sudoku_sakana_stability_4096/validation/all__labels.npy",
+        "sha256": "231a00147c02d2af2b01113eeee000166a9251e01cc4cafd553add52308cc4f4",
+        "distinct_solutions": 128,
+        "distinct_fingerprints": 105
+      },
+      {
+        "path": "datasets/sudoku_sakana_stability_4096/holdout/all__labels.npy",
+        "sha256": "a21b75819e7212e18897784f9c3e0673f17c9fa77f48afd5fc862dec79ed58bb",
+        "distinct_solutions": 256,
+        "distinct_fingerprints": 202
+      },
+      {
+        "path": "datasets/sudoku_coordination_confirmation_20261007/test_hard/all__labels.npy",
+        "sha256": "6019b628d1dc99002c070225b3b0a2dc8d1691d77685b191d97c8ec802f5d8cc",
+        "distinct_solutions": 64,
+        "distinct_fingerprints": 64
+      },
+      {
+        "path": "datasets/sudoku_coordination_extension_20261022/test_hard/all__labels.npy",
+        "sha256": "36329a219194966f1464c1cec9708053fbc8187736d860ed6011c40fe0fc9635",
+        "distinct_solutions": 128,
+        "distinct_fingerprints": 128
+      },
+      {
+        "path": "datasets/sudoku_coordination_final_20261008/test_hard/all__labels.npy",
+        "sha256": "4cb8211e67ba3184deaaed83395fe21f57e6ee2a057c0eb10c39b46cedd65826",
+        "distinct_solutions": 136,
+        "distinct_fingerprints": 136
+      },
+      {
+        "path": "datasets/sudoku_branching_coordination_dev_20261008/test_hard/all__labels.npy",
+        "sha256": "388a673feba6bca255eba875998fe49f1fcda10cd3377f2a86df144e068168af",
+        "distinct_solutions": 16,
+        "distinct_fingerprints": 16
+      }
+    ]
+  },
+  "training_labels_match_m4_training_data": true,
+  "family_records": [
+    {
+      "family_id": 0,
+      "seed": 20261109,
+      "row_index": 5,
+      "puzzle_sha256": "720c9cbc9539837ac6791a5046eaed2b70e71846f8fd4807f429626a7fa675a8",
+      "solution_sha256": "7697950c92d99b70cd84be9b041765862f5f678593b4fccad593847fbc5558b5",
+      "unit_clue_sum_squares": 670
+    },
+    {
+      "family_id": 1,
+      "seed": 20361112,
+      "row_index": 13,
+      "puzzle_sha256": "5612afc958173b7406918adcc151115870e10a44cdd7bd222af57315537b8d3d",
+      "solution_sha256": "d0cff38c2c4d002cdaf9391e1001435e5b0d72c7992a8cbd48cc3a4879adb8d8",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 2,
+      "seed": 20461115,
+      "row_index": 21,
+      "puzzle_sha256": "f661c2adcc1205b5acd774aff693af3b911556fe715df5e036f5483e514a7c6a",
+      "solution_sha256": "6169ac1201315fd07ca810b7425a72584b5a2775aadaa88b451088f0984f1fbe",
+      "unit_clue_sum_squares": 626
+    },
+    {
+      "family_id": 3,
+      "seed": 20561118,
+      "row_index": 29,
+      "puzzle_sha256": "b4da1d73be9b9367c466f4da611892d1f83ae2fc042024d264798bf47b22d520",
+      "solution_sha256": "e658a7ff3fe1131197e95eee6eb02733264e374dca9a9be66fa676e282dcc426",
+      "unit_clue_sum_squares": 624
+    },
+    {
+      "family_id": 4,
+      "seed": 20661121,
+      "row_index": 37,
+      "puzzle_sha256": "a66f5cb7958fe14d0a98b230d5ba21dc84e70aa6fc988454046c9d794ae06c8b",
+      "solution_sha256": "ea48ae1cb4c03c7d44e91cb6c6726f1bfc7e0bd7144f90aadf25a7acea5e6006",
+      "unit_clue_sum_squares": 642
+    },
+    {
+      "family_id": 5,
+      "seed": 20761124,
+      "row_index": 45,
+      "puzzle_sha256": "c2cf1027a339c1407e69d3517e1c2f885bbf52bc403a46cd5f637d8c07519406",
+      "solution_sha256": "b96417c19f97e125faaddd3b47552568e05ba04c7dbb48adeff81efbac78699c",
+      "unit_clue_sum_squares": 636
+    },
+    {
+      "family_id": 6,
+      "seed": 20861127,
+      "row_index": 53,
+      "puzzle_sha256": "a4f380f69fd4167dc83f0455b5ba5728e1a8a03e4a62449ec71d580bd36dab2f",
+      "solution_sha256": "0e4fa22902856a1cefa731f572ad799dd000a3f7a66b1e32f07d09de490f021f",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 7,
+      "seed": 20961130,
+      "row_index": 61,
+      "puzzle_sha256": "7a71cee71eca13cd0742c76bf7c97b6f1810925ff5f84a6956d254bb9cf231bb",
+      "solution_sha256": "5641a699e6bddd545077d18f8623f5fa44a34a35f0eed67945eb9eb4f4a208ef",
+      "unit_clue_sum_squares": 626
+    },
+    {
+      "family_id": 8,
+      "seed": 21061133,
+      "row_index": 69,
+      "puzzle_sha256": "885515c6e955211ee9dbf2fa781b5f9956f1440acdcf241f12eba3719e5a174a",
+      "solution_sha256": "a2f3f11fe7fa14f1ff3b2e9602ac0fe5d76559956932ba4638552386e52e3204",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 9,
+      "seed": 21161136,
+      "row_index": 77,
+      "puzzle_sha256": "0e565e377ed8426626b9303df016595dced4c8a4fe6822d218cf6763cbddbff1",
+      "solution_sha256": "f6932e9caf662b367a347772b8920d2a7d28334ee44df211990aed9230a8dc7d",
+      "unit_clue_sum_squares": 634
+    },
+    {
+      "family_id": 10,
+      "seed": 21261139,
+      "row_index": 85,
+      "puzzle_sha256": "565544996abc01a3d5b56d677f229b6de477472003ad6e355cb27f7e0c052d45",
+      "solution_sha256": "22c52b642aedf8dc13b5fad8525270d73f0a8cc8a2f04a0313664a12e1799340",
+      "unit_clue_sum_squares": 684
+    },
+    {
+      "family_id": 11,
+      "seed": 21361142,
+      "row_index": 93,
+      "puzzle_sha256": "196cf4c4aa3984c92e63c6076b54321b47e923010e7bf579494b34765f4aad78",
+      "solution_sha256": "96ae16e4ed593d241a589c88f09eb45eb135b9e74520936db23b68d276333b26",
+      "unit_clue_sum_squares": 634
+    },
+    {
+      "family_id": 12,
+      "seed": 21461145,
+      "row_index": 101,
+      "puzzle_sha256": "7b00ccdd329b65b79a6014852ccc3fcf0b32282d1a0590b3e404ec4c5d740970",
+      "solution_sha256": "88f9aa2bc473ad6d49b8f33aa38129365207cc4c6dfe0fed7319e72561522388",
+      "unit_clue_sum_squares": 650
+    },
+    {
+      "family_id": 13,
+      "seed": 21561148,
+      "row_index": 109,
+      "puzzle_sha256": "f512e606125d7e6659f07828e0d783c301e5feba2e7a71d8466cf3057183c66a",
+      "solution_sha256": "75ce25c8f5bfb12b79be05e43bb66e30fa96381b196a0a37a93dc902cf607a14",
+      "unit_clue_sum_squares": 656
+    },
+    {
+      "family_id": 14,
+      "seed": 21661151,
+      "row_index": 117,
+      "puzzle_sha256": "ef795dc58cb4a0360dd602eced1184ffd52086716716cdf7b758094b9f35ef50",
+      "solution_sha256": "501629654ceb4dfd5e0b9b168c6cd5f55517a2e8b78c24118ef23d020ba3159c",
+      "unit_clue_sum_squares": 596
+    },
+    {
+      "family_id": 15,
+      "seed": 21761154,
+      "row_index": 125,
+      "puzzle_sha256": "7dee2025b74477ba557c6ddd0361e19c73f4c813dc7e005787c9dd041edeb775",
+      "solution_sha256": "e1ebce177cb7967ca9e6bfdbf3461596cb04addfd7cdd656712bd0b1bd471d10",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 16,
+      "seed": 21861157,
+      "row_index": 133,
+      "puzzle_sha256": "e73bf1442279f62570c9afa9e3fd5d63c9485a12649008e9a5e6daabd09a6442",
+      "solution_sha256": "c9425633e9d884ff62c27b6c1a0113af317831efb24b61309396569edb645f3b",
+      "unit_clue_sum_squares": 626
+    },
+    {
+      "family_id": 17,
+      "seed": 21961160,
+      "row_index": 141,
+      "puzzle_sha256": "1c58b90c39803f4a87d549b729b3b5e0c10ac3e64bd246566db9d87b737cf1de",
+      "solution_sha256": "d46e5a706b7c77b7cf510d1698bf0756cfa7d00a3b05d7be4010b82bbad3a5b4",
+      "unit_clue_sum_squares": 622
+    },
+    {
+      "family_id": 18,
+      "seed": 22061163,
+      "row_index": 149,
+      "puzzle_sha256": "138ddb25d24adf123af6759790536612fdef9219bbd18213e329b3938b835785",
+      "solution_sha256": "a3e6073e463a5f3bd4c47818b50e70262a568c747b2774f132cdb7b5ecb9b4e2",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 19,
+      "seed": 22161166,
+      "row_index": 157,
+      "puzzle_sha256": "fdf6077974bea6b73f7edf81e4fbb4d132701e897c2086d751b125e17ec014fd",
+      "solution_sha256": "e72ccf61d3f55c6d7bcda682140f3db2a08042acf12aca67cdb422c672b326a6",
+      "unit_clue_sum_squares": 642
+    },
+    {
+      "family_id": 20,
+      "seed": 22261169,
+      "row_index": 165,
+      "puzzle_sha256": "79b1f9b45b749b1c606adb757c6815dfa84922043bb3e4caf5fbce642175c97d",
+      "solution_sha256": "889152a76f80ed780024e243aa926bff41ca6f550a0803a1c992d397146e6e0f",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 21,
+      "seed": 22361172,
+      "row_index": 173,
+      "puzzle_sha256": "240e0f2cc1be0b1205cbf5c36b19f7841595624c433e3711fb41985af60e8372",
+      "solution_sha256": "a42e8e635cceb8e2347df08c46f15443e9c078365cfc68c9ea8a287b6cbb5f3a",
+      "unit_clue_sum_squares": 646
+    },
+    {
+      "family_id": 22,
+      "seed": 22461175,
+      "row_index": 181,
+      "puzzle_sha256": "f0b71ff4c461f3a56fc0773405663b21b6393077cd42a2e96906e32e3483562e",
+      "solution_sha256": "9a8b0c8dd6f8040f66b31f883af2e05025bf817316cd6ef93930dac10473e574",
+      "unit_clue_sum_squares": 626
+    },
+    {
+      "family_id": 23,
+      "seed": 22561178,
+      "row_index": 189,
+      "puzzle_sha256": "f3e757c159c99e7108e0760742c09fb27fc959d29f8e2f99f6d782c5b61cb1f8",
+      "solution_sha256": "d0e32919738f29c7e94cd13635ec3581d18b602fed05ee68537f2cd68d1d99c3",
+      "unit_clue_sum_squares": 644
+    },
+    {
+      "family_id": 24,
+      "seed": 22661181,
+      "row_index": 197,
+      "puzzle_sha256": "d0ebe8da43c8f56286dd6500f8270de45c77c39fdd3707a8ce1d0110131e394e",
+      "solution_sha256": "aea24d4e30a564dcf54895805e1b38a05e948e0091087bce7401fcb9e6384343",
+      "unit_clue_sum_squares": 616
+    },
+    {
+      "family_id": 25,
+      "seed": 22761184,
+      "row_index": 205,
+      "puzzle_sha256": "02735cc401ef7b5fc680069064d2bb1e73625ded30d8f8dd924d496b194e6f12",
+      "solution_sha256": "a483ee653c4d76b3fc11c5a55bf1a7869e2c64cd861c81ae65f0768f1425d3b7",
+      "unit_clue_sum_squares": 638
+    },
+    {
+      "family_id": 26,
+      "seed": 22861187,
+      "row_index": 213,
+      "puzzle_sha256": "81941a8a2c6dad2f83a857cfddd2044db945ea1f3ccdf04011dcc088b353a9a3",
+      "solution_sha256": "3f1aeda8c5e70c3de6e13ded118353b5038aec4a56b3ec258581c8a7555ace03",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 27,
+      "seed": 22961190,
+      "row_index": 221,
+      "puzzle_sha256": "44629f8cad18f4ce12027e58229f5d1948c5fe6518a898948521f62950597516",
+      "solution_sha256": "613d07b8d84f29d8fad25b177bc8ec59501d182ca99309ebc1096b17b6169667",
+      "unit_clue_sum_squares": 644
+    },
+    {
+      "family_id": 28,
+      "seed": 23061193,
+      "row_index": 229,
+      "puzzle_sha256": "b00b7d0fe169c00fcb82ca4a1efbdb3c5f212f1c51971d96738d9a622598cf7b",
+      "solution_sha256": "f5df380a6f20c69ea29cf37aa907be224a4504ed1101873e9400e5fceb898a70",
+      "unit_clue_sum_squares": 660
+    },
+    {
+      "family_id": 29,
+      "seed": 23161196,
+      "row_index": 237,
+      "puzzle_sha256": "ec70a61cde1daf84f3f107807cf5e47939fddf2c1c7343a7510f82043ae800f6",
+      "solution_sha256": "d756d939a50940ed4fc39a97d94138f5542d82eb5874e1550541d1a372835e61",
+      "unit_clue_sum_squares": 608
+    },
+    {
+      "family_id": 30,
+      "seed": 23261199,
+      "row_index": 245,
+      "puzzle_sha256": "e11daa9a18506cd31e9a32d5530052cf6c2236e7f42d86e5b35dfb95c09adf82",
+      "solution_sha256": "8c25f059914fe47bf5369aa54214a6346dc294da192f9aea3c0ce90b21b47fcf",
+      "unit_clue_sum_squares": 620
+    },
+    {
+      "family_id": 31,
+      "seed": 23361202,
+      "row_index": 253,
+      "puzzle_sha256": "f1e0dda735231bf2da2b18bc24eca9bc4c007e540730aa065eee162f90c199bb",
+      "solution_sha256": "546ed2175d538095239e5542d949f122ee17f5bd09e3d233c464742f1bf6baf3",
+      "unit_clue_sum_squares": 622
+    },
+    {
+      "family_id": 32,
+      "seed": 23461205,
+      "row_index": 261,
+      "puzzle_sha256": "0487cf357b5f739c13cccb3e00657f66f6b285e0a96dbdc87c68b7b571dd5061",
+      "solution_sha256": "8ad77bfa0acab8df6c0dfdce97952717ca6c2621db531de2952b2d2e29f796c5",
+      "unit_clue_sum_squares": 618
+    },
+    {
+      "family_id": 33,
+      "seed": 23561208,
+      "row_index": 269,
+      "puzzle_sha256": "0330ec85566c9d2f53fc03403bfc53f956695f3268e04ce8c90f677474eeb243",
+      "solution_sha256": "da95b6e9123e5113b14729afb87cc87d016d200e7bfc96561bc7dac71e3ecf8c",
+      "unit_clue_sum_squares": 636
+    },
+    {
+      "family_id": 34,
+      "seed": 23661211,
+      "row_index": 277,
+      "puzzle_sha256": "30bc9b655a415fb1ce40f6f5e0f021e6d6d196b4ccf29eec44ff433f543f9d78",
+      "solution_sha256": "fe5fe122204348a4bdf14960b8fbb020669b7bb2f9a64c173bbc85a2f2e97fa7",
+      "unit_clue_sum_squares": 638
+    },
+    {
+      "family_id": 35,
+      "seed": 23761214,
+      "row_index": 285,
+      "puzzle_sha256": "70ecba3145916ebea8af9f95eee3f3d4a2152b078dbe7b0e24817d9c1738ad0c",
+      "solution_sha256": "0426d16b64cdf4e97556c318b38b0672a8d38563be5bdbc8e6bfba967c5f86cc",
+      "unit_clue_sum_squares": 624
+    },
+    {
+      "family_id": 36,
+      "seed": 23861217,
+      "row_index": 293,
+      "puzzle_sha256": "1f778799231e290ad4cdcf5e86178faf61b74cea385f3d654ae64991a50c3004",
+      "solution_sha256": "f29396e1fc472c4235cce82c584271cef883dee4ae9c84b577fcd302d1406d86",
+      "unit_clue_sum_squares": 636
+    },
+    {
+      "family_id": 37,
+      "seed": 23961220,
+      "row_index": 301,
+      "puzzle_sha256": "8b91019fb340992f4d350cda81716d093b2118f6087d1a652f6b785a44c4532e",
+      "solution_sha256": "08375c96d7e0983a15f81f519ee4c5780a21d8472471336dc13020fb38b19425",
+      "unit_clue_sum_squares": 664
+    },
+    {
+      "family_id": 38,
+      "seed": 24061223,
+      "row_index": 309,
+      "puzzle_sha256": "540296e35bb2615d8aee9b6ced6ef5d3f992aca03f286a20b22855e7acd600ae",
+      "solution_sha256": "bbef5134ac2964af99ab063244d090f8f41aa24cc1a6315c39a96f0b28793ac6",
+      "unit_clue_sum_squares": 662
+    },
+    {
+      "family_id": 39,
+      "seed": 24161226,
+      "row_index": 317,
+      "puzzle_sha256": "c3f958c339f4a12a7640a2ca736efd85433000426f1fd3678d983f82c38fcd17",
+      "solution_sha256": "a3d4bd7c862f4b20c03e3f05c8baa1c5867eb5d372d05c6412dd71c8b492e8b5",
+      "unit_clue_sum_squares": 642
+    },
+    {
+      "family_id": 40,
+      "seed": 24261229,
+      "row_index": 325,
+      "puzzle_sha256": "dc930c915293cf438ab16793b18413b1fc777f476108bccd5c8791f36e2ac898",
+      "solution_sha256": "c1637b7988f3ab0d91865beb8e4af99c6208cb16a13901dde8724c1d2d832184",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 41,
+      "seed": 24361232,
+      "row_index": 333,
+      "puzzle_sha256": "9b6eec85bccafafd0c418ae1c9de8fb720ce8e32a1c5cbe9f091f30f7f25812c",
+      "solution_sha256": "1098ac8ba12598adaaa22f868c370bb43819e249f4f317ef48f158dd7f935194",
+      "unit_clue_sum_squares": 622
+    },
+    {
+      "family_id": 42,
+      "seed": 24461235,
+      "row_index": 341,
+      "puzzle_sha256": "1e6db439725558bef174c868ffabb45451d59047254bc28b2f0f4245ee1ff9d3",
+      "solution_sha256": "07fb99e1c6f2e57ab717d6d8ba5d49dfa081764aa17bf229c5f2b4df0ec9982b",
+      "unit_clue_sum_squares": 628
+    },
+    {
+      "family_id": 43,
+      "seed": 24561238,
+      "row_index": 349,
+      "puzzle_sha256": "89fe95147662510172a9c075d8039d52c51887fb47148f6b98ba7d18713a1583",
+      "solution_sha256": "1cf59f06ec25f61033ef4e34aebb9476477bbddad963476425209f734869b473",
+      "unit_clue_sum_squares": 666
+    },
+    {
+      "family_id": 44,
+      "seed": 24661241,
+      "row_index": 357,
+      "puzzle_sha256": "dbfeabd0839be9780a843d02fd5ff6ec7e847cee9b592ae712e61978c26153f1",
+      "solution_sha256": "85c30ae3ae6ef1ee197e56760fe14cf5a1c5f5517fff7d9d88cedb3b9b074a72",
+      "unit_clue_sum_squares": 680
+    },
+    {
+      "family_id": 45,
+      "seed": 24761244,
+      "row_index": 365,
+      "puzzle_sha256": "13c11bbb7bb96c0d5a8964f793f69080404dfc7d216a765695ed6feb0874958f",
+      "solution_sha256": "fb02cfb9ed6da6f9c8295660ca7398518914591e84d505381dca8d9926f1161e",
+      "unit_clue_sum_squares": 634
+    },
+    {
+      "family_id": 46,
+      "seed": 24861247,
+      "row_index": 373,
+      "puzzle_sha256": "7f07a84f7df80f593d5ed67eb8b49237e76f5a64e32ea28df3569eb734b7bd28",
+      "solution_sha256": "72cd509d99f4818106452b7ca99bfc9305cd842a091ff3d922294f471776c39d",
+      "unit_clue_sum_squares": 662
+    },
+    {
+      "family_id": 47,
+      "seed": 24961250,
+      "row_index": 381,
+      "puzzle_sha256": "23ea28a1a75115c416658e92da26a0ff98ea670a0435dfb1d824e3518697ad6b",
+      "solution_sha256": "3072bbe32339242ad725b2ae27e27e7491a7388d855d4af46f5c9b6548fc2176",
+      "unit_clue_sum_squares": 642
+    },
+    {
+      "family_id": 48,
+      "seed": 25061253,
+      "row_index": 389,
+      "puzzle_sha256": "dd0c77199ea703cd01f48efefc0aa26286b027c530d66129bbb4cc207dac4710",
+      "solution_sha256": "e4fc1a045ef0dbeba70734b7da173c5013b27ce2384ff154b4ba578affc7f1cd",
+      "unit_clue_sum_squares": 654
+    },
+    {
+      "family_id": 49,
+      "seed": 25161256,
+      "row_index": 397,
+      "puzzle_sha256": "0ac701bb7fd6f4986d9d2ed8a7bbbca49e7e1373c9d19869a60f2f1d6b385960",
+      "solution_sha256": "18b41f8da44c15082036206c8f1784b8d7ffe8b92447629a2d7147dc7c1f02a0",
+      "unit_clue_sum_squares": 674
+    },
+    {
+      "family_id": 50,
+      "seed": 25261259,
+      "row_index": 405,
+      "puzzle_sha256": "67834ccbbaa09514e795739ebc190b35677e88303d73797bca4a9f58f6bf9f24",
+      "solution_sha256": "8fd151436fb819d5df895f6b23f342e158efb0044b8352cb929c855e28b49508",
+      "unit_clue_sum_squares": 634
+    },
+    {
+      "family_id": 51,
+      "seed": 25361262,
+      "row_index": 413,
+      "puzzle_sha256": "1fc87a5d006df085457df7300d1f948ef1b3d087c4651b243308be4e80e4a481",
+      "solution_sha256": "9ecc141d609aac13b58256437677afe6759011388990e3e92439386c1fda4d90",
+      "unit_clue_sum_squares": 652
+    },
+    {
+      "family_id": 52,
+      "seed": 25461265,
+      "row_index": 421,
+      "puzzle_sha256": "23bff3e8ba7a22062b087bed141cc57bb26bd765c7f311525d021683e47aeeb9",
+      "solution_sha256": "aa5b04ecca6c116a453f7aa4ad610a0174c384e211ad82b1e0f42fbc70c6ce7f",
+      "unit_clue_sum_squares": 650
+    },
+    {
+      "family_id": 53,
+      "seed": 25561268,
+      "row_index": 429,
+      "puzzle_sha256": "56d8631d2dc53f0e15828544e57c97fd53357a7eb22ef3113d8b1abec4fdefff",
+      "solution_sha256": "ebb2db9c3b3a2fd16c4fa0f95df607e6afe958d0e7b7a974f6bfda098f51d3c2",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 54,
+      "seed": 25661271,
+      "row_index": 437,
+      "puzzle_sha256": "115026b1649e502ae3ead4f89336fcd881f4d381c29130253ad3e413a7349464",
+      "solution_sha256": "a45ee7b1164c6bff3074248eb93ad24e1765ece2727ac3ab0128e2a59ce55150",
+      "unit_clue_sum_squares": 620
+    },
+    {
+      "family_id": 55,
+      "seed": 25761274,
+      "row_index": 445,
+      "puzzle_sha256": "e1b4ef8900670bc40627d15c96ae2e579cf670d264e4d4070ec69620630391e3",
+      "solution_sha256": "1f6ec9101916e4275a8b4736d96a50c8126640d85e644fe7ddba124231a757cd",
+      "unit_clue_sum_squares": 626
+    },
+    {
+      "family_id": 56,
+      "seed": 25861277,
+      "row_index": 453,
+      "puzzle_sha256": "f8a7edb48b5875386b6b7e4f4217b2f3ce394833991baf0f7de671ce97bed444",
+      "solution_sha256": "67c4b3280f0342bfc3ca3a6294af479de80938d6f9b256528eadb454f226cad9",
+      "unit_clue_sum_squares": 616
+    },
+    {
+      "family_id": 57,
+      "seed": 25961280,
+      "row_index": 461,
+      "puzzle_sha256": "3e6fc710e250e62b254ca165eadf8fde4baa27438cea5c019bc4fe2735b7b6f2",
+      "solution_sha256": "033c6ea7a7fcfceee45c781d820184e9548cfd73bffd214cc6c5720f54164681",
+      "unit_clue_sum_squares": 662
+    },
+    {
+      "family_id": 58,
+      "seed": 26061283,
+      "row_index": 469,
+      "puzzle_sha256": "57d44040e0e372b0c57a1f89204bc09408b8e22d80f6d49aacb4d199de59edbc",
+      "solution_sha256": "7324cdaddb8635f52ad697c418ca59c3227ef1288fee6c8440292774fa8b91cb",
+      "unit_clue_sum_squares": 654
+    },
+    {
+      "family_id": 59,
+      "seed": 26161286,
+      "row_index": 477,
+      "puzzle_sha256": "13930088c1ebf653e4b35a0a95c2230148478daf26b4f36474d45d1c92f4a9c6",
+      "solution_sha256": "a34a55013c6b653627a57805b8482da260ad6643a805a5b2123dfaced11223e9",
+      "unit_clue_sum_squares": 660
+    },
+    {
+      "family_id": 60,
+      "seed": 26261289,
+      "row_index": 485,
+      "puzzle_sha256": "3acb62a9245bffae58148bbdfd2f74165446194fcd0d38b858a12751342a9353",
+      "solution_sha256": "6ec37c5d796b2f0478aa238e641a9a569c8348c7c0ef7838107a9231f7b29979",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 61,
+      "seed": 26361292,
+      "row_index": 493,
+      "puzzle_sha256": "228eff329d189cb8d9f70f0524c07aca8b1d253b4a5af8c39042b703bc304827",
+      "solution_sha256": "be53734d4eb51f2632014a76a8d4dba18198b1b55f90e309623b36f418befee6",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 62,
+      "seed": 26461295,
+      "row_index": 501,
+      "puzzle_sha256": "98e6c6c668bcab26cbb95effa85a5f58136fb86c1837c787164046bbb8966c18",
+      "solution_sha256": "c97fff3e41c42ab140ff27ef8d0f32dc72441df33559d59163ea7c07f288fc09",
+      "unit_clue_sum_squares": 654
+    },
+    {
+      "family_id": 63,
+      "seed": 26561298,
+      "row_index": 509,
+      "puzzle_sha256": "4d419acb9cd9d999d1f34695253a1cfb583222fb489b92e6d632cf80347cc881",
+      "solution_sha256": "c968d16eec34d075d72e0e07686aca4de4e3cce4147f7d5cbfceebc699cf5aa2",
+      "unit_clue_sum_squares": 638
+    },
+    {
+      "family_id": 64,
+      "seed": 26661301,
+      "row_index": 517,
+      "puzzle_sha256": "b6006f96ced40aca5c099893669d604b5a2f71c165aff264a899b73a34e6dfd3",
+      "solution_sha256": "46ed4932501dfc81f595e950a239171f030aadaf9f628c028d45ee5563ce7a3a",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 65,
+      "seed": 26761304,
+      "row_index": 525,
+      "puzzle_sha256": "3e2b0eb25006e27fceeff9325faaa8c80f1b0d859d626cb411c828dfc338426d",
+      "solution_sha256": "d0da1a342d438b9a3ab6ee7285cf7967e72892ebfa3407ad98e99d7ca737ac99",
+      "unit_clue_sum_squares": 630
+    },
+    {
+      "family_id": 66,
+      "seed": 26861307,
+      "row_index": 533,
+      "puzzle_sha256": "8cee3e437cb5473b84534fcc4a8b53e3d9ec265184a526b6117257a4082d964b",
+      "solution_sha256": "fe150366de9cfe3a676151648a86b56cc2f87a56c4e7ed7428be64a65185dcbf",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 67,
+      "seed": 26961310,
+      "row_index": 541,
+      "puzzle_sha256": "90afc849814a2fa999bf4a3565954b22368c5a5abbddc4d3b47e4d0dda7d91e4",
+      "solution_sha256": "66086db336f741ff862ddea790c9fa8ed667df8263ca65558494299a984e2df9",
+      "unit_clue_sum_squares": 630
+    },
+    {
+      "family_id": 68,
+      "seed": 27061313,
+      "row_index": 549,
+      "puzzle_sha256": "1f55b0acd11870b84fd0c15aec7607f4ffcc8940328459df1bfd3efc5cc0c863",
+      "solution_sha256": "c00d965f1950f3724b5c7d84d710058f2aac2ec726bf583280d01eb4de850ebb",
+      "unit_clue_sum_squares": 642
+    },
+    {
+      "family_id": 69,
+      "seed": 27161316,
+      "row_index": 557,
+      "puzzle_sha256": "0084f43c38f252978cb675dbaf7e655c87602c2da124507a97545be6e4ee8104",
+      "solution_sha256": "f38d8802c3ad9101979f36e8e24fb891b497fc992119adb6c45caf15c0e9ed6d",
+      "unit_clue_sum_squares": 648
+    },
+    {
+      "family_id": 70,
+      "seed": 27261319,
+      "row_index": 565,
+      "puzzle_sha256": "5712c32d4f7de7c6c8e2a3368a9dcb88151afe55f2139a8080b3abb8f5f83619",
+      "solution_sha256": "cd4a14f055a065408729864c081b1d3f635a65d5cd14c467e60706ec483fe401",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 71,
+      "seed": 27361322,
+      "row_index": 573,
+      "puzzle_sha256": "13894012fb4ce2906a3e1af1d60fbcae86bac8c89e1a04cf0a8e0473de1ce7be",
+      "solution_sha256": "5f70267720f88128994d60d7ba1f0c6bc01edbcd1ac5debf0dccb992e3ad5ebd",
+      "unit_clue_sum_squares": 666
+    },
+    {
+      "family_id": 72,
+      "seed": 27461325,
+      "row_index": 581,
+      "puzzle_sha256": "e1451cced911dad0c050534d1bfb608e8e9e7992abcb7f3816065653622cfb0e",
+      "solution_sha256": "f62de5728582206ae391fbb4d7d45f26c17b60b41ab4ed5734665274cb69390e",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 73,
+      "seed": 27561328,
+      "row_index": 589,
+      "puzzle_sha256": "16c13f59a7ab64cc89385a3db75b3f1de9868a7970386a5a5de8ca16eb2fd856",
+      "solution_sha256": "a615e2268627d8968897d06c3d6e5a165a839b536c9c964264e977534ee3a4eb",
+      "unit_clue_sum_squares": 648
+    },
+    {
+      "family_id": 74,
+      "seed": 27661331,
+      "row_index": 597,
+      "puzzle_sha256": "c47438c6ee70240dcb2d6468d3fd86871d3674512e7a4258708697bdd74c9e7c",
+      "solution_sha256": "b3d747ecc90202f6370340e0e23aed124d0e2382436d90daab9407994c669810",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 75,
+      "seed": 27761334,
+      "row_index": 605,
+      "puzzle_sha256": "fe2cd5d3a9014e16a8294bc7ffc0eb606afd828234899d8b4fd58ab8a5544327",
+      "solution_sha256": "dd888bb75d85267e9bb66719a2884cbf8c754d8e45b7e87aab16385944e750c8",
+      "unit_clue_sum_squares": 620
+    },
+    {
+      "family_id": 76,
+      "seed": 27861337,
+      "row_index": 613,
+      "puzzle_sha256": "51227a7b4b3a935dd40f1ed3f633ccff4c799183f9f9aa6082cfb8e1058c3d34",
+      "solution_sha256": "873eaa9b4ef33acac272db5bfb366d7ae94b421e59df8b5222725373e07575e5",
+      "unit_clue_sum_squares": 638
+    },
+    {
+      "family_id": 77,
+      "seed": 27961340,
+      "row_index": 621,
+      "puzzle_sha256": "93b3e41ab2436d9ef6649687162850fa04f4681df7c9dc50e6a1d389f8437e93",
+      "solution_sha256": "17a0d1f16a52753418e7775e533d1bbf7b80f1e29ec9bb1923036129c6f17c11",
+      "unit_clue_sum_squares": 620
+    },
+    {
+      "family_id": 78,
+      "seed": 28061343,
+      "row_index": 629,
+      "puzzle_sha256": "6d3f34b1d440b15debc152e8e5a59361ce7f77fe38d3fa64ff24d80611307a25",
+      "solution_sha256": "40eb4522bf4892f1593246c7262b2013bf146a6db818c5c364ac3941ddaa5b30",
+      "unit_clue_sum_squares": 628
+    },
+    {
+      "family_id": 79,
+      "seed": 28161346,
+      "row_index": 637,
+      "puzzle_sha256": "5c87c684dd8d4c8fb911b027252fc12b09b8655fdfcc852d25d1560c6eaa3cae",
+      "solution_sha256": "f9c9e119a93d0c8763d1ed43d61d7d6cb81f7a829563c5f6b4c8ab2028230a60",
+      "unit_clue_sum_squares": 664
+    },
+    {
+      "family_id": 80,
+      "seed": 28261349,
+      "row_index": 645,
+      "puzzle_sha256": "c72735215fa8b6865b49702144422a57d3a5b80cf971c08b80fbd3f9b46ea139",
+      "solution_sha256": "f3b6c941b528f4ca199589e9daf91f06e6c5962c37b0115e178c9f75d1e98701",
+      "unit_clue_sum_squares": 650
+    },
+    {
+      "family_id": 81,
+      "seed": 28361352,
+      "row_index": 653,
+      "puzzle_sha256": "da26e982056fc5f69c4baf26de2da26819ba420f3f77deedeb17bcab077e029d",
+      "solution_sha256": "7fd0cf9d57feb8a9f0309d602dcb890664c7eebd5734b013b2cc2bf0ae55e0d4",
+      "unit_clue_sum_squares": 632
+    },
+    {
+      "family_id": 82,
+      "seed": 28461355,
+      "row_index": 661,
+      "puzzle_sha256": "ef8c991cdeb0330294a3083a6dc5d433d008170bdad3f8f8ba7f8f57815d86f7",
+      "solution_sha256": "9b2a936bc9e04b14335c42b54d9e9cc62b6e3f8c66b4573266f7bbe690e31ddb",
+      "unit_clue_sum_squares": 652
+    },
+    {
+      "family_id": 83,
+      "seed": 28561358,
+      "row_index": 669,
+      "puzzle_sha256": "748a637b2c5e233f4cbfab46e40f3bf87ce34fe53ba6c9e1a355c9fce314cce4",
+      "solution_sha256": "a0e0d6ea02d1e8a33966c224fdf6938911721065f92a619af0f350f10794517a",
+      "unit_clue_sum_squares": 628
+    },
+    {
+      "family_id": 84,
+      "seed": 28661361,
+      "row_index": 677,
+      "puzzle_sha256": "109c2cfab44330163ce915e1bd5e52cc4a2f7f31bba3c13608afd2774fbe5aaf",
+      "solution_sha256": "433229583248964649a4c60e208b2ea9ca5e32d83fd14548ea822aedc0e285b3",
+      "unit_clue_sum_squares": 640
+    },
+    {
+      "family_id": 85,
+      "seed": 28761364,
+      "row_index": 685,
+      "puzzle_sha256": "819a6913dd5a2a3f7d26424103c9e0a177d8eb0ac2b363b82472b6f9bd9eb771",
+      "solution_sha256": "f51fbf6b5d7aab61b3e9ad79c95d2a2aa4fe9879b747d2ab700e11060bcc3b0a",
+      "unit_clue_sum_squares": 628
+    },
+    {
+      "family_id": 86,
+      "seed": 28861367,
+      "row_index": 693,
+      "puzzle_sha256": "35b4d2bd173bb27e37369ca094196133fb070a6705ee50df57fdd0940bca4438",
+      "solution_sha256": "0127a69b80c0d8edf787272db84d97ecd426f77b06c72bcea4ada980c9d23dbe",
+      "unit_clue_sum_squares": 624
+    },
+    {
+      "family_id": 87,
+      "seed": 28961370,
+      "row_index": 701,
+      "puzzle_sha256": "a08534c66b7f4b90a09f78c8c9746e8775e64918747dd66d1cabd68f36cba70b",
+      "solution_sha256": "0cc47379b9f238c5994b74a97315a5ac0d8f0b86ceab2783b1d4809da09581ff",
+      "unit_clue_sum_squares": 638
+    },
+    {
+      "family_id": 88,
+      "seed": 29061373,
+      "row_index": 709,
+      "puzzle_sha256": "26bec5ac5dbe824497ff187ea2c184097467fe4096bc06a392bc86c57917891d",
+      "solution_sha256": "9886973077b67b7b8c47fe6599dbdeb504a8617c71001e6b4d6d7f0304c87d84",
+      "unit_clue_sum_squares": 640
+    },
+    {
+      "family_id": 89,
+      "seed": 29161376,
+      "row_index": 717,
+      "puzzle_sha256": "b1b5f01017a5d9f826e5e06dc6647ab44be1bc584fdcd8475741715ba5dfeeca",
+      "solution_sha256": "470d67e4ed3a5e3120de14813e8bbc6d6000dc176982ad70264b0379203325b0",
+      "unit_clue_sum_squares": 612
+    },
+    {
+      "family_id": 90,
+      "seed": 29261379,
+      "row_index": 725,
+      "puzzle_sha256": "668c8414de81e94925a3b6b07586e1524e590d5acb54cece39c42b9144644237",
+      "solution_sha256": "66c9de9e657f1036f97253253051db0a8a84e657236391a48e9744685fd738c7",
+      "unit_clue_sum_squares": 638
+    },
+    {
+      "family_id": 91,
+      "seed": 29361382,
+      "row_index": 733,
+      "puzzle_sha256": "7287d7800bfa9c6ea23cf85a8a10e9a1d4019fbe05425318429f66b9da1c7a75",
+      "solution_sha256": "f3c28ab7d5ef2088bd53ced4662df0ff475a78dffdf427afef928ab7f7e7b1a3",
+      "unit_clue_sum_squares": 660
+    },
+    {
+      "family_id": 92,
+      "seed": 29461385,
+      "row_index": 741,
+      "puzzle_sha256": "bcd6c080b9df231796ca304740c08c288b7bcc3eb5180662855aae73870d3193",
+      "solution_sha256": "f82186055401f0931768490d713bf98346017ed5187c99eb516569d5d47f29db",
+      "unit_clue_sum_squares": 636
+    },
+    {
+      "family_id": 93,
+      "seed": 29561388,
+      "row_index": 749,
+      "puzzle_sha256": "0032f42580886b9559f91c21f39cc5eac331097fea95b02b064ce6c3707d9e39",
+      "solution_sha256": "11dc5ff64cd703d22235679e8f0611a5454b797498a5ed44d81baee15ac06ee6",
+      "unit_clue_sum_squares": 608
+    },
+    {
+      "family_id": 94,
+      "seed": 29661391,
+      "row_index": 757,
+      "puzzle_sha256": "2bd20681634f9f8d015ef3cb78dbe7740acc04fe6f084d3f20fac0335430acf5",
+      "solution_sha256": "70507da54e04b05f82a1b800c6667dbeaa329459243c4ac8e441955ddf7b1326",
+      "unit_clue_sum_squares": 674
+    },
+    {
+      "family_id": 95,
+      "seed": 29761394,
+      "row_index": 765,
+      "puzzle_sha256": "5819e9b376ad994f6f8be4e248c5b8eadd808c7129d1f26d1180b4f0dfcb544f",
+      "solution_sha256": "0e143e18ac8547bd8e449435199eeb9acca81f7131db25ee20a7fe805be7519a",
+      "unit_clue_sum_squares": 646
+    }
+  ],
+  "data_sha256": {
+    "paired_clue_manifest.json": "b8036d47834eff71463f7df648ac9edd3f799c5666c2196b8c80053131caaf8d",
+    "test_hard/all__inputs.npy": "f09289a1cdf2cefbf474192c05b9568d9ca1cc0396d078b18e653285e2da51e7",
+    "test_hard/all__labels.npy": "e21eead261941a4149c401bb44d4c0d05b86c33bbbb847b1bde28f4c76cc0e54"
+  },
+  "artifact_hashes_sha256": "9e95a59b359f63ea5f3b6f54cd3d5210cfd54e886c4ecc26569715e970f75a08",
+  "builder_sha256": "fd421f0debf4d4831b5e8f8303f4cb9391663f6398769811f8ab24408d3ba802",
+  "audit_source_sha256": "c987f2510f67f7dd4a6f10a943b6f5f4b5c65c9e99a08e79f5051a878ff161c8"
+}

@@ -1,0 +1,4 @@
+Derivado de SakanaAI/sheaf-admm, sob Apache-2.0.
+Autores originais: Jeffrey Seely, Bartłomiej Cupiał e Llion Jones.
+Snapshot experimental de 23/10/2026: controles de canais, pistas locais, decimação, avaliação familiar e documentação do estudo de Gustavo Daiske Mashiba Doki, sob orientação de Gustavo Valentim Loch.
+O pacote contém código modificado e não deve ser apresentado como distribuição oficial da SakanaAI.

@@ -1,0 +1,2 @@
+estimand,metric,arm_weighting,repeated_measure_aggregation,bootstrap_unit,families,estimate,cluster_bootstrap_95_low,cluster_bootstrap_95_high,bootstrap_draws
+"(decimation gain, full_100) - (decimation gain, random_50)",decimation_gain_exact,equal internal and terminal weights within family,"average mask replicates within checkpoint, then seeds, then arms",solution-base family,64,-0.36328125,-0.4713541666666667,-0.25390625,20000

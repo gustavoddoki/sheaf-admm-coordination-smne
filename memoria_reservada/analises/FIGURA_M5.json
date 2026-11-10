@@ -1,0 +1,64 @@
+{
+  "status": "complete",
+  "role": "descriptive_secondary_stage2_curves",
+  "gate_sha256": "acf16084d1c4c15955a345cbf2c1e2aedd92dcebc5cc994eb2849198255f4c06",
+  "analysis_sha256": "4a9ea802926385ff125784d91efa44c6eea1ae295795fb34e0804197b5822326",
+  "source_csv_sha256": {
+    "outputs/intermittent_coordination_20261106/retained_m5_evaluation_60697cbd4fa9/confirmatory_metrics.csv": "799e61402226ed017f2c506f0a6b27ad41ddf113a0c2a81f85f5076e10ce3618",
+    "outputs/intermittent_coordination_20261106/retained_m5_evaluation_925c45f56481/confirmatory_metrics.csv": "0ddfaa94eb54c2602bad443f14d023f30c2ddb13cd083d1dc02c26088c8dd7fc",
+    "outputs/intermittent_coordination_20261106/retained_m5_evaluation_a75d305cf117/confirmatory_metrics.csv": "f75d9ecd09ed798da657f44142972bff4515b713d7259454f84dd1e452443740"
+  },
+  "curve_points": 1200,
+  "diagnostics": {
+    "blackout": {
+      "retained_minus_discard_max_abs_during_outage": 0.0,
+      "reconnection_round": 13,
+      "correct_at_reconnection_pct": {
+        "standard_dual": 1.084010840108401,
+        "normal_on_change": 1.100948509485095,
+        "retained_dual": 10.145663956639567,
+        "freeze_missing": 0.9823848238482384,
+        "pause_isolated": 54.68326558265583
+      }
+    },
+    "partition3": {
+      "retained_minus_discard_max_abs_during_outage": 0.0,
+      "reconnection_round": 13,
+      "correct_at_reconnection_pct": {
+        "standard_dual": 13.998983739837401,
+        "normal_on_change": 14.066734417344174,
+        "retained_dual": 26.17716802168022,
+        "freeze_missing": 9.59518970189702,
+        "pause_isolated": 13.998983739837401
+      }
+    },
+    "random50": {
+      "retained_minus_discard_max_abs_during_outage": 0.4390243902439025,
+      "reconnection_round": 13,
+      "correct_at_reconnection_pct": {
+        "standard_dual": 18.436653116531165,
+        "normal_on_change": 22.48475609756097,
+        "retained_dual": 55.013550135501355,
+        "freeze_missing": 34.02777777777778,
+        "pause_isolated": 18.436653116531165
+      }
+    },
+    "late_burst4": {
+      "retained_minus_discard_max_abs_during_outage": 0.0,
+      "reconnection_round": 15,
+      "correct_at_reconnection_pct": {
+        "standard_dual": 1.0755420054200542,
+        "normal_on_change": 1.3888888888888888,
+        "retained_dual": 21.358401084010843,
+        "freeze_missing": 1.4989837398373986,
+        "pause_isolated": 70.78252032520324
+      }
+    }
+  },
+  "script_sha256": "8cbc3c421ed0dd4787f60bd46dbeec0258d6795be1dbe3f2b1147101308099ee",
+  "curves_sha256": "cd545b43ce44d86872ac7c1794b850b5bcabc4b1fb7dd632fac578f32a828e43",
+  "figure_sha256": {
+    "trajetorias_m5.png": "1ab208a967e1242db17dc5548ff365f55ce5aa9b5ba496109540230a01fa2f3f",
+    "trajetorias_m5.svg": "a621bd93e5ff782ac586b262c9ac3031f7b17db74e45bce25fa81efb03708a19"
+  }
+}

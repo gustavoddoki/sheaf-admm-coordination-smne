@@ -1,0 +1,77 @@
+{
+  "bootstrap_seed": 20261008,
+  "conditions_mean_logprob": {
+    "decim_admm_off_global": -1.5726063504504662,
+    "decim_admm_off_local": -1.5775042449434598,
+    "decim_admm_on_global": -0.0739779355056621,
+    "decim_admm_on_local": -0.36263625455679477,
+    "direct_admm_off": -1.5775042449434598,
+    "direct_admm_on": -0.18515737059199935
+  },
+  "dataset_manifest_sha256": "4993c25229a42e0f46a8463e57d8f32049a54fa34a3ad8afd1fc5cfb38bd101c",
+  "family_cluster_bootstrap_draws": 20000,
+  "family_count": 64,
+  "independent_unit": "solution family",
+  "phase": "P7",
+  "primary_contrasts": {
+    "admm_effect_global_commits": {
+      "ci95_family_bootstrap": [
+        1.4602711538161235,
+        1.5326187618025524
+      ],
+      "estimate": 1.498628414944804,
+      "families": 64,
+      "name": "admm_effect_global_commits",
+      "p_holm_two_primary": 4.145897405307297e-65,
+      "p_two_sided_paired_t": 2.0729487026536485e-65,
+      "sd_between_families": 0.1480131961079093
+    },
+    "admm_effect_local_commits": {
+      "ci95_family_bootstrap": [
+        1.1787593128990277,
+        1.246397188925164
+      ],
+      "estimate": 1.214867990386665,
+      "families": 64,
+      "name": "admm_effect_local_commits",
+      "p_holm_two_primary": 3.936325818543645e-61,
+      "p_two_sided_paired_t": 3.936325818543645e-61,
+      "sd_between_families": 0.14054108842501506
+    }
+  },
+  "primary_endpoint": "family mean pre-commit log-probability, equal agent-view weighting",
+  "repeated_measures": "checkpoint seed, model position, and communication mask",
+  "run_config_sha256": "bfbe6591c3912fe05ba4e1ee3ef205a4565f562b199e87fa6c0827018bd1ba91",
+  "secondary_commit_traffic": {
+    "decim_admm_off_global": {
+      "mean_commits": 0.34375,
+      "mean_conflicts": 0.0,
+      "mean_correct": 0.34375,
+      "mean_routed_view_updates": 1.03125,
+      "mean_wrong": 0.0
+    },
+    "decim_admm_off_local": {
+      "mean_commits": 0.34375,
+      "mean_conflicts": 0.0,
+      "mean_correct": 0.34375,
+      "mean_routed_view_updates": 0.34375,
+      "mean_wrong": 0.0
+    },
+    "decim_admm_on_global": {
+      "mean_commits": 40.505208333333336,
+      "mean_conflicts": 0.09114583333333334,
+      "mean_correct": 40.248697916666664,
+      "mean_routed_view_updates": 121.515625,
+      "mean_wrong": 0.25651041666666663
+    },
+    "decim_admm_on_local": {
+      "mean_commits": 32.372395833333336,
+      "mean_conflicts": 0.07682291666666667,
+      "mean_correct": 32.1171875,
+      "mean_routed_view_updates": 32.372395833333336,
+      "mean_wrong": 0.2552083333333333
+    }
+  },
+  "secondary_direct_admm_on_minus_off_mean": 1.3923468743514604,
+  "secondary_interaction_global_minus_local_mean": 0.2837604245581389
+}

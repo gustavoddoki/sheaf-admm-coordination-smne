@@ -1,0 +1,2089 @@
+{
+  "status": "complete",
+  "mode": "m5_preregistered_analysis",
+  "m5_gate_sha256": "acf16084d1c4c15955a345cbf2c1e2aedd92dcebc5cc994eb2849198255f4c06",
+  "data_gate": "retained_m5_fresh_families_gate_v1.json",
+  "data_gate_sha256": "acf16084d1c4c15955a345cbf2c1e2aedd92dcebc5cc994eb2849198255f4c06",
+  "runs": {
+    "789": {
+      "evaluation": "retained_m5_evaluation_60697cbd4fa9",
+      "metrics_sha256": "799e61402226ed017f2c506f0a6b27ad41ddf113a0c2a81f85f5076e10ce3618"
+    },
+    "1011": {
+      "evaluation": "retained_m5_evaluation_925c45f56481",
+      "metrics_sha256": "0ddfaa94eb54c2602bad443f14d023f30c2ddb13cd083d1dc02c26088c8dd7fc"
+    },
+    "1213": {
+      "evaluation": "retained_m5_evaluation_a75d305cf117",
+      "metrics_sha256": "f75d9ecd09ed798da657f44142972bff4515b713d7259454f84dd1e452443740"
+    }
+  },
+  "seeds": [
+    789,
+    1011,
+    1213
+  ],
+  "families": 96,
+  "bootstrap": {
+    "seed": 20261120,
+    "samples": 50000,
+    "adjusted_level": 0.9944444444444445,
+    "unit": "two-way paired over seeds x families"
+  },
+  "pooled_profiles": {
+    "projection_on__standard_dual": {
+      "correct": 0.6560171070460705,
+      "excess": 0.3193324676302318,
+      "wrong": 0.2532181571815718,
+      "connected_correct": 0.8034383468834688,
+      "exact_count": 0,
+      "clues_preserved": true
+    },
+    "projection_on__normal_on_change": {
+      "correct": 0.6548102981029811,
+      "excess": 0.3378740401987353,
+      "wrong": 0.25431910569105687,
+      "connected_correct": 0.8034383468834688,
+      "exact_count": 0,
+      "clues_preserved": true
+    },
+    "projection_on__retained_dual": {
+      "correct": 0.7591039972899729,
+      "excess": 0.27747054727491727,
+      "wrong": 0.19014651084010842,
+      "connected_correct": 0.8034383468834688,
+      "exact_count": 6,
+      "clues_preserved": true
+    },
+    "projection_on__freeze_missing": {
+      "correct": 0.7454691734417344,
+      "excess": 0.27127465371875936,
+      "wrong": 0.19897527100271004,
+      "connected_correct": 0.8034383468834688,
+      "exact_count": 3,
+      "clues_preserved": true
+    },
+    "projection_on__pause_isolated": {
+      "correct": 0.7277904810298104,
+      "excess": 0.15676189400782897,
+      "wrong": 0.21373221544715448,
+      "connected_correct": 0.8034383468834688,
+      "exact_count": 3,
+      "clues_preserved": true
+    },
+    "projection_off__standard_dual": {
+      "correct": 0.11477388211382114,
+      "excess": 0.2329992848539596,
+      "wrong": 0.8786627710027101,
+      "connected_correct": 0.11568428184281841,
+      "exact_count": 0,
+      "clues_preserved": false
+    },
+    "projection_off__retained_dual": {
+      "correct": 0.11471036585365854,
+      "excess": 0.24409581074977416,
+      "wrong": 0.8786839430894309,
+      "connected_correct": 0.11568428184281841,
+      "exact_count": 0,
+      "clues_preserved": false
+    }
+  },
+  "hypotheses": {
+    "H1_m4_replication": {
+      "rule": "M4 gate v2 pass rule, unchanged (95% intervals).",
+      "estimates": {
+        "correct_gain": {
+          "mean": 0.10308689024390241,
+          "ci95": [
+            0.09463922764227639,
+            0.11155572493224929
+          ],
+          "ci_adjusted": [
+            0.09108231707317069,
+            0.11547497224104183
+          ]
+        },
+        "excess_reduction": {
+          "mean": 0.04186192035531467,
+          "ci95": [
+            0.04005617660343271,
+            0.0436888479561879
+          ],
+          "ci_adjusted": [
+            0.03924550916516109,
+            0.044602082392351694
+          ]
+        },
+        "correct_interaction": {
+          "mean": 0.103150406504065,
+          "ci95": [
+            0.09489329268292679,
+            0.11147156588753387
+          ],
+          "ci_adjusted": [
+            0.0912093495934959,
+            0.11496925342517314
+          ]
+        },
+        "excess_interaction_benefit": {
+          "mean": 0.052958446251129186,
+          "ci95": [
+            0.04541694896115629,
+            0.061919920110659436
+          ],
+          "ci_adjusted": [
+            0.04336011210227844,
+            0.06433821938045771
+          ]
+        }
+      },
+      "checks": {
+        "correct_gain_margin": true,
+        "correct_gain_interval_positive": true,
+        "excess_reduction_margin": true,
+        "excess_reduction_interval_positive": true,
+        "correct_effect_positive_in_at_least_two_seeds": true,
+        "excess_effect_positive_in_at_least_two_seeds": true,
+        "per_condition_correctness_guard": true,
+        "connected_correctness_guard": true,
+        "wrong_agreement_guard": true,
+        "exact_puzzles_guard": true,
+        "clues_preserved": true,
+        "candidate_nondominated_same_weights": true,
+        "correct_interaction_positive_interval": true,
+        "excess_interaction_benefit_interval": true
+      },
+      "per_condition_correct_difference": {
+        "blackout": 0.09400406504065041,
+        "partition3": 0.04911924119241192,
+        "random50": 0.08223238482384825,
+        "late_burst4": 0.1869918699186992
+      },
+      "seed_effects": {
+        "789": {
+          "correct_gain": 0.10054623983739834,
+          "excess_reduction": 0.04156221770551039
+        },
+        "1011": {
+          "correct_gain": 0.10886686991869915,
+          "excess_reduction": 0.04139848690153569
+        },
+        "1213": {
+          "correct_gain": 0.09984756097560972,
+          "excess_reduction": 0.04262505645889792
+        }
+      },
+      "dominators": [],
+      "favorable_seed_family_pairs": {
+        "correct": 287,
+        "excess": 288,
+        "total": 288
+      },
+      "verdict": "supported"
+    },
+    "H2_partial_retained_vs_freeze": {
+      "id": "H2_partial_retained_vs_freeze",
+      "outcome": "correct_final",
+      "comparator": "freeze_missing",
+      "conditions": "partial_connectivity",
+      "direction": "retained_higher",
+      "test": "superiority",
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9: lower bound > 0.",
+      "m4_posthoc_pp": [
+        1.61,
+        4.0
+      ],
+      "estimate": {
+        "mean": 0.026253387533875336,
+        "ci95": [
+          0.021764905149051484,
+          0.030699525745257458
+        ],
+        "ci_adjusted": [
+          0.019177088038241467,
+          0.03264735772357724
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H3_partial_retained_vs_pause": {
+      "id": "H3_partial_retained_vs_pause",
+      "outcome": "correct_final",
+      "comparator": "pause_isolated",
+      "conditions": "partial_connectivity",
+      "direction": "retained_higher",
+      "test": "superiority",
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9: lower bound > 0.",
+      "note": "Pause never isolates an agent under partition3/random50, so pause equals standard there by construction; this is the same contrast as retained vs standard in that regime and is not independent evidence.",
+      "m4_posthoc_pp": [
+        4.39,
+        8.06
+      ],
+      "estimate": {
+        "mean": 0.06567581300813008,
+        "ci95": [
+          0.0585619918699187,
+          0.07317073170731708
+        ],
+        "ci_adjusted": [
+          0.05533901215748266,
+          0.07685467479674797
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H4a_total_retained_vs_freeze_equivalence": {
+      "id": "H4a_total_retained_vs_freeze_equivalence",
+      "outcome": "correct_final",
+      "comparator": "freeze_missing",
+      "conditions": "total_blackout",
+      "direction": "retained_higher",
+      "test": "equivalence",
+      "margin": 0.02,
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9 entirely inside (-0.02, +0.02).",
+      "m4_posthoc_pp": [
+        -0.09,
+        0.41
+      ],
+      "estimate": {
+        "mean": 0.0010162601626016274,
+        "ci95": [
+          -0.0008045392953929484,
+          0.0030487804878048808
+        ],
+        "ci_adjusted": [
+          -0.001651422764227634,
+          0.004192073170731703
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H4b_total_retained_vs_pause_equivalence": {
+      "id": "H4b_total_retained_vs_pause_equivalence",
+      "outcome": "correct_final",
+      "comparator": "pause_isolated",
+      "conditions": "total_blackout",
+      "direction": "retained_higher",
+      "test": "equivalence",
+      "margin": 0.02,
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9 entirely inside (-0.02, +0.02).",
+      "m4_posthoc_pp": [
+        0.13,
+        -0.42
+      ],
+      "estimate": {
+        "mean": -0.003048780487804879,
+        "ci95": [
+          -0.005081300813008133,
+          -0.0010586043360433623
+        ],
+        "ci_adjusted": [
+          -0.00609756097560976,
+          -0.00012703252032520275
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H5a_final_disagreement_vs_standard": {
+      "id": "H5a_final_disagreement_vs_standard",
+      "outcome": "disagreement_final",
+      "comparator": "standard_dual",
+      "conditions": "all_faults",
+      "direction": "retained_lower",
+      "test": "superiority",
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9 of (standard - retained) D20: lower bound > 0.",
+      "m4_posthoc_pct": [
+        6.04,
+        3.39
+      ],
+      "estimate": {
+        "mean": 0.027086156278229447,
+        "ci95": [
+          0.023543360433604336,
+          0.030770099367660342
+        ],
+        "ci_adjusted": [
+          0.021955453929539293,
+          0.032541497289972895
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H5b_final_disagreement_vs_freeze_noninferiority": {
+      "id": "H5b_final_disagreement_vs_freeze_noninferiority",
+      "outcome": "disagreement_final",
+      "comparator": "freeze_missing",
+      "conditions": "all_faults",
+      "direction": "retained_lower",
+      "test": "noninferiority",
+      "margin": 0.01,
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9 of (freeze - retained) D20: lower bound > -0.01 (retained at most 1 pp above).",
+      "m4_posthoc_pct": [
+        3.98,
+        3.39
+      ],
+      "estimate": {
+        "mean": 0.003309902890695573,
+        "ci95": [
+          0.0008468834688346882,
+          0.005702348690153567
+        ],
+        "ci_adjusted": [
+          -0.0003199925662451173,
+          0.00669824052117836
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H5c_final_disagreement_vs_pause_noninferiority": {
+      "id": "H5c_final_disagreement_vs_pause_noninferiority",
+      "outcome": "disagreement_final",
+      "comparator": "pause_isolated",
+      "conditions": "all_faults",
+      "direction": "retained_lower",
+      "test": "noninferiority",
+      "margin": 0.01,
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9 of (pause - retained) D20: lower bound > -0.01.",
+      "m4_posthoc_pct": [
+        3.9,
+        3.39
+      ],
+      "estimate": {
+        "mean": 0.0052153906955736224,
+        "ci95": [
+          0.0027947154471544716,
+          0.0075796070460704594
+        ],
+        "ci_adjusted": [
+          0.0015314476061427276,
+          0.008695474035180168
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H6a_post_reconnection_disagreement_vs_standard": {
+      "id": "H6a_post_reconnection_disagreement_vs_standard",
+      "outcome": "disagreement_post_reconnection",
+      "comparator": "standard_dual",
+      "conditions": "all_faults",
+      "direction": "retained_lower",
+      "test": "superiority",
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9 of (standard - retained): lower bound > 0.",
+      "m4_posthoc_pct": [
+        22.07,
+        13.08
+      ],
+      "estimate": {
+        "mean": 0.09598571354637157,
+        "ci95": [
+          0.092456436961288,
+          0.09937562193004743
+        ],
+        "ci_adjusted": [
+          0.0907320954719964,
+          0.10078015627221762
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    },
+    "H6b_post_reconnection_disagreement_vs_freeze": {
+      "id": "H6b_post_reconnection_disagreement_vs_freeze",
+      "outcome": "disagreement_post_reconnection",
+      "comparator": "freeze_missing",
+      "conditions": "all_faults",
+      "direction": "retained_lower",
+      "test": "superiority",
+      "rule": "Bonferroni-adjusted two-sided percentile interval, level 1-0.05/9 of (freeze - retained): lower bound > 0.",
+      "m4_posthoc_pct": [
+        19.06,
+        13.08
+      ],
+      "estimate": {
+        "mean": 0.06152079098915989,
+        "ci95": [
+          0.05994993977717554,
+          0.06333336420929313
+        ],
+        "ci_adjusted": [
+          0.05932841569144375,
+          0.0643320071046727
+        ]
+      },
+      "difference_sign": "positive favors retained",
+      "verdict": "supported"
+    }
+  },
+  "secondary": {
+    "correct_final": {
+      "blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.7399220867208671,
+          "standard_dual": 0.6459180216802167,
+          "normal_on_change": 0.6459180216802167,
+          "freeze_missing": 0.7406842818428183,
+          "pause_isolated": 0.7384823848238482
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": 0.09400406504065041,
+            "ci95": [
+              0.08545054200542006,
+              0.10264227642276423
+            ]
+          },
+          "normal_on_change": {
+            "mean": 0.0940040650406504,
+            "ci95": [
+              0.08561991869918699,
+              0.10264227642276423
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.000762195121951219,
+            "ci95": [
+              -0.0033028455284552856,
+              0.0015243902439024421
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.0014397018970189691,
+            "ci95": [
+              -0.0010162601626016253,
+              0.0038109756097561027
+            ]
+          }
+        }
+      },
+      "partition3": {
+        "profiles_mean": {
+          "retained_dual": 0.7548272357723577,
+          "standard_dual": 0.7057079945799457,
+          "normal_on_change": 0.7043529810298101,
+          "freeze_missing": 0.7400067750677507,
+          "pause_isolated": 0.7057079945799457
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": 0.04911924119241192,
+            "ci95": [
+              0.04081978319783197,
+              0.057672764227642274
+            ]
+          },
+          "normal_on_change": {
+            "mean": 0.05047425474254742,
+            "ci95": [
+              0.04115853658536585,
+              0.060213414634146326
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.014820460704607043,
+            "ci95": [
+              0.010755420054200542,
+              0.01905487804878049
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.04911924119241192,
+            "ci95": [
+              0.04065040650406505,
+              0.057672764227642274
+            ]
+          }
+        }
+      },
+      "random50": {
+        "profiles_mean": {
+          "retained_dual": 0.7772696476964769,
+          "standard_dual": 0.6950372628726287,
+          "normal_on_change": 0.6915650406504064,
+          "freeze_missing": 0.7395833333333334,
+          "pause_isolated": 0.6950372628726287
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": 0.08223238482384825,
+            "ci95": [
+              0.07342479674796748,
+              0.09112466124661246
+            ]
+          },
+          "normal_on_change": {
+            "mean": 0.08570460704607047,
+            "ci95": [
+              0.07571138211382114,
+              0.09535907859078592
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.037686314363143625,
+            "ci95": [
+              0.030995934959349585,
+              0.04395325203252033
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.08223238482384825,
+            "ci95": [
+              0.07342479674796748,
+              0.09112466124661246
+            ]
+          }
+        }
+      },
+      "late_burst4": {
+        "profiles_mean": {
+          "retained_dual": 0.7643970189701896,
+          "standard_dual": 0.5774051490514905,
+          "normal_on_change": 0.5774051490514905,
+          "freeze_missing": 0.7616023035230352,
+          "pause_isolated": 0.7719342818428184
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": 0.1869918699186992,
+            "ci95": [
+              0.17132452574525747,
+              0.20257452574525747
+            ]
+          },
+          "normal_on_change": {
+            "mean": 0.1869918699186992,
+            "ci95": [
+              0.17166327913279134,
+              0.20223577235772358
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.0027947154471544716,
+            "ci95": [
+              -0.0005928184281842789,
+              0.00660569105691057
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.007537262872628724,
+            "ci95": [
+              -0.010670731707317062,
+              -0.004403794037940379
+            ]
+          }
+        }
+      },
+      "all_faults": {
+        "profiles_mean": {
+          "retained_dual": 0.7591039972899729,
+          "standard_dual": 0.6560171070460705,
+          "normal_on_change": 0.6548102981029811,
+          "freeze_missing": 0.7454691734417344,
+          "pause_isolated": 0.7277904810298104
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": 0.10308689024390241,
+            "ci95": [
+              0.09470274390243899,
+              0.11147103658536582
+            ]
+          },
+          "normal_on_change": {
+            "mean": 0.10429369918699183,
+            "ci95": [
+              0.09557079945799456,
+              0.1132283197831978
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.013634823848238484,
+            "ci95": [
+              0.010967140921409213,
+              0.01632367886178861
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.031313516260162606,
+            "ci95": [
+              0.027460196476964766,
+              0.03518800813008131
+            ]
+          }
+        }
+      },
+      "total_blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.7521595528455285,
+          "standard_dual": 0.6116615853658538,
+          "normal_on_change": 0.6116615853658537,
+          "freeze_missing": 0.7511432926829268,
+          "pause_isolated": 0.7552083333333334
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": 0.1404979674796748,
+            "ci95": [
+              0.12944613821138212,
+              0.15112635501355012
+            ]
+          },
+          "normal_on_change": {
+            "mean": 0.1404979674796748,
+            "ci95": [
+              0.12974254742547425,
+              0.15104166666666666
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.0010162601626016274,
+            "ci95": [
+              -0.0007621951219512202,
+              0.003048780487804878
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.003048780487804879,
+            "ci95": [
+              -0.0050813008130081334,
+              -0.001100948509485094
+            ]
+          }
+        }
+      },
+      "partial_connectivity": {
+        "profiles_mean": {
+          "retained_dual": 0.7660484417344173,
+          "standard_dual": 0.7003726287262872,
+          "normal_on_change": 0.6979590108401085,
+          "freeze_missing": 0.739795054200542,
+          "pause_isolated": 0.7003726287262872
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": 0.06567581300813008,
+            "ci95": [
+              0.05860433604336043,
+              0.07308604336043362
+            ]
+          },
+          "normal_on_change": {
+            "mean": 0.06808943089430894,
+            "ci95": [
+              0.060213414634146326,
+              0.07647357723577237
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.026253387533875336,
+            "ci95": [
+              0.021722560975609748,
+              0.03074186991869919
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.06567581300813008,
+            "ci95": [
+              0.058646680216802166,
+              0.07317073170731708
+            ]
+          }
+        }
+      }
+    },
+    "disagreement_final": {
+      "blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.036585365853658534,
+          "standard_dual": 0.06173780487804878,
+          "normal_on_change": 0.06173780487804878,
+          "freeze_missing": 0.037799232158988255,
+          "pause_isolated": 0.03390356820234869
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.025152439024390242,
+            "ci95": [
+              -0.03201219512195122,
+              -0.0186596657633243
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.02515243902439024,
+            "ci95": [
+              -0.03184281842818429,
+              -0.018716124661246614
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.00121386630532972,
+            "ci95": [
+              -0.0035293868563685345,
+              0.0009315718157181575
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.0026817976513098464,
+            "ci95": [
+              0.0002822944896115623,
+              0.005165989159891599
+            ]
+          }
+        }
+      },
+      "partition3": {
+        "profiles_mean": {
+          "retained_dual": 0.03331074977416441,
+          "standard_dual": 0.04587285456187895,
+          "normal_on_change": 0.045844625112917786,
+          "freeze_missing": 0.03573848238482385,
+          "pause_isolated": 0.04587285456187895
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.012562104787714544,
+            "ci95": [
+              -0.017869241192411924,
+              -0.00728319783197832
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.012533875338753386,
+            "ci95": [
+              -0.018207994579945798,
+              -0.006831526648599819
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.00242773261065944,
+            "ci95": [
+              -0.006154019873532069,
+              0.0014397018970189696
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.012562104787714544,
+            "ci95": [
+              -0.01784101174345077,
+              -0.007254968383017164
+            ]
+          }
+        }
+      },
+      "random50": {
+        "profiles_mean": {
+          "retained_dual": 0.029217479674796747,
+          "standard_dual": 0.049232158988256544,
+          "normal_on_change": 0.05010727190605239,
+          "freeze_missing": 0.034270551038843716,
+          "pause_isolated": 0.049232158988256544
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.0200146793134598,
+            "ci95": [
+              -0.02656391147244806,
+              -0.013691282746160794
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.020889792231255644,
+            "ci95": [
+              -0.027636630532971995,
+              -0.014481707317073171
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.005053071364046974,
+            "ci95": [
+              -0.010896567299006323,
+              0.0005081300813008121
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.0200146793134598,
+            "ci95": [
+              -0.026450993676603432,
+              -0.013634823848238482
+            ]
+          }
+        }
+      },
+      "late_burst4": {
+        "profiles_mean": {
+          "retained_dual": 0.037065266485998186,
+          "standard_dual": 0.08768066847335139,
+          "normal_on_change": 0.08689024390243902,
+          "freeze_missing": 0.04161020776874435,
+          "pause_isolated": 0.02803184281842818
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.05061540198735321,
+            "ci95": [
+              -0.05682588075880758,
+              -0.04440492321589882
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.049824977416440826,
+            "ci95": [
+              -0.05606368563685636,
+              -0.04358626919602529
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.00454494128274616,
+            "ci95": [
+              -0.007932475158084913,
+              -0.0015801434056006809
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.009033423667570008,
+            "ci95": [
+              0.005815266485998193,
+              0.012364498644986448
+            ]
+          }
+        }
+      },
+      "all_faults": {
+        "profiles_mean": {
+          "retained_dual": 0.03404471544715447,
+          "standard_dual": 0.06113087172538391,
+          "normal_on_change": 0.0611449864498645,
+          "freeze_missing": 0.037354618337850046,
+          "pause_isolated": 0.03926010614272809
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.027086156278229447,
+            "ci95": [
+              -0.030748927280939475,
+              -0.023522011912827448
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.027100271002710022,
+            "ci95": [
+              -0.030748927280939475,
+              -0.0235010162601626
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.003309902890695573,
+            "ci95": [
+              -0.005667061878952122,
+              -0.0008892276422764229
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.0052153906955736224,
+            "ci95": [
+              -0.007593721770551037,
+              -0.002794715447154471
+            ]
+          }
+        }
+      },
+      "total_blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.036825316169828363,
+          "standard_dual": 0.07470923667570009,
+          "normal_on_change": 0.0743140243902439,
+          "freeze_missing": 0.039704719963866306,
+          "pause_isolated": 0.030967705510388435
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.03788392050587172,
+            "ci95": [
+              -0.04307813911472448,
+              -0.032859078590785906
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.037488708220415536,
+            "ci95": [
+              -0.04289464769647697,
+              -0.032449751580849145
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.00287940379403794,
+            "ci95": [
+              -0.005165989159891599,
+              -0.0008327687443541101
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.005857610659439928,
+            "ci95": [
+              0.00371217253839205,
+              0.00797481933152665
+            ]
+          }
+        }
+      },
+      "partial_connectivity": {
+        "profiles_mean": {
+          "retained_dual": 0.031264114724480575,
+          "standard_dual": 0.047552506775067754,
+          "normal_on_change": 0.04797594850948509,
+          "freeze_missing": 0.03500451671183378,
+          "pause_isolated": 0.047552506775067754
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.016288392050587172,
+            "ci95": [
+              -0.02016994128274616,
+              -0.01235038392050587
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.016711833785004515,
+            "ci95": [
+              -0.020819218608852757,
+              -0.012435072267389342
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.0037404019873532074,
+            "ci95": [
+              -0.007636065943992774,
+              0.00021172086720867188
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.016288392050587172,
+            "ci95": [
+              -0.020042908762420958,
+              -0.01236449864498645
+            ]
+          }
+        }
+      }
+    },
+    "disagreement_post_reconnection": {
+      "blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.1681451840560072,
+          "standard_dual": 0.2609071533423667,
+          "normal_on_change": 0.26053664182475156,
+          "freeze_missing": 0.22923018292682926,
+          "pause_isolated": 0.06250352868112014
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09276196928635952,
+            "ci95": [
+              -0.09693295858739838,
+              -0.08843933491418247
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.09239145776874434,
+            "ci95": [
+              -0.0966188177506775,
+              -0.08798060636856368
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.06108499887082205,
+            "ci95": [
+              -0.06306811766034327,
+              -0.05904894986449865
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.10564165537488707,
+            "ci95": [
+              0.10229293699186993,
+              0.10936441395663955
+            ]
+          }
+        }
+      },
+      "partition3": {
+        "profiles_mean": {
+          "retained_dual": 0.1276465108401084,
+          "standard_dual": 0.16788759033423664,
+          "normal_on_change": 0.16719244015356818,
+          "freeze_missing": 0.17805019196025293,
+          "pause_isolated": 0.16788759033423664
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.04024107949412828,
+            "ci95": [
+              -0.04313812669376694,
+              -0.03726287262872628
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.03954592931345981,
+            "ci95": [
+              -0.04251002145438121,
+              -0.0365041179708672
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.05040368112014453,
+            "ci95": [
+              -0.05298667570009033,
+              -0.048138267841011745
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.04024107949412828,
+            "ci95": [
+              -0.04319105691056911,
+              -0.03731227416440831
+            ]
+          }
+        }
+      },
+      "random50": {
+        "profiles_mean": {
+          "retained_dual": 0.06962087850045166,
+          "standard_dual": 0.1596904640921409,
+          "normal_on_change": 0.15162037037037035,
+          "freeze_missing": 0.1113404753839205,
+          "pause_isolated": 0.1596904640921409
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09006958559168925,
+            "ci95": [
+              -0.09435340447154471,
+              -0.08544348464317977
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.0819994918699187,
+            "ci95": [
+              -0.08588809846431797,
+              -0.07781800474254744
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.04171959688346884,
+            "ci95": [
+              -0.04423563473915989,
+              -0.03927069218608852
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.09006958559168925,
+            "ci95": [
+              -0.09435693315266486,
+              -0.08550691268631436
+            ]
+          }
+        }
+      },
+      "late_burst4": {
+        "profiles_mean": {
+          "retained_dual": 0.16371198434206563,
+          "standard_dual": 0.32458220415537486,
+          "normal_on_change": 0.3213405224330021,
+          "freeze_missing": 0.2565868714242698,
+          "pause_isolated": 0.033931797651309846
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.16087021981330923,
+            "ci95": [
+              -0.1661914709424872,
+              -0.15548298234718455
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.15762853809093647,
+            "ci95": [
+              -0.1628933303221921,
+              -0.15224612315567598
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.09287488708220414,
+            "ci95": [
+              -0.09629065040650406,
+              -0.08963320535983138
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.12978018669075578,
+            "ci95": [
+              0.12427544414333032,
+              0.13537432249322492
+            ]
+          }
+        }
+      },
+      "all_faults": {
+        "profiles_mean": {
+          "retained_dual": 0.13228113943465825,
+          "standard_dual": 0.22826685298102978,
+          "normal_on_change": 0.22517249369542303,
+          "freeze_missing": 0.1938019304238181,
+          "pause_isolated": 0.10600334518970188
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09598571354637157,
+            "ci95": [
+              -0.09934178334838903,
+              -0.09245316557983285
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.09289135426076482,
+            "ci95": [
+              -0.0961724836974932,
+              -0.08941618411952347
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.06152079098915989,
+            "ci95": [
+              -0.06331865401987352,
+              -0.05994141213113519
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.026277794244956337,
+            "ci95": [
+              0.024111478093947602,
+              0.02838737949553975
+            ]
+          }
+        }
+      },
+      "total_blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.16592858419903644,
+          "standard_dual": 0.29274467874887083,
+          "normal_on_change": 0.29093858212887685,
+          "freeze_missing": 0.24290852717554953,
+          "pause_isolated": 0.04821766316621499
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.12681609454983436,
+            "ci95": [
+              -0.13136810789765885,
+              -0.12212643323264827
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.12500999792984038,
+            "ci95": [
+              -0.12950377333634444,
+              -0.12037153189457239
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.0769799429765131,
+            "ci95": [
+              -0.07942121690097109,
+              -0.07459808322041554
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.11771092103282142,
+            "ci95": [
+              0.11381759482742394,
+              0.12197420004799006
+            ]
+          }
+        }
+      },
+      "partial_connectivity": {
+        "profiles_mean": {
+          "retained_dual": 0.09863369467028003,
+          "standard_dual": 0.1637890272131888,
+          "normal_on_change": 0.15940640526196928,
+          "freeze_missing": 0.14469533367208673,
+          "pause_isolated": 0.1637890272131888
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.06515533254290876,
+            "ci95": [
+              -0.06808766655374887,
+              -0.06205715051942187
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.06077271059168924,
+            "ci95": [
+              -0.06356389735772357,
+              -0.05785801998644987
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.04606163900180668,
+            "ci95": [
+              -0.04809067475440379,
+              -0.04415081406673441
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.06515533254290876,
+            "ci95": [
+              -0.0680788448509485,
+              -0.062020099367660335
+            ]
+          }
+        }
+      }
+    },
+    "excess_disagreement_window": {
+      "blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.42112315567600117,
+          "standard_dual": 0.44554539295392953,
+          "normal_on_change": 0.4703985998193315,
+          "freeze_missing": 0.404518593797049,
+          "pause_isolated": 0.0729147847034026
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.024422237277928343,
+            "ci95": [
+              -0.02703816621499549,
+              -0.02192487202649805
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.04927544414333032,
+            "ci95": [
+              -0.05153003613369467,
+              -0.04695121951219513
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.016604561878952113,
+            "ci95": [
+              0.01551866907557965,
+              0.0177149202047576
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.34820837097259855,
+            "ci95": [
+              0.3414954080096356,
+              0.3543586269196025
+            ]
+          }
+        }
+      },
+      "partition3": {
+        "profiles_mean": {
+          "retained_dual": 0.28187857573020175,
+          "standard_dual": 0.2923159439927733,
+          "normal_on_change": 0.30296973803071364,
+          "freeze_missing": 0.29336419753086423,
+          "pause_isolated": 0.2923159439927733
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.010437368262571512,
+            "ci95": [
+              -0.01227416440831075,
+              -0.008668322794339059
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.02109116230051189,
+            "ci95": [
+              -0.022677657332128863,
+              -0.0194726738934056
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.01148562180066245,
+            "ci95": [
+              -0.013838075880758801,
+              -0.0093458295694068
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.010437368262571512,
+            "ci95": [
+              -0.012245982008431215,
+              -0.008655149051490521
+            ]
+          }
+        }
+      },
+      "random50": {
+        "profiles_mean": {
+          "retained_dual": 0.16263550135501353,
+          "standard_dual": 0.2543191056910569,
+          "normal_on_change": 0.27083145137006925,
+          "freeze_missing": 0.15914634146341464,
+          "pause_isolated": 0.2543191056910569
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09168360433604336,
+            "ci95": [
+              -0.09442938873833184,
+              -0.08876279735019572
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.10819595001505572,
+            "ci95": [
+              -0.11087774766636554,
+              -0.10546893819632641
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.0034891598915989144,
+            "ci95": [
+              0.0013700692562481174,
+              0.005583785004516708
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.09168360433604336,
+            "ci95": [
+              -0.0944896115627823,
+              -0.08879097975007529
+            ]
+          }
+        }
+      },
+      "late_burst4": {
+        "profiles_mean": {
+          "retained_dual": 0.2442449563384523,
+          "standard_dual": 0.2851494278831677,
+          "normal_on_change": 0.3072963715748268,
+          "freeze_missing": 0.22806948208370972,
+          "pause_isolated": 0.007497741644083112
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.04090447154471545,
+            "ci95": [
+              -0.043343495934959335,
+              -0.038493629554351094
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.06305141523637459,
+            "ci95": [
+              -0.06517050587172538,
+              -0.06090221318879855
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.01617547425474255,
+            "ci95": [
+              0.014611562782294495,
+              0.017575654923215903
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.23674721469436916,
+            "ci95": [
+              0.23313572719060527,
+              0.2407275669978922
+            ]
+          }
+        }
+      },
+      "all_faults": {
+        "profiles_mean": {
+          "retained_dual": 0.27747054727491727,
+          "standard_dual": 0.3193324676302318,
+          "normal_on_change": 0.3378740401987353,
+          "freeze_missing": 0.27127465371875936,
+          "pause_isolated": 0.15676189400782897
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.04186192035531467,
+            "ci95": [
+              -0.04369825777250829,
+              -0.04006462191358024
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.060403492923818115,
+            "ci95": [
+              -0.062105728696175845,
+              -0.05862220293209876
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.006195893556157782,
+            "ci95": [
+              0.00503518095076784,
+              0.007336833785004515
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.12070865326708821,
+            "ci95": [
+              0.11821127625338751,
+              0.12316839101550739
+            ]
+          }
+        }
+      },
+      "total_blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.3326840560072267,
+          "standard_dual": 0.36534741041854857,
+          "normal_on_change": 0.38884748569707916,
+          "freeze_missing": 0.3162940379403794,
+          "pause_isolated": 0.040206263173742846
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.03266335441132189,
+            "ci95": [
+              -0.03490571364046973,
+              -0.030494391749473056
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.056163429689852454,
+            "ci95": [
+              -0.05821476964769648,
+              -0.054045280036133694
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.016390018066847336,
+            "ci95": [
+              0.015334213151159284,
+              0.01745991418247516
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.29247779283348385,
+            "ci95": [
+              0.2882960469361638,
+              0.29675834180216804
+            ]
+          }
+        }
+      },
+      "partial_connectivity": {
+        "profiles_mean": {
+          "retained_dual": 0.22225703854260764,
+          "standard_dual": 0.27331752484191507,
+          "normal_on_change": 0.28690059470039153,
+          "freeze_missing": 0.22625526949713937,
+          "pause_isolated": 0.27331752484191507
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.051060486299307435,
+            "ci95": [
+              -0.052883191245106896,
+              -0.049196401686239094
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.06464355615778379,
+            "ci95": [
+              -0.0663599301791629,
+              -0.06286698283649504
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.003998230954531765,
+            "ci95": [
+              -0.005826558265582649,
+              -0.002224480578139112
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.051060486299307435,
+            "ci95": [
+              -0.05288130928184283,
+              -0.04919355521680216
+            ]
+          }
+        }
+      }
+    },
+    "disagreement_window": {
+      "blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.4668172237277928,
+          "standard_dual": 0.49123946100572113,
+          "normal_on_change": 0.5160926678711231,
+          "freeze_missing": 0.45021266184884073,
+          "pause_isolated": 0.11860885275519421
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.024422237277928343,
+            "ci95": [
+              -0.027019346582354716,
+              -0.021922990063233984
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.04927544414333032,
+            "ci95": [
+              -0.05154697380307135,
+              -0.04691917908762421
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.016604561878952113,
+            "ci95": [
+              0.015526196928635947,
+              0.01771303824149352
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.3482083709725986,
+            "ci95": [
+              0.34159891598915987,
+              0.3544358344625113
+            ]
+          }
+        }
+      },
+      "partition3": {
+        "profiles_mean": {
+          "retained_dual": 0.3275726437819934,
+          "standard_dual": 0.33801001204456493,
+          "normal_on_change": 0.34866380608250525,
+          "freeze_missing": 0.33905826558265584,
+          "pause_isolated": 0.33801001204456493
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.010437368262571512,
+            "ci95": [
+              -0.012249698885877736,
+              -0.008666440831074972
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.021091162300511886,
+            "ci95": [
+              -0.022670176528154163,
+              -0.01947643781993376
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.011485621800662447,
+            "ci95": [
+              -0.013800436615477255,
+              -0.009381539822342655
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.010437368262571512,
+            "ci95": [
+              -0.012268518518518496,
+              -0.008660794941282746
+            ]
+          }
+        }
+      },
+      "random50": {
+        "profiles_mean": {
+          "retained_dual": 0.20832956940680514,
+          "standard_dual": 0.3000131737428486,
+          "normal_on_change": 0.31652551942186086,
+          "freeze_missing": 0.20484040951520624,
+          "pause_isolated": 0.3000131737428486
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09168360433604336,
+            "ci95": [
+              -0.0944406805179163,
+              -0.08883807588075882
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.10819595001505572,
+            "ci95": [
+              -0.1109078590785908,
+              -0.10549340371875941
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.0034891598915989144,
+            "ci95": [
+              0.0013888888888888928,
+              0.005574375188196319
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.09168360433604336,
+            "ci95": [
+              -0.09446138211382116,
+              -0.0888229731255646
+            ]
+          }
+        }
+      },
+      "late_burst4": {
+        "profiles_mean": {
+          "retained_dual": 0.2899390243902439,
+          "standard_dual": 0.3308434959349593,
+          "normal_on_change": 0.3529904396266185,
+          "freeze_missing": 0.27376355013550135,
+          "pause_isolated": 0.05319180969587473
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.04090447154471545,
+            "ci95": [
+              -0.04331724254742547,
+              -0.03846163617886178
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.06305141523637459,
+            "ci95": [
+              -0.0651441583860283,
+              -0.06090785907859079
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.01617547425474255,
+            "ci95": [
+              0.014622807512797343,
+              0.017570009033423678
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.23674721469436916,
+            "ci95": [
+              0.23318842216199936,
+              0.24071815718157177
+            ]
+          }
+        }
+      },
+      "all_faults": {
+        "profiles_mean": {
+          "retained_dual": 0.3231646153267088,
+          "standard_dual": 0.3650265356820235,
+          "normal_on_change": 0.3835681082505269,
+          "freeze_missing": 0.316968721770551,
+          "pause_isolated": 0.20245596205962058
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.04186192035531467,
+            "ci95": [
+              -0.043676638719512204,
+              -0.04008015987277928
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.060403492923818115,
+            "ci95": [
+              -0.062086438572719053,
+              -0.058618450767841015
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.006195893556157783,
+            "ci95": [
+              0.005039415368112009,
+              0.0073170731707317095
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.12070865326708824,
+            "ci95": [
+              0.11824466933905448,
+              0.12313639764001807
+            ]
+          }
+        }
+      },
+      "total_blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.37837812405901833,
+          "standard_dual": 0.4110414784703402,
+          "normal_on_change": 0.4345415537488708,
+          "freeze_missing": 0.361988105992171,
+          "pause_isolated": 0.08590033122553448
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.03266335441132189,
+            "ci95": [
+              -0.0349264622854562,
+              -0.030502860584161406
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.056163429689852454,
+            "ci95": [
+              -0.058220439062029505,
+              -0.054056548291177335
+            ]
+          },
+          "freeze_missing": {
+            "mean": 0.016390018066847332,
+            "ci95": [
+              0.015323885877747677,
+              0.01744958690906354
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.29247779283348385,
+            "ci95": [
+              0.28833747365251433,
+              0.2967828308491418
+            ]
+          }
+        }
+      },
+      "partial_connectivity": {
+        "profiles_mean": {
+          "retained_dual": 0.26795110659439925,
+          "standard_dual": 0.3190115928937067,
+          "normal_on_change": 0.3325946627521831,
+          "freeze_missing": 0.271949337548931,
+          "pause_isolated": 0.3190115928937067
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.05106048629930744,
+            "ci95": [
+              -0.05285590277777778,
+              -0.04920298855766335
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.06464355615778379,
+            "ci95": [
+              -0.06637590334236676,
+              -0.06289803523035231
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.003998230954531766,
+            "ci95": [
+              -0.005830322192110806,
+              -0.0022150472372779264
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.05106048629930744,
+            "ci95": [
+              -0.05289069557362241,
+              -0.04917287714543813
+            ]
+          }
+        }
+      }
+    },
+    "excess_disagreement_post_reconnection": {
+      "blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.14073438911472447,
+          "standard_dual": 0.23349635840108396,
+          "normal_on_change": 0.23312584688346882,
+          "freeze_missing": 0.20181938798554652,
+          "pause_isolated": 0.035092733739837394
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09276196928635952,
+            "ci95": [
+              -0.09698580058717253,
+              -0.08842874887082203
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.09239145776874436,
+            "ci95": [
+              -0.0965870596205962,
+              -0.08795943428184282
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.06108499887082205,
+            "ci95": [
+              -0.06303988821138212,
+              -0.059048949864498636
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.10564165537488707,
+            "ci95": [
+              0.10232822380307136,
+              0.10934677055103884
+            ]
+          }
+        }
+      },
+      "partition3": {
+        "profiles_mean": {
+          "retained_dual": 0.10023571589882566,
+          "standard_dual": 0.1404767953929539,
+          "normal_on_change": 0.13978164521228542,
+          "freeze_missing": 0.1506393970189702,
+          "pause_isolated": 0.1404767953929539
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.04024107949412828,
+            "ci95": [
+              -0.043159298780487805,
+              -0.03732638888888889
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.0395459293134598,
+            "ci95": [
+              -0.042562951671183374,
+              -0.036535876100948494
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.05040368112014453,
+            "ci95": [
+              -0.05299734996047877,
+              -0.048106509710930445
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.04024107949412828,
+            "ci95": [
+              -0.0431664443597561,
+              -0.03728395649841914
+            ]
+          }
+        }
+      },
+      "random50": {
+        "profiles_mean": {
+          "retained_dual": 0.042210083559168915,
+          "standard_dual": 0.13227966915085818,
+          "normal_on_change": 0.1242095754290876,
+          "freeze_missing": 0.08392968044263777,
+          "pause_isolated": 0.13227966915085818
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09006958559168925,
+            "ci95": [
+              -0.09434290664521229,
+              -0.08548230013550134
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.0819994918699187,
+            "ci95": [
+              -0.08590574186991869,
+              -0.07790622177055104
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.04171959688346884,
+            "ci95": [
+              -0.044232017841011745,
+              -0.03922481933152664
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.09006958559168925,
+            "ci95": [
+              -0.09436407873193314,
+              -0.08553875903342366
+            ]
+          }
+        }
+      },
+      "late_burst4": {
+        "profiles_mean": {
+          "retained_dual": 0.1380514152363746,
+          "standard_dual": 0.2989216350496837,
+          "normal_on_change": 0.295679953327311,
+          "freeze_missing": 0.23092630231857875,
+          "pause_isolated": 0.008271228545618788
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.16087021981330923,
+            "ci95": [
+              -0.1662432249322493,
+              -0.15547369015356818
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.15762853809093647,
+            "ci95": [
+              -0.16292155977115325,
+              -0.1523072869617585
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.09287488708220415,
+            "ci95": [
+              -0.09628594549834386,
+              -0.0896049759108702
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.12978018669075578,
+            "ci95": [
+              0.12426603432700992,
+              0.13534609304426376
+            ]
+          }
+        }
+      },
+      "all_faults": {
+        "profiles_mean": {
+          "retained_dual": 0.1053079009522734,
+          "standard_dual": 0.20129361449864497,
+          "normal_on_change": 0.19819925521303824,
+          "freeze_missing": 0.1668286919414333,
+          "pause_isolated": 0.07903010670731707
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.09598571354637157,
+            "ci95": [
+              -0.09937795968128951,
+              -0.09244701244212963
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.09289135426076484,
+            "ci95": [
+              -0.09621774638427807,
+              -0.0894388117872064
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.06152079098915989,
+            "ci95": [
+              -0.0633448324229336,
+              -0.05994081666619617
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.026277794244956337,
+            "ci95": [
+              0.02409383468834688,
+              0.02838647527100271
+            ]
+          }
+        }
+      },
+      "total_blackout": {
+        "profiles_mean": {
+          "retained_dual": 0.13939290217554953,
+          "standard_dual": 0.2662089967253839,
+          "normal_on_change": 0.2644029001053899,
+          "freeze_missing": 0.21637284515206265,
+          "pause_isolated": 0.02168198114272809
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.12681609454983436,
+            "ci95": [
+              -0.13133811410813762,
+              -0.12221351814212585
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.1250099979298404,
+            "ci95": [
+              -0.12954085389378198,
+              -0.12037328153229447
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.0769799429765131,
+            "ci95": [
+              -0.07939241404132791,
+              -0.07456514886329418
+            ]
+          },
+          "pause_isolated": {
+            "mean": 0.11771092103282142,
+            "ci95": [
+              0.11382643123306233,
+              0.12201122179407559
+            ]
+          }
+        }
+      },
+      "partial_connectivity": {
+        "profiles_mean": {
+          "retained_dual": 0.07122289972899727,
+          "standard_dual": 0.13637823227190604,
+          "normal_on_change": 0.13199561032068655,
+          "freeze_missing": 0.11728453873080397,
+          "pause_isolated": 0.13637823227190604
+        },
+        "retained_minus": {
+          "standard_dual": {
+            "mean": -0.06515533254290877,
+            "ci95": [
+              -0.0680788448509485,
+              -0.06207298547594851
+            ]
+          },
+          "normal_on_change": {
+            "mean": -0.06077271059168924,
+            "ci95": [
+              -0.06356570580679764,
+              -0.05779975263945348
+            ]
+          },
+          "freeze_missing": {
+            "mean": -0.04606163900180668,
+            "ci95": [
+              -0.048122432884485096,
+              -0.04414909383468835
+            ]
+          },
+          "pause_isolated": {
+            "mean": -0.06515533254290877,
+            "ci95": [
+              -0.06804536648882112,
+              -0.06204832881662149
+            ]
+          }
+        }
+      }
+    }
+  },
+  "identities": {
+    "pause_minus_standard_max_abs_partial_all_rounds": {
+      "partition3": 0.0,
+      "random50": 0.0
+    },
+    "retained_minus_discard_max_abs_during_outage": {
+      "blackout": 0.0,
+      "partition3": 0.0,
+      "late_burst4": 0.0
+    }
+  },
+  "caveat": "Intervals are conditional on the three fixed initializations (resampling 3 seeds yields only 10 distinct multisets); Sudoku only; no physical robotics claim; hypotheses H2-H6 were formulated from post-hoc M4 observations, which is why they are tested on unseen families.",
+  "analysis_source_sha256": "df98eaf96fa70c6761c780dee0ff13f78094253057ec993f0244b8e0362aa034"
+}
